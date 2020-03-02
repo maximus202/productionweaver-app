@@ -1,0 +1,11 @@
+section.header, section.call-to-action {
+    flex-direction: column;
+    text-align: center;
+    padding: 12% 0;
+}
+
+section.feature {
+    flex-direction: column;
+    text-align: center;
+    padding: 6% 0;
+}
