@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import './LandingPageContent.css';
+import { Link } from 'react-router-dom';
 
 class LandingPageContent extends Component {
+    nextPath(path) {
+        this.props.history.push(path);
+    }
+
     render() {
         return (
             <main>
                 <header className="landing-page-header">
                     <h1>Simple, swift, film production management.</h1>
-                    <button>Sign up</button>
+                    <Link to="/sign-up">Sign Up</Link>
                     <button>Login</button>
                 </header>
                 <section className="feature">
@@ -30,7 +35,7 @@ class LandingPageContent extends Component {
                 </section>
                 <section className="call-to-action">
                     <h2>Start using ProductionWeaver!</h2>
-                    <button>Get started</button>
+                    <Link to="/sign-up">Get started</Link>
                 </section>
             </main>
         )
