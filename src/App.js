@@ -1,14 +1,14 @@
 import React from 'react';
-import NavBar from './NavBar/NavBar.js';
-import LandingPageContent from './LandingPageContent/LandingPageContent.js';
-import Footer from './Footer/Footer.js';
+import { Route } from 'react-router-dom';
+import LandingPage from './LandingPage/LandingPage';
 
 function App() {
   return (
     <main className='App'>
-      <NavBar />
-      <LandingPageContent />
-      <Footer />
+      <Route
+        exact path="/"
+        component={LandingPage}
+      />
     </main>
   );
 }
