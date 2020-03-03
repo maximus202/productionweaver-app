@@ -13,7 +13,7 @@ class LandingPageContent extends Component {
                 <header className="landing-page-header">
                     <h1>Simple, swift, film production management.</h1>
                     <Link to="/sign-up">Sign Up</Link>
-                    <button>Login</button>
+                    <Link to="/login">Login here</Link>
                 </header>
                 <section className="feature">
                     <h2>Script breakdown</h2>
