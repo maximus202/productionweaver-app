@@ -1,11 +1,12 @@
-section.header, section.call-to-action {
+header.landing-page-header, section.feature, section.call-to-action {
     flex-direction: column;
-    text-align: center;
-    padding: 12% 0;
+    text-align: left;
+}
+
+header.landing-page-header, section.call-to-action {
+    padding: 12% 0 12% 0;
 }
 
 section.feature {
-    flex-direction: column;
-    text-align: center;
-    padding: 6% 0;
+    padding: 6% 0 6% 0;
 }

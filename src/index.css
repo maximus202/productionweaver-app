@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -14,4 +17,31 @@ code {
 
 main {
   width: 100%;
+  height: 100vh;
+}
+
+section, header {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin: 6% 0;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+  main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1024px) {
+  main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

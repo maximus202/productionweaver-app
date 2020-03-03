@@ -6,10 +6,10 @@ import Menu from '../Menu/Menu.js';
 class NavBar extends Component {
     render() {
         return (
-            <section>
+            <nav>
                 <Logo />
                 <Menu />
-            </section>
+            </nav>
         )
     }
 }

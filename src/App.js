@@ -1,15 +1,20 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import LandingPage from './LandingPage/LandingPage';
+import AccountSignUp from './AccountSignUp/AccountSignUp';
 
 function App() {
   return (
-    <main className='App'>
+    <>
       <Route
         exact path="/"
         component={LandingPage}
       />
-    </main>
+      <Route
+        path="/sign-up"
+        component={AccountSignUp}
+      />
+    </>
   );
 }
 

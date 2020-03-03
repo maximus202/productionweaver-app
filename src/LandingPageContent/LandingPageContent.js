@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './LandingPageContent.css'
+import './LandingPageContent.css';
 
 class LandingPageContent extends Component {
     render() {
         return (
-            <>
-                <section className="header">
+            <main>
+                <header className="landing-page-header">
                     <h1>Simple, swift, film production management.</h1>
                     <button>Sign up</button>
                     <button>Login</button>
-                </section>
+                </header>
                 <section className="feature">
                     <h2>Script breakdown</h2>
                     <p>Breeze through your script breakdown process with ProductionWeaver's simple, mobile-friendly interface.</p>
@@ -32,7 +32,7 @@ class LandingPageContent extends Component {
                     <h2>Start using ProductionWeaver!</h2>
                     <button>Get started</button>
                 </section>
-            </>
+            </main>
         )
     }
 }
