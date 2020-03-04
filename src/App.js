@@ -5,6 +5,7 @@ import AccountSignUp from './AccountSignUp/AccountSignUp';
 import Login from './Login/Login';
 import AccountDashboard from './AccountDashboard/AccountDashboard';
 import AddProject from './AddProject/AddProject';
+import ProjectOverview from './ProjectOverview/ProjectOverview';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
       <Route
         path="/add-project"
         component={AddProject}
+      />
+      <Route
+        path="/project/1"
+        component={ProjectOverview}
       />
     </>
   );
