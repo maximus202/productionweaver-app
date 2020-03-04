@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AddProject from './AddProject';
+import AddProjectForm from './AddProjectForm';
 
-describe('AddProject', () => {
+describe('AddProjectForm', () => {
     it('renders without crashing', () => {
         const div = document.createElement('div');
-        ReactDOM.render(<AddProject />, div);
+        ReactDOM.render(<AddProjectForm />, div);
         ReactDOM.unmountComponentAtNode(div);
     });
 });
