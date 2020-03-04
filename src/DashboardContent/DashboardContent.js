@@ -8,7 +8,7 @@ class DashboardContent extends Component {
                 <header>
                     <h1>Good afternoon, (name)</h1>
                 </header>
-                <section class="module-header">
+                <section className="module-header">
                     <h2>Projects</h2>
                     <button>Add project</button>
                 </section>
