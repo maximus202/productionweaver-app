@@ -1,0 +1,12 @@
+section.project-item {
+    flex-direction: row;
+    align-items: center;
+}
+
+section.project-item h3 {
+    padding-left: 10px;
+}
+
+img.project-icon {
+    width: 60px;
+}
