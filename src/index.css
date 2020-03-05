@@ -66,6 +66,10 @@ div.bottom-bar button {
   color: white;
 }
 
+a {
+  display: flex;
+}
+
 /*Tablet*/
 @media only screen and (min-width: 768px) {
   main {

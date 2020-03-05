@@ -7,8 +7,10 @@ export default function ProjectsList() {
         <>
             {PROJECTS.map(project =>
                 <section className="project-item" key={project.id}>
-                    <img src="project-icon.png" alt="Project" className="project-icon" />
-                    <h3>{project.projectName}</h3>
+                    <a href={`/project/${project.id}`}>
+                        <img src="project-icon.png" alt="Project" className="project-icon" />
+                        <h3>{project.projectName}</h3>
+                    </a>
                 </section>
             )}
         </>

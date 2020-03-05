@@ -8,7 +8,7 @@ class ScriptBreakdown extends Component {
         return (
             <>
                 <NavBar />
-                <Scenes />
+                <Scenes project={this.props.match.params} />
                 <Footer />
             </>
         )

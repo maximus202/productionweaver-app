@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import NavBar from './NavBar/NavBar';
+import Footer from './Footer/Footer.js';
 import LandingPage from './LandingPage/LandingPage';
 import AccountSignUp from './AccountSignUp/AccountSignUp';
 import Login from './Login/Login';
@@ -33,15 +35,15 @@ function App() {
         component={AddProject}
       />
       <Route
-        exact path="/project/1"
+        exact path="/project/:projectId"
         component={ProjectOverview}
       />
       <Route
-        exact path="/project/1/script-breakdown"
+        exact path="/script-breakdown/:projectId"
         component={ScriptBreakdown}
       />
       <Route
-        exact path="/project/1/script-breakdown/1"
+        exact path="/script-breakdown/:projectId/scene-breakdown/:sceneId"
         component={SceneBreakdown}
       />
     </>

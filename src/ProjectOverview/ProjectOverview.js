@@ -5,10 +5,11 @@ import ProjectOverviewContent from '../ProjectOverviewContent/ProjectOverviewCon
 
 class ProjectOverview extends Component {
     render() {
+        console.log(this.props.match.params)
         return (
             <>
                 <NavBar />
-                <ProjectOverviewContent />
+                <ProjectOverviewContent project={this.props.match.params} />
                 <Footer />
             </>
         )

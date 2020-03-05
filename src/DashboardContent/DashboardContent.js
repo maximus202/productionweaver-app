@@ -6,7 +6,7 @@ class DashboardContent extends Component {
         return (
             <main>
                 <header>
-                    <h1>Good afternoon, (name)</h1>
+                    <h1>Good afternoon</h1>
                 </header>
                 <section className="module-header">
                     <h2>Projects</h2>

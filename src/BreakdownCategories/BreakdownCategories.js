@@ -1,179 +1,207 @@
 import React, { Component } from 'react';
 import './BreakdownCategories.css';
+import PROJECTS from '../projects';
 
 class BreakdownCategories extends Component {
     render() {
+        const project = PROJECTS.find(project =>
+            project.id === this.props.scene.projectId
+        )
+        const scene = project.scenes.find(scene =>
+            scene.sceneNumber == this.props.scene.sceneId
+        )
+        const elements = scene.elements
         return (
-            <main>
+            < main >
+                {console.log(elements)}
                 <header>
-                    <h1>Night of the Living Dead</h1>
+                    <h1>{project.projectName}</h1>
                     <p className="header-subtitle">Script breakdown</p>
-                    <p className="header-subtitle">1. EXT. FRENCH COUNTRYSIDE - DUSK</p>
+                    <p className="header-subtitle">SCENE {scene.sceneNumber}. {scene.setting} {scene.description} - {scene.timeOfDay}</p>
                 </header>
+
                 <section className="module-header">
                     <h2>Animal handler</h2>
-                    <button>Add element</button>
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.animalHandler}
+                    <button>Add Animal Handler</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Cast</h2>
-                    <button>Add element</button>
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.cast}
+                    <button>Add cast member</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Extras</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.extras}
+                    <button>Add extras</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Greenery</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.greenery}
+                    <button>Add greenery</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Livestock</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.livestock}
+                    <button>Add livestock</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Makeup/Hair</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.makeupHair}
+                    <button>Add Makeup/Hair</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Mechanical FX</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.mechanicalFx}
+                    <button>Add Mechanical FX</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Miscellanous</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.miscellanous}
+                    <button>Add Miscellanous</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Music</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.music}
+                    <button>Add Music</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Optical FX</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.opticalFx}
+                    <button>Add Optical FX</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Props</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.props}
+                    <button>Add Props</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Security</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.security}
+                    <button>Add security</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Set Dressing</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.setDressing}
+                    <button>Add Set Dressing</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Sound</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.sound}
+                    <button>Add Sound</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Special Equipment</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.specialEquipment}
+                    <button>Add Special Equipment</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Special FX</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.specialFx}
+                    <button>Add Special FX</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Stunts</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.stunts}
+                    <button>Add Stunts</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Vehicles</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.vehicles}
+                    <button>Add Vehicles</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Visual FX</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.visualFx}
+                    <button>Add Visual FX</button>
                 </section>
 
                 <section className="module-header">
                     <h2>Wardrobe</h2>
-                    <button>Add element</button>
+
                 </section>
                 <section className="element-list">
-                    <p>None</p>
+                    {elements.wardrobe}
+                    <button>Add Wardrobe</button>
                 </section>
-                <div class="bottom-bar">
-                    <p>SCENE 1: EXT. FRENCH COUNTRYSIDE - DUSK</p>
+                <div className="bottom-bar">
+                    <p>SCENE {scene.sceneNumber}. {scene.setting} {scene.description} - {scene.timeOfDay}</p>
                     <button>+</button>
                 </div>
-            </main>
+            </main >
         )
     }
 }

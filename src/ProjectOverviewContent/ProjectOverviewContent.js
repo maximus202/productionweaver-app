@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import './ProjectOverviewContent.css';
 import ProductionTools from '../ProductionTools/ProductionTools';
+import PROJECTS from '../projects';
 
 class ProjectOverviewContent extends Component {
     render() {
+        const project = PROJECTS.find(project =>
+            project.id === this.props.project.projectId
+        )
         return (
-            <main>
+            < main >
                 <header>
-                    <h1>Night of the Living Dead</h1>
+                    <h1>{project.projectName}</h1>
                     <p className="header-subtitle">Project overview</p>
                 </header>
                 <section className="module-header">
                     <h2>Production Tools</h2>
                 </section>
                 <section>
-                    <ProductionTools />
+                    <ProductionTools project={this.props.project} />
                 </section>
-            </main>
+            </main >
         )
     }
 }
