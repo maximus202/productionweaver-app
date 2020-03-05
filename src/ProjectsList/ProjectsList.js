@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
 import './ProjectsList.css';
+import PROJECTS from '../projects';
 
-class ProjectsList extends Component {
-    render() {
-        return (
-            <>
-                <section className="project-item">
+export default function ProjectsList() {
+    return (
+        <>
+            {PROJECTS.map(project =>
+                <section className="project-item" key={project.id}>
                     <img src="project-icon.png" alt="Project" className="project-icon" />
-                    <h3>Charade</h3>
+                    <h3>{project.projectName}</h3>
                 </section>
-                <section className="project-item">
-                    <img src="project-icon.png" alt="Project" className="project-icon" />
-                    <h3>Night of the Living Dead</h3>
-                </section>
-                <section className="project-item">
-                    <img src="project-icon.png" alt="Project" className="project-icon" />
-                    <h3>Blade Runner 2049</h3>
-                </section>
-            </>
-        )
-    }
+            )}
+        </>
+    )
 }
-
-export default ProjectsList;
