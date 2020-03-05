@@ -7,6 +7,7 @@ import AccountDashboard from './AccountDashboard/AccountDashboard';
 import AddProject from './AddProject/AddProject';
 import ProjectOverview from './ProjectOverview/ProjectOverview';
 import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
+import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
       <Route
         exact path="/project/1/script-breakdown"
         component={ScriptBreakdown}
+      />
+      <Route
+        exact path="/project/1/script-breakdown/1"
+        component={SceneBreakdown}
       />
     </>
   );

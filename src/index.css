@@ -1,5 +1,6 @@
 * {
   background-color: #F6F5F1;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,6 +36,36 @@ section.module-header {
     border-bottom: solid 1px;
 }
 
+div.bottom-bar {
+    display: flex;
+    flex-flow: row;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: lightgrey;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+div.bottom-bar p {
+  font-size: 12px;
+  background-color: lightgray;
+  color: black;
+  padding-right: 10px;
+}
+
+div.bottom-bar button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: black;
+  color: white;
+}
+
 /*Tablet*/
 @media only screen and (min-width: 768px) {
   main {
@@ -45,7 +76,7 @@ section.module-header {
 
 /*Desktop*/
 @media only screen and (min-width: 1024px) {
-  main {
+  main, div.bottom-bar {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
