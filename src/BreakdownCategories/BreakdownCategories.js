@@ -83,14 +83,6 @@ class BreakdownCategories extends Component {
                 </section>
 
                 <section className="module-header">
-                    <h2>Note</h2>
-                    <button>Add element</button>
-                </section>
-                <section className="element-list">
-                    <p>None</p>
-                </section>
-
-                <section className="module-header">
                     <h2>Optical FX</h2>
                     <button>Add element</button>
                 </section>
