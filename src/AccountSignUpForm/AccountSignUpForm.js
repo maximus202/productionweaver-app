@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
 import './AccountSignUpForm.css';
 import { Link } from 'react-router-dom';
+import { Context } from '../Context/Context';
 
 class AccountSignUpForm extends Component {
     render() {
         return (
-            <main>
-                <header>
-                    <h1>Account Sign Up</h1>
-                </header>
-                <section>
-                    <form>
-                        <input type="text" id="first-name" name="first-name" placeholder="First name" required />
-                        <input type="text" id="last-name" name="last-name" placeholder="Last name" required />
-                        <input type="email" id="email" name="email" placeholder="Email address" required />
-                        <input type="password" id="password" name="password" placeholder="Password" required />
-                        <input type="submit" id="submit" name="submit" placeholder="Submit" />
-                    </form>
-                    <Link to="/login">Existing user? Login here!</Link>
-                </section>
-            </main>
+            <Context.Consumer>
+                {(value) => {
+                    return (
+                        <main>
+                            <header>
+                                <h1>Account Sign Up</h1>
+                            </header>
+                            <section>
+                                <form onSubmit={(e) => value.handleSubmitNewUser(e, this.props.history)}>
+                                    <input type="text" id="first-name" name="first-name" placeholder="First name" required onChange={value.handleFirstNameInputChange} />
+                                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required onChange={value.handleLastNameInputChange} />
+                                    <input type="email" id="email" name="email" placeholder="Email address" required onChange={value.handleEmailInputChange} />
+                                    <input type="password" id="password" name="password" placeholder="Password" required onChange={value.handlePasswordInputChange} />
+                                    <input type="submit" id="submit" name="submit" placeholder="Submit" />
+                                </form>
+                                <Link to="/login">Existing user? Login here!</Link>
+                            </section>
+                        </main>
+                    )
+                }
+                }
+            </Context.Consumer>
         )
     }
 }
