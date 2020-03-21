@@ -15,10 +15,10 @@ class AccountSignUpForm extends Component {
                             </header>
                             <section>
                                 <form onSubmit={(e) => value.handleSubmitNewUser(e, this.props.history)}>
-                                    <input type="text" id="first-name" name="first-name" placeholder="First name" required onChange={value.handleFirstNameInputChange} />
-                                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required onChange={value.handleLastNameInputChange} />
-                                    <input type="email" id="email" name="email" placeholder="Email address" required onChange={value.handleEmailInputChange} />
-                                    <input type="password" id="password" name="password" placeholder="Password" required onChange={value.handlePasswordInputChange} />
+                                    <input type="text" id="first-name" name="first-name" placeholder="First name" onChange={value.handleFirstNameInputChange} required />
+                                    <input type="text" id="last-name" name="last-name" placeholder="Last name" onChange={value.handleLastNameInputChange} required />
+                                    <input type="email" id="email" name="email" placeholder="Email address" onChange={value.handleEmailInputChange} required />
+                                    <input type="password" id="password" name="password" placeholder="Password" onChange={value.handlePasswordInputChange} required />
                                     <input type="submit" id="submit" name="submit" placeholder="Submit" />
                                 </form>
                                 <Link to="/login">Existing user? Login here!</Link>

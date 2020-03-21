@@ -10,42 +10,45 @@ import AddProject from './AddProject/AddProject';
 import ProjectOverview from './ProjectOverview/ProjectOverview';
 import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
 import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
+import { Provider } from './Context/Context'
 
 function App() {
   return (
     <>
-      <Route
-        exact path="/"
-        component={LandingPage}
-      />
-      <Route
-        path="/sign-up"
-        component={AccountSignUp}
-      />
-      <Route
-        path="/login"
-        component={Login}
-      />
-      <Route
-        path="/dashboard"
-        component={AccountDashboard}
-      />
-      <Route
-        path="/add-project"
-        component={AddProject}
-      />
-      <Route
-        exact path="/project/:projectId"
-        component={ProjectOverview}
-      />
-      <Route
-        exact path="/script-breakdown/:projectId"
-        component={ScriptBreakdown}
-      />
-      <Route
-        exact path="/script-breakdown/:projectId/scene-breakdown/:sceneId"
-        component={SceneBreakdown}
-      />
+      <Provider>
+        <Route
+          exact path="/"
+          component={LandingPage}
+        />
+        <Route
+          path="/sign-up"
+          component={AccountSignUp}
+        />
+        <Route
+          path="/login"
+          component={Login}
+        />
+        <Route
+          path="/dashboard"
+          component={AccountDashboard}
+        />
+        <Route
+          path="/add-project"
+          component={AddProject}
+        />
+        <Route
+          exact path="/project/:projectId"
+          component={ProjectOverview}
+        />
+        <Route
+          exact path="/script-breakdown/:projectId"
+          component={ScriptBreakdown}
+        />
+        <Route
+          exact path="/script-breakdown/:projectId/scene-breakdown/:sceneId"
+          component={SceneBreakdown}
+        />
+      </Provider>
     </>
   );
 }
