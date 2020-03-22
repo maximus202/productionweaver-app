@@ -81,7 +81,7 @@ export class Provider extends React.Component {
                     users: [...this.state.users, responseJson]
                 })
             })
-            .then(() => history.push('/login'))
+            .then(() => history.push('/registrationsuccess'))
             .catch(error => {
                 console.error({ error })
             })

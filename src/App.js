@@ -11,6 +11,7 @@ import ProjectOverview from './ProjectOverview/ProjectOverview';
 import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
 import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
 import { Provider } from './Context/Context'
+import RegistrationSuccess from './RegistrationSuccess/RegistrationSuccess';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
           render={({ history }) =>
             <AccountSignUp history={history} />
           }
+        />
+        <Route
+          path="/registrationsuccess"
+          component={RegistrationSuccess}
         />
         <Route
           path="/login"
