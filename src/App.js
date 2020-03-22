@@ -22,7 +22,9 @@ function App() {
         />
         <Route
           path="/sign-up"
-          component={AccountSignUp}
+          render={({ history }) =>
+            <AccountSignUp history={history} />
+          }
         />
         <Route
           path="/login"

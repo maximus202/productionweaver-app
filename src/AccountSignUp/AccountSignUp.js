@@ -8,7 +8,7 @@ class AccountSignUp extends Component {
         return (
             <>
                 <NavBar />
-                <AccountSignUpForm />
+                <AccountSignUpForm history={this.props.history} />
                 <Footer />
             </>
         )
