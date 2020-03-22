@@ -74,8 +74,7 @@ export class Provider extends React.Component {
         }
         AuthApiService.postLogin(data)
             .then(res => {
-                console.log(res)
-                //TokenService.saveAuthToken(res.authToken)
+                TokenService.saveAuthToken(res.authToken)
             })
             .catch(res => {
                 this.setState({
