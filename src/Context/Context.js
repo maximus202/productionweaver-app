@@ -72,9 +72,10 @@ export class Provider extends React.Component {
             'email': loginEmailInput,
             'password': loginPasswordInput
         }
-        AuthApiService.postLogin({ data })
+        AuthApiService.postLogin(data)
             .then(res => {
-                TokenService.saveAuthToken(res.authToken)
+                console.log(res)
+                //TokenService.saveAuthToken(res.authToken)
             })
             .catch(res => {
                 this.setState({
