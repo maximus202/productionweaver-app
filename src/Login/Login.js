@@ -8,7 +8,7 @@ class Login extends Component {
         return (
             <>
                 <NavBar />
-                <LoginForm />
+                <LoginForm history={this.props.history} />
                 <Footer />
             </>
         )

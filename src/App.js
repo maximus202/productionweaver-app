@@ -33,7 +33,9 @@ function App() {
         />
         <Route
           path="/login"
-          component={Login}
+          render={({ history }) =>
+            <Login history={history} />
+          }
         />
         <Route
           path="/dashboard"

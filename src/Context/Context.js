@@ -64,7 +64,7 @@ export class Provider extends React.Component {
         })
     }
 
-    handleSubmitJwtAuth = (e) => {
+    handleSubmitJwtAuth = (e, history) => {
         e.preventDefault();
         const loginEmailInput = this.state.loginEmail;
         const loginPasswordInput = this.state.loginPassword;
@@ -76,6 +76,7 @@ export class Provider extends React.Component {
             .then(res => {
                 TokenService.saveAuthToken(res.authToken)
             })
+            .then(() => history.push('/dashboard'))
             .catch(res => {
                 this.setState({
                     error: res.error
