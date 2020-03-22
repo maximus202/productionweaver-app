@@ -64,17 +64,16 @@ export class Provider extends React.Component {
 
     handleSubmitJwtAuth = (e) => {
         e.preventDefault();
-        this.setState({ error: null });
         const loginEmailInput = this.state.loginEmail;
         const loginPasswordInput = this.state.loginPassword;
         const data = {
             'email': loginEmailInput,
             'password': loginPasswordInput
         }
-        console.log(data)
         AuthApiService.postLogin({ data })
             .then(res => {
-                console.log(res)
+                email.value = ''
+                password.value = ''
             })
     }
 

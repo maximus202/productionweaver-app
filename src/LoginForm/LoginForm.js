@@ -12,11 +12,13 @@ class LoginForm extends Component {
                             <header>
                                 <h1>Login</h1>
                             </header>
-                            <form onSubmit={(e) => value.handleSubmitJwtAuth(e)}>
-                                <input type="email" id="email" name="email" placeholder="Email address" onChange={value.handleSubmitLoginEmail} required />
-                                <input type="password" id="password" name="password" placeholder="Password" onChange={value.handleSubmitLoginPassword} required />
-                                <input type="submit" id="login" name="login" placeholder="Login" />
-                            </form>
+                            <section>
+                                <form onSubmit={(e) => value.handleSubmitJwtAuth(e)}>
+                                    <input type="email" id="email" name="email" placeholder="Email address" onChange={value.handleSubmitLoginEmail} required />
+                                    <input type="password" id="password" name="password" placeholder="Password" onChange={value.handleSubmitLoginPassword} required />
+                                    <input type="submit" id="login" name="login" placeholder="Login" />
+                                </form>
+                            </section>
                             <Link to="/sign-up">New user? Sign up!</Link>
                         </main>
                     )
