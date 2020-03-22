@@ -1,6 +1,7 @@
 import React from 'react';
 import { API_BASE_URL } from '../config';
 import AuthApiService from '../services/auth-api-service';
+import TokenService from '../services/token-service';
 
 export const Context = React.createContext()
 
@@ -21,7 +22,8 @@ export class Provider extends React.Component {
             handlePasswordInputChange: this.handlePasswordInputChange,
             handleSubmitNewUser: this.handleSubmitNewUser,
             handleSubmitLoginEmail: this.handleSubmitLoginEmail,
-            handleSubmitLoginPassword: this.handleSubmitLoginPassword
+            handleSubmitLoginPassword: this.handleSubmitLoginPassword,
+            handleSubmitJwtAuth: this.handleSubmitJwtAuth
         }
     }
 
@@ -72,8 +74,12 @@ export class Provider extends React.Component {
         }
         AuthApiService.postLogin({ data })
             .then(res => {
-                email.value = ''
-                password.value = ''
+                TokenService.saveAuthToken(res.authToken)
+            })
+            .catch(res => {
+                this.setState({
+                    error: res.error
+                })
             })
     }
 
