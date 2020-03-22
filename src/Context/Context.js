@@ -71,6 +71,7 @@ export class Provider extends React.Component {
             'email': loginEmailInput,
             'password': loginPasswordInput
         }
+        console.log(data)
         AuthApiService.postLogin({ data })
             .then(res => {
                 console.log(res)
