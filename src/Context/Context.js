@@ -1,5 +1,6 @@
 import React from 'react';
 import { API_BASE_URL } from '../config';
+import AuthApiService from '../services/auth-api-service';
 
 export const Context = React.createContext()
 
@@ -12,11 +13,15 @@ export class Provider extends React.Component {
             lastName: '',
             email: '',
             password: '',
+            loginEmail: '',
+            loginPassword: '',
             handleFirstNameInputChange: this.handleFirstNameInputChange,
             handleLastNameInputChange: this.handleLastNameInputChange,
             handleEmailInputChange: this.handleEmailInputChange,
             handlePasswordInputChange: this.handlePasswordInputChange,
-            handleSubmitNewUser: this.handleSubmitNewUser
+            handleSubmitNewUser: this.handleSubmitNewUser,
+            handleSubmitLoginEmail: this.handleSubmitLoginEmail,
+            handleSubmitLoginPassword: this.handleSubmitLoginPassword
         }
     }
 
@@ -43,6 +48,33 @@ export class Provider extends React.Component {
         this.setState({
             password: event.target.value
         })
+    }
+
+    handleSubmitLoginEmail = (event) => {
+        this.setState({
+            loginEmail: event.target.value
+        })
+    }
+
+    handleSubmitLoginPassword = (event) => {
+        this.setState({
+            loginPassword: event.target.value
+        })
+    }
+
+    handleSubmitJwtAuth = (e) => {
+        e.preventDefault();
+        this.setState({ error: null });
+        const loginEmailInput = this.state.loginEmail;
+        const loginPasswordInput = this.state.loginPassword;
+        const data = {
+            'email': loginEmailInput,
+            'password': loginPasswordInput
+        }
+        AuthApiService.postLogin({ data })
+            .then(res => {
+                console.log(res)
+            })
     }
 
     handleSubmitNewUser = (e, history) => {
