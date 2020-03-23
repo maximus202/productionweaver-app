@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ProductionsList.css';
-import PROJECTS from '../projects';
 import { Context } from '../Context/Context';
 import { API_BASE_URL } from '../config';
 import TokenService from '../services/token-service';

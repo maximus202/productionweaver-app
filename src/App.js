@@ -6,7 +6,7 @@ import LandingPage from './LandingPage/LandingPage';
 import AccountSignUp from './AccountSignUp/AccountSignUp';
 import Login from './Login/Login';
 import AccountDashboard from './AccountDashboard/AccountDashboard';
-import AddProject from './AddProject/AddProject';
+import AddProduction from './AddProduction/AddProduction';
 import ProjectOverview from './ProjectOverview/ProjectOverview';
 import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
 import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
@@ -42,8 +42,10 @@ function App() {
           component={AccountDashboard}
         />
         <Route
-          path="/add-project"
-          component={AddProject}
+          path="/add-production"
+          render={({ history }) =>
+            <AddProduction history={history} />
+          }
         />
         <Route
           exact path="/project/:projectId"

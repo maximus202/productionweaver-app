@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer.js';
-import AddProjectForm from '../AddProjectForm/AddProjectForm';
+import AddProductionForm from '../AddProductionForm/AddProductionForm';
 
-class AddProject extends Component {
+class AddProduction extends Component {
     render() {
         return (
             <>
                 <NavBar />
-                <AddProjectForm />
+                <AddProductionForm history={this.props.history} />
                 <Footer />
             </>
         )
     }
 }
 
-export default AddProject;
+export default AddProduction;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProductionsList from '../ProductionsList/ProductionsList';
+import { Link } from 'react-router-dom';
 
 class DashboardContent extends Component {
     render() {
@@ -10,7 +11,7 @@ class DashboardContent extends Component {
                 </header>
                 <section className="module-header">
                     <h2>Productions</h2>
-                    <button>Add production</button>
+                    <Link to="/add-production">Add production</Link>
                 </section>
                 <section>
                     <ProductionsList />

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AddProjectForm from './AddProjectForm';
+import AddProjectForm from './AddProductionForm';
 
 describe('AddProjectForm', () => {
     it('renders without crashing', () => {
