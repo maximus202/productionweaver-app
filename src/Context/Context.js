@@ -1,5 +1,6 @@
 import React from 'react';
 import { API_BASE_URL } from '../config';
+import { TOKEN_KEY } from '../config';
 import AuthApiService from '../services/auth-api-service';
 import TokenService from '../services/token-service';
 
@@ -10,6 +11,7 @@ export class Provider extends React.Component {
         super(props);
         this.state = {
             users: [],
+            productions: [],
             firstName: '',
             lastName: '',
             email: '',
@@ -23,7 +25,8 @@ export class Provider extends React.Component {
             handleSubmitNewUser: this.handleSubmitNewUser,
             handleSubmitLoginEmail: this.handleSubmitLoginEmail,
             handleSubmitLoginPassword: this.handleSubmitLoginPassword,
-            handleSubmitJwtAuth: this.handleSubmitJwtAuth
+            handleSubmitJwtAuth: this.handleSubmitJwtAuth,
+            handleGetProductions: this.handleGetProductions
         }
     }
 
@@ -61,6 +64,12 @@ export class Provider extends React.Component {
     handleSubmitLoginPassword = (event) => {
         this.setState({
             loginPassword: event.target.value
+        })
+    }
+
+    handleGetProductions = (productions) => {
+        this.setState({
+            productions: productions
         })
     }
 
@@ -125,7 +134,6 @@ export class Provider extends React.Component {
                 console.error({ error })
             })
     }
-
 
     render() {
         return (

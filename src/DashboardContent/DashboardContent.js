@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import ProjectsList from '../ProjectsList/ProjectsList';
+import ProductionsList from '../ProductionsList/ProductionsList';
 
 class DashboardContent extends Component {
     render() {
         return (
             <main>
                 <header>
-                    <h1>Good afternoon</h1>
+                    <h1>Dashboard</h1>
                 </header>
                 <section className="module-header">
-                    <h2>Projects</h2>
-                    <button>Add project</button>
+                    <h2>Productions</h2>
+                    <button>Add production</button>
                 </section>
                 <section>
-                    <ProjectsList />
+                    <ProductionsList />
                 </section>
             </main>
         )
