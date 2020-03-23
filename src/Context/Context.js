@@ -18,6 +18,7 @@ export class Provider extends React.Component {
             password: '',
             loginEmail: '',
             loginPassword: '',
+            newProductionTitle: '',
             handleFirstNameInputChange: this.handleFirstNameInputChange,
             handleLastNameInputChange: this.handleLastNameInputChange,
             handleEmailInputChange: this.handleEmailInputChange,
@@ -26,7 +27,9 @@ export class Provider extends React.Component {
             handleSubmitLoginEmail: this.handleSubmitLoginEmail,
             handleSubmitLoginPassword: this.handleSubmitLoginPassword,
             handleSubmitJwtAuth: this.handleSubmitJwtAuth,
-            handleGetProductions: this.handleGetProductions
+            handleGetProductions: this.handleGetProductions,
+            handleNewProductionTitle: this.handleNewProductionTitle,
+            handleSubmitNewProduction: this.handleSubmitNewProduction
         }
     }
 
@@ -71,6 +74,47 @@ export class Provider extends React.Component {
         this.setState({
             productions: productions
         })
+    }
+
+    handleNewProductionTitle = (event) => {
+        this.setState({
+            newProductionTitle: event.target.value
+        })
+    }
+
+    handleSubmitNewProduction = (e, history) => {
+        e.preventDefault();
+        const newProductionTitleInput = this.state.newProductionTitle;
+        const data = {
+            'production_title': newProductionTitleInput
+        }
+
+        fetch(`${API_BASE_URL}/api/productions/`, {
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(data),
+            method: 'POST',
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    return response
+                        .json()
+                        .then(responseJson => Promise.reject(new Error(responseJson)))
+                }
+            })
+            .then(responseJson => {
+                this.setState({
+                    productions: [...this.state.productions, responseJson]
+                })
+            })
+            .then(() => history.push('/dashboard'))
+            .catch(error => {
+                console.error({ error })
+            })
     }
 
     handleSubmitJwtAuth = (e, history) => {
