@@ -12,6 +12,7 @@ import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
 import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
 import { Provider } from './Context/Context'
 import RegistrationSuccess from './RegistrationSuccess/RegistrationSuccess';
+import AddScene from './AddScene/AddScene';
 
 function App() {
   return (
@@ -58,8 +59,14 @@ function App() {
             <ScriptBreakdown history={history} />}
         />
         <Route
-          exact path="/script-breakdown/:projectId/scene-breakdown/:sceneId"
-          component={SceneBreakdown}
+          exact path="/add-scene"
+          render={({ history }) =>
+            <AddScene history={history} />}
+        />
+        <Route
+          exact path="/elements/:sceneId"
+          render={({ history }) =>
+            <SceneBreakdown history={history} />}
         />
       </Provider>
     </>

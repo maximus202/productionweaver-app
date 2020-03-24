@@ -9,7 +9,7 @@ class SceneBreakdown extends Component {
         return (
             <>
                 <NavBar />
-                <BreakdownCategories scene={this.props.match.params} />
+                <BreakdownCategories history={this.props.history} />
                 <Footer />
             </>
         )

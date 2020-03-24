@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ScenesList from '../ScenesList/ScenesList';
 import PROJECTS from '../projects';
 import { API_BASE_URL } from '../config';
 import TokenService from '../services/token-service';
@@ -71,17 +70,3 @@ class Scenes extends Component {
 }
 
 export default Scenes;
-
-/*< main >
-                <header>
-                    <h1>{project.projectName}</h1>
-                    <p className="header-subtitle">Script breakdown</p>
-                </header>
-                <section className="module-header">
-                    <h2>Scenes</h2>
-                    <button>Add scene</button>
-                </section>
-                <section>
-                    <ScenesList project={project} />
-                </section>
-            </main>*/
