@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer.js';
-import ProjectOverviewContent from '../ProjectOverviewContent/ProjectOverviewContent';
+import ProductionOverviewContent from '../ProductionOverviewContent/ProductionOverviewContent';
 
-class ProjectOverview extends Component {
+class ProductionOverview extends Component {
     render() {
         console.log(this.props.match.params)
         return (
             <>
                 <NavBar />
-                <ProjectOverviewContent project={this.props.match.params} />
+                <ProductionOverviewContent project={this.props.match.params} />
                 <Footer />
             </>
         )
     }
 }
 
-export default ProjectOverview;
+export default ProductionOverview;

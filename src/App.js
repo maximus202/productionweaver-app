@@ -7,7 +7,7 @@ import AccountSignUp from './AccountSignUp/AccountSignUp';
 import Login from './Login/Login';
 import AccountDashboard from './AccountDashboard/AccountDashboard';
 import AddProduction from './AddProduction/AddProduction';
-import ProjectOverview from './ProjectOverview/ProjectOverview';
+import ProductionOverview from './ProductionOverview/ProductionOverview';
 import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
 import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
 import { Provider } from './Context/Context'
@@ -48,8 +48,8 @@ function App() {
           }
         />
         <Route
-          exact path="/project/:projectId"
-          component={ProjectOverview}
+          exact path="/production/:productionId"
+          component={ProductionOverview}
         />
         <Route
           exact path="/script-breakdown/:projectId"

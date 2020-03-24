@@ -40,7 +40,7 @@ class ProductionsList extends Component {
                             {
                                 value.productions.map(production =>
                                     <section className="project-item" key={production.id}>
-                                        <a href={`/project/${production.id}`}>
+                                        <a href={`/production/${production.id}`}>
                                             <img src="project-icon.png" alt="Production" className="project-icon" />
                                             <h3>{production.production_title}</h3>
                                         </a>

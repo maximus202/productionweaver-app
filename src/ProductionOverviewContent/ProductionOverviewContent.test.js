@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import ProjectOverviewContent from './ProjectOverviewContent';
+import ProjectOverviewContent from './ProductionOverviewContent';
 
 describe('ProjectOverviewContent', () => {
     it('renders without crashing', () => {

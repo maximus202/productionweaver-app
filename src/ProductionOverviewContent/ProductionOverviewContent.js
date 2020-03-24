@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ProjectOverviewContent.css';
+import './ProductionOverviewContent.css';
 import ProductionTools from '../ProductionTools/ProductionTools';
 import PROJECTS from '../projects';
 
