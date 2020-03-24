@@ -5,11 +5,10 @@ import ProductionOverviewContent from '../ProductionOverviewContent/ProductionOv
 
 class ProductionOverview extends Component {
     render() {
-        console.log(this.props.match.params)
         return (
             <>
                 <NavBar />
-                <ProductionOverviewContent project={this.props.match.params} />
+                <ProductionOverviewContent history={this.props.history} />
                 <Footer />
             </>
         )

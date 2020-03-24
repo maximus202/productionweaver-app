@@ -3,6 +3,8 @@ import './ProductionsList.css';
 import { Context } from '../Context/Context';
 import { API_BASE_URL } from '../config';
 import TokenService from '../services/token-service';
+import ProductionOverviewContent from '../ProductionOverviewContent/ProductionOverviewContent';
+import { Link } from 'react-router-dom';
 
 class ProductionsList extends Component {
     static contextType = Context;
@@ -40,10 +42,10 @@ class ProductionsList extends Component {
                             {
                                 value.productions.map(production =>
                                     <section className="project-item" key={production.id}>
-                                        <a href={`/production/${production.id}`}>
+                                        <Link to={`/productions/${production.id}`}>
                                             <img src="project-icon.png" alt="Production" className="project-icon" />
                                             <h3>{production.production_title}</h3>
-                                        </a>
+                                        </Link>
                                     </section>
                                 )
                             }
