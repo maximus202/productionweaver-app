@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './ProductionOverviewContent.css';
-import ProductionTools from '../ProductionTools/ProductionTools';
 import { Context } from '../Context/Context';
 import { API_BASE_URL } from '../config';
 import TokenService from '../services/token-service';
-import PROJECTS from '../projects';
 import { Link } from 'react-router-dom';
 
 class ProductionOverviewContent extends Component {
@@ -29,7 +27,7 @@ class ProductionOverviewContent extends Component {
                 }
             })
             .then(responseJson => {
-                this.context.handleGetProductions(responseJson)
+                this.context.handleDisplayedProduction(responseJson)
             })
             .catch(error => {
                 console.log({ error })
@@ -43,14 +41,14 @@ class ProductionOverviewContent extends Component {
                     return (
                         < main >
                             <header>
-                                <h1>{value.productions.production_title}</h1>
+                                <h1>{value.displayedProduction.production_title}</h1>
                                 <p className="header-subtitle">Project overview</p>
                             </header>
                             <section className="module-header">
                                 <h2>Production Tools</h2>
                             </section>
                             <section>
-                                <h3><Link to={`/script-breakdown/${value.productions.id}`}>Script breakdown</Link></h3>
+                                <h3><Link to={`/script-breakdown/${value.displayedProduction.id}`}>Script breakdown</Link></h3>
                             </section>
                         </main >
                     )
@@ -61,3 +59,16 @@ class ProductionOverviewContent extends Component {
 }
 
 export default ProductionOverviewContent;
+
+/*< main >
+                            <header>
+                                <h1>{value.displayProductions.production_title}</h1>
+                                <p className="header-subtitle">Project overview</p>
+                            </header>
+                            <section className="module-header">
+                                <h2>Production Tools</h2>
+                            </section>
+                            <section>
+                                <h3><Link to={`/script-breakdown/${value.displayProductions.id}`}>Script breakdown</Link></h3>
+                            </section>
+                        </main >*/

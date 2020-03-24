@@ -12,6 +12,7 @@ export class Provider extends React.Component {
         this.state = {
             users: [],
             productions: [],
+            displayedProduction: [],
             firstName: '',
             lastName: '',
             email: '',
@@ -29,7 +30,8 @@ export class Provider extends React.Component {
             handleSubmitJwtAuth: this.handleSubmitJwtAuth,
             handleGetProductions: this.handleGetProductions,
             handleNewProductionTitle: this.handleNewProductionTitle,
-            handleSubmitNewProduction: this.handleSubmitNewProduction
+            handleSubmitNewProduction: this.handleSubmitNewProduction,
+            handleDisplayedProduction: this.handleDisplayedProduction
         }
     }
 
@@ -79,6 +81,12 @@ export class Provider extends React.Component {
     handleNewProductionTitle = (event) => {
         this.setState({
             newProductionTitle: event.target.value
+        })
+    }
+
+    handleDisplayedProduction = (production) => {
+        this.setState({
+            displayedProduction: production
         })
     }
 
