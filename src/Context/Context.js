@@ -22,6 +22,10 @@ export class Provider extends React.Component {
             loginEmail: '',
             loginPassword: '',
             newProductionTitle: '',
+            newSceneSetting: '',
+            newSceneLocation: '',
+            newSceneTimeOfDay: '',
+            newSceneShortSummary: '',
             handleFirstNameInputChange: this.handleFirstNameInputChange,
             handleLastNameInputChange: this.handleLastNameInputChange,
             handleEmailInputChange: this.handleEmailInputChange,
@@ -34,7 +38,12 @@ export class Provider extends React.Component {
             handleNewProductionTitle: this.handleNewProductionTitle,
             handleSubmitNewProduction: this.handleSubmitNewProduction,
             handleDisplayedProduction: this.handleDisplayedProduction,
-            handleGetScenes: this.handleGetScenes
+            handleGetScenes: this.handleGetScenes,
+            handleNewSceneSettingInput: this.handleNewSceneSettingInput,
+            handleNewSceneLocationInput: this.handleNewSceneLocationInput,
+            handleNewSceneTimeOfDayInput: this.handleNewSceneTimeOfDayInput,
+            handleNewSceneShortSummaryInput: this.handleNewSceneShortSummaryInput,
+            handleSubmitNewScene: this.handleSubmitNewScene
         }
     }
 
@@ -75,6 +84,36 @@ export class Provider extends React.Component {
         })
     }
 
+    handleNewProductionTitle = (event) => {
+        this.setState({
+            newProductionTitle: event.target.value
+        })
+    }
+
+    handleNewSceneSettingInput = (event) => {
+        this.setState({
+            newSceneSetting: event.target.value
+        })
+    }
+
+    handleNewSceneLocationInput = (event) => {
+        this.setState({
+            newSceneLocation: event.target.value
+        })
+    }
+
+    handleNewSceneTimeOfDayInput = (event) => {
+        this.setState({
+            newSceneTimeOfDay: event.target.value
+        })
+    }
+
+    handleNewSceneShortSummaryInput = (event) => {
+        this.setState({
+            newSceneShortSummary: event.target.value
+        })
+    }
+
     handleGetProductions = (productions) => {
         this.setState({
             productions: productions
@@ -84,12 +123,6 @@ export class Provider extends React.Component {
     handleGetScenes = (scenes) => {
         this.setState({
             scenes: scenes
-        })
-    }
-
-    handleNewProductionTitle = (event) => {
-        this.setState({
-            newProductionTitle: event.target.value
         })
     }
 
@@ -191,6 +224,49 @@ export class Provider extends React.Component {
                 })
             })
             .then(() => history.push('/registrationsuccess'))
+            .catch(error => {
+                console.error({ error })
+            })
+    }
+
+    handleSubmitNewScene = (e, history) => {
+        e.preventDefault();
+        const settingInput = this.state.newSceneSetting;
+        const locationInput = this.state.newSceneLocation;
+        const timeOfDayInput = this.state.newSceneTimeOfDay;
+        const shortSummaryInput = this.state.newSceneShortSummary;
+        const url = `${API_BASE_URL}/api/scenes${this.props.history.location.pathname}`;
+        const data = {
+            'setting': settingInput,
+            'location': locationInput,
+            'time_of_day': timeOfDayInput,
+            'short_summary': shortSummaryInput
+        };
+        const otherParams = {
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(data),
+            method: 'POST',
+        }
+
+        fetch(url, otherParams)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    return response
+                        .json()
+                        .then(responseJson => Promise.reject(new Error(responseJson)))
+                }
+            })
+            .then(responseJson => {
+                this.setState({
+                    scenes: [...this.state.users, responseJson]
+                })
+            })
+            .then(() => history.push(this.props.history.location.pathname))
             .catch(error => {
                 console.error({ error })
             })

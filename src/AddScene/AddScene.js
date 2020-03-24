@@ -8,7 +8,7 @@ class AddScene extends Component {
         return (
             <>
                 <NavBar />
-                <AddSceneForm />
+                <AddSceneForm history={this.props.history} />
                 <Footer />
             </>
         )
