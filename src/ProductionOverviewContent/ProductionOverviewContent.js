@@ -32,6 +32,29 @@ class ProductionOverviewContent extends Component {
             .catch(error => {
                 console.log({ error })
             })
+
+        fetch(`${API_BASE_URL}/api${this.props.history.location.pathname}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    return response
+                        .json()
+                        .then(responseJson => Promise.reject(new Error(responseJson)))
+                }
+            })
+            .then(responseJson => {
+                this.context.handleDisplayedScenes(responseJson)
+            })
+            .catch(error => {
+                console.log({ error })
+            })
     }
 
     render() {
@@ -40,6 +63,7 @@ class ProductionOverviewContent extends Component {
                 {(value) => {
                     return (
                         < main >
+                            {console.log(value.productions)}
                             <header>
                                 <h1>{value.displayedProduction.production_title}</h1>
                                 <p className="header-subtitle">Project overview</p>
@@ -48,7 +72,7 @@ class ProductionOverviewContent extends Component {
                                 <h2>Production Tools</h2>
                             </section>
                             <section>
-                                <h3><Link to={`/script-breakdown/${value.displayedProduction.id}`}>Script breakdown</Link></h3>
+                                <h3><Link to={`/scenes/${value.displayedProduction.id}`}>Script breakdown</Link></h3>
                             </section>
                         </main >
                     )

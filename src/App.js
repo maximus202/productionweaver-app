@@ -53,8 +53,9 @@ function App() {
             <ProductionOverview history={history} />}
         />
         <Route
-          exact path="/script-breakdown/:projectId"
-          component={ScriptBreakdown}
+          exact path="/scenes/:productionId"
+          render={({ history }) =>
+            <ScriptBreakdown history={history} />}
         />
         <Route
           exact path="/script-breakdown/:projectId/scene-breakdown/:sceneId"

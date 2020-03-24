@@ -12,6 +12,8 @@ export class Provider extends React.Component {
         this.state = {
             users: [],
             productions: [],
+            scenes: [],
+            elements: [],
             displayedProduction: [],
             firstName: '',
             lastName: '',
@@ -31,7 +33,8 @@ export class Provider extends React.Component {
             handleGetProductions: this.handleGetProductions,
             handleNewProductionTitle: this.handleNewProductionTitle,
             handleSubmitNewProduction: this.handleSubmitNewProduction,
-            handleDisplayedProduction: this.handleDisplayedProduction
+            handleDisplayedProduction: this.handleDisplayedProduction,
+            handleGetScenes: this.handleGetScenes
         }
     }
 
@@ -75,6 +78,12 @@ export class Provider extends React.Component {
     handleGetProductions = (productions) => {
         this.setState({
             productions: productions
+        })
+    }
+
+    handleGetScenes = (scenes) => {
+        this.setState({
+            scenes: scenes
         })
     }
 
