@@ -59,16 +59,3 @@ class ProductionOverviewContent extends Component {
 }
 
 export default ProductionOverviewContent;
-
-/*< main >
-                            <header>
-                                <h1>{value.displayProductions.production_title}</h1>
-                                <p className="header-subtitle">Project overview</p>
-                            </header>
-                            <section className="module-header">
-                                <h2>Production Tools</h2>
-                            </section>
-                            <section>
-                                <h3><Link to={`/script-breakdown/${value.displayProductions.id}`}>Script breakdown</Link></h3>
-                            </section>
-                        </main >*/
