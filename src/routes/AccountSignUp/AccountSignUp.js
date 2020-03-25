@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from '../Context/Context';
+import { Context } from '../../Context/Context';
 import './AccountSignUp.css';
 
 class AccountSignUp extends Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from './NavBar.js';
+import NavBar from './NavBar.js.js';
 
 describe('NavBar', () => {
     it('renders without crashing', () => {

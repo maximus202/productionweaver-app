@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import PrivateRoute from './components/Utils/PrivateRoute';
-import NavBar from './NavBar/NavBar';
-import Footer from './Footer/Footer.js';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer.js';
 import LandingPage from './routes/LandingPage/LandingPage';
-import AccountSignUp from './AccountSignUp/AccountSignUp';
-import Login from './Login/Login';
+import AccountSignUp from './routes/AccountSignUp/AccountSignUp';
+import Login from './routes/Login/Login';
 import AccountDashboardPage from './routes/AccountDashboardPage/AccountDashboardPage';
 import AddProduction from './AddProduction/AddProduction';
 import ProductionPage from './routes/ProductionPage/ProductionPage';

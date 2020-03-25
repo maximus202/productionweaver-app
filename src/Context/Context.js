@@ -53,6 +53,7 @@ export class Provider extends React.Component {
             setError: this.setError,
             clearError: this.clearError,
             setProduction: this.setProduction,
+            clearProduction: this.clearProduction,
             setScenesList: this.setScenesList,
 
         }

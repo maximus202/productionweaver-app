@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from '../NavBar/NavBar';
-import Footer from '../Footer/Footer.js';
+import NavBar from '../components/NavBar/NavBar';
+import Footer from '../components/Footer/Footer.js';
 import BreakdownCategories from '../BreakdownCategories/BreakdownCategories.js';
 
 class SceneBreakdown extends Component {

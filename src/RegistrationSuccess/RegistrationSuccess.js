@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../components/NavBar/NavBar';
 import './RegistrationSuccess.css';
 import { Link } from 'react-router-dom';
-import Footer from '../Footer/Footer';
+import Footer from '../components/Footer/Footer';
 
 class RegistrationSuccess extends Component {
     render() {
