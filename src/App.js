@@ -26,9 +26,7 @@ function App() {
         />
         <Route
           path="/sign-up"
-          render={({ history }) =>
-            <AccountSignUp history={history} />
-          }
+          component={AccountSignUp}
         />
         <Route
           path="/registrationsuccess"

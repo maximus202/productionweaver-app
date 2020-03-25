@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
-import NavBar from '../NavBar/NavBar';
-import AccountSignUpForm from '../AccountSignUpForm/AccountSignUpForm';
-import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
+import { Context } from '../Context/Context';
+import './AccountSignUp.css';
 
 class AccountSignUp extends Component {
     render() {
         return (
             <>
-                <NavBar />
-                <AccountSignUpForm history={this.props.history} />
-                <Footer />
+                <Context.Consumer>
+                    {(value) => {
+                        return (
+                            <main>
+                                <header>
+                                    <h1>Account Sign Up</h1>
+                                </header>
+                                <section>
+                                    <form onSubmit={(e) => value.handleSubmitNewUser(e, this.props.history)}>
+                                        <input type="text" id="first-name" name="first-name" placeholder="First name" onChange={value.handleFirstNameInputChange} required />
+                                        <input type="text" id="last-name" name="last-name" placeholder="Last name" onChange={value.handleLastNameInputChange} required />
+                                        <input type="email" id="email" name="email" placeholder="Email address" onChange={value.handleEmailInputChange} required />
+                                        <input type="password" id="password" name="password" placeholder="Password" onChange={value.handlePasswordInputChange} required />
+                                        <input type="submit" id="submit" name="submit" placeholder="Submit" />
+                                    </form>
+                                    <Link to="/login">Existing user? Login here!</Link>
+                                </section>
+                            </main>
+                        )
+                    }
+                    }
+                </Context.Consumer>
             </>
         )
     }
