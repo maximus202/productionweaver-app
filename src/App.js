@@ -59,7 +59,7 @@ function App() {
             <ScriptBreakdown history={history} />}
         />
         <Route
-          exact path="/add-scene"
+          exact path="/add-scene/scenes/:productionId"
           render={({ history }) =>
             <AddScene history={history} />}
         />

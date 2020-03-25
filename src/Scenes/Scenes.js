@@ -39,14 +39,14 @@ class Scenes extends Component {
                     return (
                         < main >
                             {console.log(value.scenes)}
-                            {console.log(value.productions)}
+                            {console.log(value.displayedProduction)}
                             <header>
                                 <h1>project.projectName</h1>
                                 <p className="header-subtitle">Script breakdown</p>
                             </header>
                             <section className="module-header">
                                 <h2>Scenes</h2>
-                                <button>Add scene</button>
+                                <Link to={`/add-scene/${value.displayedProduction.id}`}>Add scene</Link>
                             </section>
                             <section>
                                 {value.scenes.map(scene =>

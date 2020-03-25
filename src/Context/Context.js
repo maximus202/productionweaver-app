@@ -230,12 +230,13 @@ export class Provider extends React.Component {
     }
 
     handleSubmitNewScene = (e, history) => {
+        console.log(history.location.pathname)
         e.preventDefault();
         const settingInput = this.state.newSceneSetting;
         const locationInput = this.state.newSceneLocation;
         const timeOfDayInput = this.state.newSceneTimeOfDay;
         const shortSummaryInput = this.state.newSceneShortSummary;
-        const url = `${API_BASE_URL}/api/scenes${this.props.history.location.pathname}`;
+        const url = `${API_BASE_URL}/api/scenes${history.location.pathname}`;
         const data = {
             'setting': settingInput,
             'location': locationInput,
@@ -266,7 +267,7 @@ export class Provider extends React.Component {
                     scenes: [...this.state.users, responseJson]
                 })
             })
-            .then(() => history.push(this.props.history.location.pathname))
+            .then(() => history.goBack())
             .catch(error => {
                 console.error({ error })
             })
