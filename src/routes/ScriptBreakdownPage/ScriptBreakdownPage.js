@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer.js';
-import Scenes from '../../Scenes/Scenes.js';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import SceneListItem from '../../components/SceneListItem/SceneListItem';
