@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import PrivateRoute from './components/Utils/PrivateRoute';
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer.js';
 import LandingPage from './LandingPage/LandingPage';
@@ -17,6 +18,7 @@ import AddScene from './AddScene/AddScene';
 function App() {
   return (
     <>
+      <NavBar />
       <Provider>
         <Route
           exact path="/"
@@ -38,30 +40,30 @@ function App() {
             <Login history={history} />
           }
         />
-        <Route
+        <PrivateRoute
           exact path="/dashboard"
           component={AccountDashboardPage}
         />
-        <Route
+        <PrivateRoute
           exact path="/production/:productionId"
           component={ProductionPage}
         />
-        <Route
+        <PrivateRoute
           path="/add-production"
           render={({ history }) =>
             <AddProduction history={history} />
           }
         />
-        <Route
+        <PrivateRoute
           exact path="/script-breakdown/:productionId"
           component={ScriptBreakdownPage}
         />
-        <Route
+        <PrivateRoute
           exact path="/add-scene/:productionId"
           render={({ history }) =>
             <AddScene history={history} />}
         />
-        <Route
+        <PrivateRoute
           exact path="/scene-breakdown/:productionId/:sceneId"
           render={({ history }) =>
             <SceneBreakdown history={history} />}
