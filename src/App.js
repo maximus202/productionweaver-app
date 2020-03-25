@@ -21,7 +21,7 @@ function App() {
       <NavBar />
       <Provider>
         <Route
-          exact path="/"
+          exact path="/home"
           component={LandingPage}
         />
         <Route
@@ -41,7 +41,7 @@ function App() {
           }
         />
         <PrivateRoute
-          exact path="/dashboard"
+          exact path="/"
           component={AccountDashboardPage}
         />
         <PrivateRoute

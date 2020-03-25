@@ -218,7 +218,7 @@ export class Provider extends React.Component {
                     productions: [...this.state.productions, responseJson]
                 })
             })
-            .then(() => history.push('/dashboard'))
+            .then(() => history.push('/'))
             .catch(error => {
                 console.error({ error })
             })
@@ -236,7 +236,7 @@ export class Provider extends React.Component {
             .then(res => {
                 TokenService.saveAuthToken(res.authToken)
             })
-            .then(() => history.push('/dashboard'))
+            .then(() => history.push('/'))
             .catch(res => {
                 this.setState({
                     error: res.error
