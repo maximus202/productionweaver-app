@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import PrivateRoute from './components/Utils/PrivateRoute';
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer.js';
-import LandingPage from './LandingPage/LandingPage';
+import LandingPage from './routes/LandingPage/LandingPage';
 import AccountSignUp from './AccountSignUp/AccountSignUp';
 import Login from './Login/Login';
 import AccountDashboardPage from './routes/AccountDashboardPage/AccountDashboardPage';
@@ -69,6 +69,7 @@ function App() {
             <SceneBreakdown history={history} />}
         />
       </Provider>
+      <Footer />
     </>
   );
 }
