@@ -34,9 +34,7 @@ function App() {
         />
         <Route
           path="/login"
-          render={({ history }) =>
-            <Login history={history} />
-          }
+          component={Login}
         />
         <PrivateRoute
           exact path="/"
