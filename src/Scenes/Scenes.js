@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom';
 
 class Scenes extends Component {
     static contextType = Context;
+
     componentDidMount() {
-        fetch(`${API_BASE_URL}/api${this.props.history.location.pathname}`, {
+        fetch(`${API_BASE_URL}/api/scenes${this.props.history.location.pathname}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',
@@ -25,7 +26,7 @@ class Scenes extends Component {
                 }
             })
             .then(responseJson => {
-                this.context.handleGetScenes(responseJson)
+                this.context.handleGetDisplayedScenes(responseJson)
             })
             .catch(error => {
                 console.log({ error })
@@ -38,21 +39,18 @@ class Scenes extends Component {
                 {(value) => {
                     return (
                         < main >
-                            {console.log(value.scenes)}
-                            {console.log(value.displayedProduction)}
                             <header>
-                                <h1>project.projectName</h1>
-                                <p className="header-subtitle">Script breakdown</p>
+                                {console.log(value.displayedProductions)}
+                                <h1>Script breakdown</h1>
                             </header>
                             <section className="module-header">
-                                <h2>Scenes</h2>
-                                <Link to={`/add-scene/${value.displayedProduction.id}`}>Add scene</Link>
+                                <Link to={`/add-scene/`}>Add scene</Link>
                             </section>
                             <section>
-                                {value.scenes.map(scene =>
+                                {value.displayedScenes.map(scene =>
                                     <section className="scene-item" key={scene.id}>
-                                        <Link to={`/script-breakdown/${scene.production_id}/scene-breakdown/${scene.id}`}>
-                                            <p className="scene-number">{scene.id}</p>
+                                        <Link to={`/scene-breakdown/${scene.production_id}/${scene.id}`}>
+                                            <p className="scene-number">Scene {scene.id}</p>
                                             <div className="scene-and-short-summary">
                                                 <h3>{scene.setting} {scene.location} - {scene.time_of_day}</h3>
                                                 <p>{scene.short_summary}</p>

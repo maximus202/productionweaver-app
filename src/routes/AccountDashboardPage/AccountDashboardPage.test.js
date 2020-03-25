@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AccountDashboard from './AccountDashboard';
+import AccountDashboard from './AccountDashboardPage';
 
 describe('AccountDashboard', () => {
     it('renders without crashing', () => {

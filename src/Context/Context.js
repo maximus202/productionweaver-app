@@ -11,10 +11,14 @@ export class Provider extends React.Component {
         super(props);
         this.state = {
             users: [],
+            error: null,
+            productionList: [],
+            scenesList: [],
+            production: [],
             productions: [],
-            scenes: [],
-            elements: [],
             displayedProduction: [],
+            displayedScenes: [],
+            displayedElements: [],
             firstName: '',
             lastName: '',
             email: '',
@@ -37,13 +41,20 @@ export class Provider extends React.Component {
             handleGetProductions: this.handleGetProductions,
             handleNewProductionTitle: this.handleNewProductionTitle,
             handleSubmitNewProduction: this.handleSubmitNewProduction,
-            handleDisplayedProduction: this.handleDisplayedProduction,
-            handleGetScenes: this.handleGetScenes,
+            handleGetDisplayedProduction: this.handleGetDisplayedProduction,
+            handleGetDisplayedScenes: this.handleGetDisplayedScenes,
+            handleGetDisplayedElements: this.handleGetDisplayedElements,
             handleNewSceneSettingInput: this.handleNewSceneSettingInput,
             handleNewSceneLocationInput: this.handleNewSceneLocationInput,
             handleNewSceneTimeOfDayInput: this.handleNewSceneTimeOfDayInput,
             handleNewSceneShortSummaryInput: this.handleNewSceneShortSummaryInput,
-            handleSubmitNewScene: this.handleSubmitNewScene
+            handleSubmitNewScene: this.handleSubmitNewScene,
+            setProductionList: this.setProductionList,
+            setError: this.setError,
+            clearError: this.clearError,
+            setProduction: this.setProduction,
+            setScenesList: this.setScenesList,
+
         }
     }
 
@@ -120,16 +131,62 @@ export class Provider extends React.Component {
         })
     }
 
-    handleGetScenes = (scenes) => {
-        this.setState({
-            scenes: scenes
-        })
-    }
-
-    handleDisplayedProduction = (production) => {
+    handleGetDisplayedProduction = (production) => {
         this.setState({
             displayedProduction: production
         })
+    }
+
+    handleGetDisplayedScenes = (scenes) => {
+        this.setState({
+            displayedScenes: scenes
+        })
+    }
+
+    handleGetDisplayedElements = (elements) => {
+        this.setState({
+            displayedElements: elements
+        })
+    }
+
+    //Dashboard route handlers
+    setProductionList = productionList => {
+        this.setState({
+            productionList
+        })
+    }
+
+    setError = (error) => {
+        console.error(error)
+        this.setState({
+            error
+        })
+    }
+
+    clearError = () => {
+        this.setState({
+            error: null
+        })
+    }
+
+    //Production route handlers
+    setProduction = (production) => {
+        this.setState({ production })
+    }
+
+    clearProduction = () => {
+        this.setProduction(null)
+    }
+
+    //Script breakdown route handlers
+    setScenesList = (scenesList) => {
+        this.setState({
+            scenesList
+        })
+    }
+
+    clearScenesList = () => {
+        this.setScenesList(null)
     }
 
     handleSubmitNewProduction = (e, history) => {

@@ -5,10 +5,10 @@ import Footer from './Footer/Footer.js';
 import LandingPage from './LandingPage/LandingPage';
 import AccountSignUp from './AccountSignUp/AccountSignUp';
 import Login from './Login/Login';
-import AccountDashboard from './AccountDashboard/AccountDashboard';
+import AccountDashboardPage from './routes/AccountDashboardPage/AccountDashboardPage';
 import AddProduction from './AddProduction/AddProduction';
-import ProductionOverview from './ProductionOverview/ProductionOverview';
-import ScriptBreakdown from './ScriptBreakdown/ScriptBreakdown';
+import ProductionPage from './routes/ProductionPage/ProductionPage';
+import ScriptBreakdownPage from './routes/ScriptBreakdownPage/ScriptBreakdownPage';
 import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
 import { Provider } from './Context/Context'
 import RegistrationSuccess from './RegistrationSuccess/RegistrationSuccess';
@@ -39,8 +39,12 @@ function App() {
           }
         />
         <Route
-          path="/dashboard"
-          component={AccountDashboard}
+          exact path="/dashboard"
+          component={AccountDashboardPage}
+        />
+        <Route
+          exact path="/production/:productionId"
+          component={ProductionPage}
         />
         <Route
           path="/add-production"
@@ -49,22 +53,16 @@ function App() {
           }
         />
         <Route
-          exact path="/productions/:productionId"
-          render={({ history }) =>
-            <ProductionOverview history={history} />}
+          exact path="/script-breakdown/:productionId"
+          component={ScriptBreakdownPage}
         />
         <Route
-          exact path="/scenes/:productionId"
-          render={({ history }) =>
-            <ScriptBreakdown history={history} />}
-        />
-        <Route
-          exact path="/add-scene/scenes/:productionId"
+          exact path="/add-scene/:productionId"
           render={({ history }) =>
             <AddScene history={history} />}
         />
         <Route
-          exact path="/elements/:sceneId"
+          exact path="/scene-breakdown/:productionId/:sceneId"
           render={({ history }) =>
             <SceneBreakdown history={history} />}
         />

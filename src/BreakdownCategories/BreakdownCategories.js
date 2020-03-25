@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './BreakdownCategories.css';
 import PROJECTS from '../projects';
+import { API_BASE_URL } from '../config';
+import { Context } from '../Context/Context';
+import TokenService from '../services/token-service';
 
 class BreakdownCategories extends Component {
+    static contextType = Context;
+
     render() {
         const project = PROJECTS.find(project =>
             project.id === this.props.scene.projectId
