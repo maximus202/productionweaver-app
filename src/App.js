@@ -10,7 +10,7 @@ import AccountDashboardPage from './routes/AccountDashboardPage/AccountDashboard
 import AddProduction from './AddProduction/AddProduction';
 import ProductionPage from './routes/ProductionPage/ProductionPage';
 import ScriptBreakdownPage from './routes/ScriptBreakdownPage/ScriptBreakdownPage';
-import SceneBreakdown from './routes/SceneBreakdownPage/SceneBreakdownPage';
+import SceneBreakdownPage from './routes/SceneBreakdownPage/SceneBreakdownPage';
 import { Provider } from './Context/Context'
 import RegistrationSuccess from './routes/RegistrationSuccess/RegistrationSuccess';
 import AddScene from './AddScene/AddScene';
@@ -61,7 +61,7 @@ function App() {
         />
         <PrivateRoute
           exact path="/scene-breakdown/:sceneId"
-          component={SceneBreakdown}
+          component={SceneBreakdownPage}
         />
       </Provider>
       <Footer />
