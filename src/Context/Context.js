@@ -1,6 +1,5 @@
 import React from 'react';
 import { API_BASE_URL } from '../config';
-import { TOKEN_KEY } from '../config';
 import AuthApiService from '../services/auth-api-service';
 import TokenService from '../services/token-service';
 
@@ -16,6 +15,8 @@ export class Provider extends React.Component {
             scenesList: [],
             production: [],
             productions: [],
+            scene: [],
+            elementsList: [],
             displayedProduction: [],
             displayedScenes: [],
             displayedElements: [],
@@ -55,7 +56,11 @@ export class Provider extends React.Component {
             setProduction: this.setProduction,
             clearProduction: this.clearProduction,
             setScenesList: this.setScenesList,
-
+            clearScenesList: this.clearScenesList,
+            setScene: this.setScene,
+            clearScene: this.clearScene,
+            setElementsList: this.setElementsList,
+            clearElementsList: this.clearElementsList
         }
     }
 
@@ -188,6 +193,27 @@ export class Provider extends React.Component {
 
     clearScenesList = () => {
         this.setScenesList(null)
+    }
+
+    //Scene breakdown route handlers
+    setScene = (scene) => {
+        this.setState({
+            scene
+        })
+    }
+
+    clearScene = () => {
+        this.setState(null)
+    }
+
+    setElementsList = (elementsList) => {
+        this.setState({
+            elementsList
+        })
+    }
+
+    clearElementsList = () => {
+        this.setState(null)
     }
 
     handleSubmitNewProduction = (e, history) => {

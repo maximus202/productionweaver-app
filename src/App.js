@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import PrivateRoute from './components/Utils/PrivateRoute';
 import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer.js';
+import Footer from './components/Footer/Footer';
 import LandingPage from './routes/LandingPage/LandingPage';
 import AccountSignUp from './routes/AccountSignUp/AccountSignUp';
 import Login from './routes/Login/Login';
@@ -10,9 +10,9 @@ import AccountDashboardPage from './routes/AccountDashboardPage/AccountDashboard
 import AddProduction from './AddProduction/AddProduction';
 import ProductionPage from './routes/ProductionPage/ProductionPage';
 import ScriptBreakdownPage from './routes/ScriptBreakdownPage/ScriptBreakdownPage';
-import SceneBreakdown from './SceneBreakdown/SceneBreakdown';
+import SceneBreakdown from './routes/SceneBreakdownPage/SceneBreakdownPage';
 import { Provider } from './Context/Context'
-import RegistrationSuccess from './RegistrationSuccess/RegistrationSuccess';
+import RegistrationSuccess from './routes/RegistrationSuccess/RegistrationSuccess';
 import AddScene from './AddScene/AddScene';
 
 function App() {
@@ -60,9 +60,8 @@ function App() {
             <AddScene history={history} />}
         />
         <PrivateRoute
-          exact path="/scene-breakdown/:productionId/:sceneId"
-          render={({ history }) =>
-            <SceneBreakdown history={history} />}
+          exact path="/scene-breakdown/:sceneId"
+          component={SceneBreakdown}
         />
       </Provider>
       <Footer />

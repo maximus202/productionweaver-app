@@ -1,18 +1,43 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { Context } from '../../Context/Context'
+import ProductionApiService from '../../services/production-api-service'
 
 class SceneListItem extends Component {
+    static contextType = Context
+
+    componentDidMount() {
+        ProductionApiService.getElements(this.props.scene.id)
+            .then(this.context.setElementsList)
+    }
+
+    componentWillUnmount() {
+        this.context.clearElementsList()
+    }
+
+    renderElements() {
+        const sceneElementsList = []
+        const { elementsList = [] } = this.context
+        console.log(elementsList)
+        elementsList.map(element => {
+            if (element.scene_id == this.props.scene.id) {
+                sceneElementsList.push(element)
+            }
+        })
+    }
+
     render() {
-        const { scene } = this.props
+        const { elementsList } = this.context
+        let content
+        if (!elementsList) {
+            content = <div>Loading...</div>
+        } else {
+            content = this.renderElements()
+        }
+
         return (
-            <section className="scene-item" key={scene.id}>
-                <Link to={`/scene-breakdown/${scene.production_id}/${scene.id}`}>
-                    <p className="scene-number">Scene {scene.id}</p>
-                    <div className="scene-and-short-summary">
-                        <h3>{scene.setting} {scene.location} - {scene.time_of_day}</h3>
-                        <p>{scene.short_summary}</p>
-                    </div>
-                </Link>
+            <section>
+                {content}
             </section>
         )
     }

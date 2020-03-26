@@ -31,7 +31,7 @@ const ProductionApiService = {
             )
     },
     getScenes(productionId) {
-        return fetch(`${API_BASE_URL}/api/scenes/${productionId}`, {
+        return fetch(`${API_BASE_URL}/api/scenes/production/${productionId}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',
@@ -42,6 +42,32 @@ const ProductionApiService = {
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
+            )
+    },
+    getScene(sceneId) {
+        return fetch(`${API_BASE_URL}/api/scenes/scene/${sceneId}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
+    getElements(sceneId) {
+        return fetch(`${API_BASE_URL}/api/elements/scene/${sceneId}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+        })
+            .then(res =>
+                res.json()
             )
     },
 }

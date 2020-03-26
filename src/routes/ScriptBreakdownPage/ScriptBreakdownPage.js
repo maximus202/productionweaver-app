@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer.js';
-import Scenes from '../../Scenes/Scenes.js';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import SceneListItem from '../../components/SceneListItem/SceneListItem';
@@ -26,7 +24,6 @@ class ScriptBreakdownPage extends Component {
             .catch(this.context.setError)
     }
 
-
     componentWillUnmount() {
         this.context.clearProduction()
         this.context.clearScenesList()
@@ -35,10 +32,13 @@ class ScriptBreakdownPage extends Component {
     renderScenes() {
         const { scenesList = [] } = this.context
         return scenesList.map(scene =>
-            < SceneListItem
-                key={scene.id}
-                scene={scene}
-            />
+            <section key={scene.id}>
+                <h1>SCENE {scene.id}. {scene.setting} {scene.location} - {scene.time_of_day}</h1>
+                < SceneListItem
+                    key={scene.id}
+                    scene={scene}
+                />
+            </section>
         )
     }
 
@@ -67,7 +67,6 @@ class ScriptBreakdownPage extends Component {
                 <section>
                     {content}
                 </section>
-                <Footer />
             </>
         )
     }

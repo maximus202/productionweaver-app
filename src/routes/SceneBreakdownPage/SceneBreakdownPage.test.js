@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SceneBreakdown from './SceneBreakdown';
+import SceneBreakdown from './SceneBreakdownPage';
 
 describe('SceneBreakdown', () => {
     it('renders without crashing', () => {
