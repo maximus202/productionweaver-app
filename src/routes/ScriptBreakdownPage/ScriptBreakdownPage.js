@@ -32,13 +32,11 @@ class ScriptBreakdownPage extends Component {
     renderScenes() {
         const { scenesList = [] } = this.context
         return scenesList.map(scene =>
-            <section key={scene.id}>
-                <h1>SCENE {scene.id}. {scene.setting} {scene.location} - {scene.time_of_day}</h1>
-                < SceneListItem
-                    key={scene.id}
-                    scene={scene}
-                />
-            </section>
+            <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
+                <section key={scene.id}>
+                    <h1>{scene.setting} {scene.location} - {scene.time_of_day}</h1>
+                </section>
+            </Link>
         )
     }
 

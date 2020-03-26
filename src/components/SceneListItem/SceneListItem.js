@@ -18,7 +18,6 @@ class SceneListItem extends Component {
     renderElements() {
         const sceneElementsList = []
         const { elementsList = [] } = this.context
-        console.log(elementsList)
         elementsList.map(element => {
             if (element.scene_id == this.props.scene.id) {
                 sceneElementsList.push(element)
