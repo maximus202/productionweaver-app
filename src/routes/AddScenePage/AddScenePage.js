@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
-import ProductionApiService from '../../services/production-api-service';
 import { Context } from '../../Context/Context';
 
 class AddScenePage extends Component {

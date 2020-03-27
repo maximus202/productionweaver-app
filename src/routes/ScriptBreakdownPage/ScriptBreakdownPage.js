@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../../components/Footer/Footer.js';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BreakdownCategories from '../../BreakdownCategories/BreakdownCategories.js';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 
