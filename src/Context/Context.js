@@ -32,6 +32,8 @@ export class Provider extends React.Component {
             newSceneLocation: '',
             newSceneTimeOfDay: '',
             newSceneShortSummary: '',
+            newElementCategory: '',
+            newElementDescription: '',
             handleFirstNameInputChange: this.handleFirstNameInputChange,
             handleLastNameInputChange: this.handleLastNameInputChange,
             handleEmailInputChange: this.handleEmailInputChange,
@@ -52,6 +54,9 @@ export class Provider extends React.Component {
             handleNewSceneTimeOfDayInput: this.handleNewSceneTimeOfDayInput,
             handleNewSceneShortSummaryInput: this.handleNewSceneShortSummaryInput,
             handleSubmitNewScene: this.handleSubmitNewScene,
+            handleNewElementCategoryInput: this.handleNewElementCategoryInput,
+            handleNewElementDescriptionInput: this.handleNewElementDescriptionInput,
+            handleSubmitNewElement: this.handleSubmitNewElement,
             setProductionList: this.setProductionList,
             setError: this.setError,
             clearError: this.clearError,
@@ -224,6 +229,18 @@ export class Provider extends React.Component {
         this.setState(null)
     }
 
+    handleNewElementCategoryInput = (event) => {
+        this.setState({
+            newElementCategory: event.target.value
+        })
+    }
+
+    handleNewElementDescriptionInput = (event) => {
+        this.setState({
+            newElementDescription: event.target.value
+        })
+    }
+
     handleSubmitNewProduction = (e, history) => {
         e.preventDefault();
         const newProductionTitleInput = this.state.newProductionTitle;
@@ -361,6 +378,46 @@ export class Provider extends React.Component {
                 })
             })
             .then(() => history.push(`/script-breakdown/${productionId}`))
+            .catch(error => {
+                console.error({ error })
+            })
+    }
+
+    handleSubmitNewElement = (e, sceneId, history) => {
+        e.preventDefault();
+        const categoryInput = this.state.newElementCategory;
+        const descriptionInput = this.state.newElementDescription;
+        const url = `${API_BASE_URL}/api/elements/scene/${sceneId}`;
+        const data = {
+            'category': categoryInput,
+            'description': descriptionInput
+        }
+        console.log(data)
+        const otherParams = {
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(data),
+            method: 'POST',
+        }
+
+        fetch(url, otherParams)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    return response
+                        .json()
+                        .then(responseJson => Promise.reject(new Error(responseJson)))
+                }
+            })
+            .then(responseJson => {
+                this.setState({
+                    elementsList: [...this.state.elementsList, responseJson]
+                })
+            })
+            .then(() => history.push(`/scene-breakdown/${sceneId}`))
             .catch(error => {
                 console.error({ error })
             })

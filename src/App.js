@@ -62,7 +62,7 @@ function App() {
           component={SceneBreakdownPage}
         />
         <PrivateRoute
-          exact path="/add_element/:sceneId"
+          path="/add-element/:sceneId"
           component={AddElementPage}
         />
       </Provider>

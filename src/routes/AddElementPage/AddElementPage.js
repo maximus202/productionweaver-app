@@ -3,6 +3,7 @@ import { Context } from '../../Context/Context';
 
 class AddElementPage extends Component {
     render() {
+        const { sceneId } = this.props.match.params
         return (
             <Context.Consumer>
                 {(value) => {
@@ -11,7 +12,7 @@ class AddElementPage extends Component {
                             <header>
                                 <h1>Add new Element</h1>
                             </header>
-                            <form onSubmit={(e) => value.handleSubmitNewElement(e, this.props.history)}>
+                            <form onSubmit={(e) => value.handleSubmitNewElement(e, sceneId, this.props.history)}>
                                 <label htmlFor="category">Category</label>
                                 <select id="category" name="category" onChange={value.handleNewElementCategoryInput} required>
                                     <option value="">--Please choose an option--</option>
