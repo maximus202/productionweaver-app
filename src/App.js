@@ -14,6 +14,7 @@ import SceneBreakdownPage from './routes/SceneBreakdownPage/SceneBreakdownPage';
 import { Provider } from './Context/Context'
 import RegistrationSuccess from './routes/RegistrationSuccess/RegistrationSuccess';
 import AddScenePage from './routes/AddScenePage/AddScenePage';
+import AddElementPage from './routes/AddElementPage/AddElementPage';
 
 function App() {
   return (
@@ -59,6 +60,10 @@ function App() {
         <PrivateRoute
           exact path="/scene-breakdown/:sceneId"
           component={SceneBreakdownPage}
+        />
+        <PrivateRoute
+          exact path="/add_element/:sceneId"
+          component={AddElementPage}
         />
       </Provider>
       <Footer />
