@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
-import AddSceneForm from '../../AddSceneForm/AddSceneForm';
 import ProductionApiService from '../../services/production-api-service';
 import { Context } from '../../Context/Context';
 
-class AddScene extends Component {
+class AddScenePage extends Component {
     render() {
         const { productionId } = this.props.match.params
         console.log(productionId)
@@ -15,8 +14,7 @@ class AddScene extends Component {
                     return (
                         <main>
                             <header>
-                                <h1>Project name</h1>
-                                <h2>Add a new scene</h2>
+                                <h1>Add a new scene</h1>
                             </header>
                             <form onSubmit={(e) => value.handleSubmitNewScene(e, productionId, this.props.history)}>
                                 <label htmlFor="scene_script_number">Script Scene Number</label>
@@ -49,4 +47,4 @@ class AddScene extends Component {
     }
 }
 
-export default AddScene;
+export default AddScenePage;
