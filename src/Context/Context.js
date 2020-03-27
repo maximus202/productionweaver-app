@@ -27,6 +27,7 @@ export class Provider extends React.Component {
             loginEmail: '',
             loginPassword: '',
             newProductionTitle: '',
+            newSceneScriptNumber: '',
             newSceneSetting: '',
             newSceneLocation: '',
             newSceneTimeOfDay: '',
@@ -45,6 +46,7 @@ export class Provider extends React.Component {
             handleGetDisplayedProduction: this.handleGetDisplayedProduction,
             handleGetDisplayedScenes: this.handleGetDisplayedScenes,
             handleGetDisplayedElements: this.handleGetDisplayedElements,
+            handleNewSceneSceneScriptNumberInput: this.handleNewSceneSceneScriptNumberInput,
             handleNewSceneSettingInput: this.handleNewSceneSettingInput,
             handleNewSceneLocationInput: this.handleNewSceneLocationInput,
             handleNewSceneTimeOfDayInput: this.handleNewSceneTimeOfDayInput,
@@ -104,6 +106,12 @@ export class Provider extends React.Component {
     handleNewProductionTitle = (event) => {
         this.setState({
             newProductionTitle: event.target.value
+        })
+    }
+
+    handleNewSceneSceneScriptNumberInput = (event) => {
+        this.setState({
+            newSceneScriptNumber: event.target.value
         })
     }
 
@@ -313,15 +321,16 @@ export class Provider extends React.Component {
             })
     }
 
-    handleSubmitNewScene = (e, history) => {
-        console.log(history.location.pathname)
+    handleSubmitNewScene = (e, productionId, history) => {
         e.preventDefault();
         const settingInput = this.state.newSceneSetting;
+        const sceneSceneScriptNumberInput = this.state.newSceneScriptNumber;
         const locationInput = this.state.newSceneLocation;
         const timeOfDayInput = this.state.newSceneTimeOfDay;
         const shortSummaryInput = this.state.newSceneShortSummary;
-        const url = `${API_BASE_URL}/api/scenes${history.location.pathname}`;
+        const url = `${API_BASE_URL}/api/scenes/${productionId}`;
         const data = {
+            'scene_script_number': sceneSceneScriptNumberInput,
             'setting': settingInput,
             'location': locationInput,
             'time_of_day': timeOfDayInput,
@@ -348,10 +357,10 @@ export class Provider extends React.Component {
             })
             .then(responseJson => {
                 this.setState({
-                    scenes: [...this.state.users, responseJson]
+                    scenes: [...this.state.scenesList, responseJson]
                 })
             })
-            .then(() => history.goBack())
+            .then(() => history.push(`/script-breakdown/${productionId}`))
             .catch(error => {
                 console.error({ error })
             })

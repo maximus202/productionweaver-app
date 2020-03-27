@@ -59,7 +59,7 @@ class ScriptBreakdownPage extends Component {
                 </header>
                 <section className="module-header">
                     <h2>Scenes</h2>
-                    <Link to={`/add-scene/`}>Add scene</Link>
+                    <Link to={`/add-scene/${production.id}`}>Add scene</Link>
                 </section>
                 <section>
                     {content}

@@ -13,7 +13,7 @@ import ScriptBreakdownPage from './routes/ScriptBreakdownPage/ScriptBreakdownPag
 import SceneBreakdownPage from './routes/SceneBreakdownPage/SceneBreakdownPage';
 import { Provider } from './Context/Context'
 import RegistrationSuccess from './routes/RegistrationSuccess/RegistrationSuccess';
-import AddScene from './AddScene/AddScene';
+import AddScenePage from './routes/AddScenePage/AddScenePage';
 
 function App() {
   return (
@@ -54,8 +54,7 @@ function App() {
         />
         <PrivateRoute
           exact path="/add-scene/:productionId"
-          render={({ history }) =>
-            <AddScene history={history} />}
+          component={AddScenePage}
         />
         <PrivateRoute
           exact path="/scene-breakdown/:sceneId"
