@@ -24,8 +24,8 @@ class ScriptBreakdownPage extends Component {
     }
 
     componentWillUnmount() {
-        this.context.clearProduction()
-        this.context.clearScenesList()
+        //this.context.clearProduction()
+        //this.context.clearScenesList()
     }
 
     renderScenes() {

@@ -17,7 +17,7 @@ class ProductionPage extends Component {
     }
 
     componentWillUnmount() {
-        this.context.clearProduction()
+        //this.context.clearProduction()
     }
 
     renderProduction() {

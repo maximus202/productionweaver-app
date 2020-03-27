@@ -7,7 +7,7 @@ import LandingPage from './routes/LandingPage/LandingPage';
 import AccountSignUp from './routes/AccountSignUp/AccountSignUp';
 import Login from './routes/Login/Login';
 import AccountDashboardPage from './routes/AccountDashboardPage/AccountDashboardPage';
-import AddProduction from './AddProduction/AddProduction';
+import AddProductionPage from './routes/AddProductionPage/AddProductionPage';
 import ProductionPage from './routes/ProductionPage/ProductionPage';
 import ScriptBreakdownPage from './routes/ScriptBreakdownPage/ScriptBreakdownPage';
 import SceneBreakdownPage from './routes/SceneBreakdownPage/SceneBreakdownPage';
@@ -46,9 +46,7 @@ function App() {
         />
         <PrivateRoute
           path="/add-production"
-          render={({ history }) =>
-            <AddProduction history={history} />
-          }
+          component={AddProductionPage}
         />
         <PrivateRoute
           exact path="/script-breakdown/:productionId"

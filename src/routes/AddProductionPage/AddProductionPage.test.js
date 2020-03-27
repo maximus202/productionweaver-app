@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AddProject from './AddProduction';
+import AddProject from './AddProductionPage';
 
 describe('AddProject', () => {
     it('renders without crashing', () => {

@@ -22,8 +22,8 @@ class SceneBreakdown extends Component {
     }
 
     componentWillUnmount() {
-        this.context.clearScene()
-        this.context.clearElementsList()
+        //this.context.clearScene()
+        //this.context.clearElementsList()
     }
 
     renderElements() {
