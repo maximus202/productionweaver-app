@@ -33,7 +33,7 @@ class ScriptBreakdownPage extends Component {
         return scenesList.map(scene =>
             <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
                 <section key={scene.id}>
-                    <h1>{scene.setting} {scene.location} - {scene.time_of_day}</h1>
+                    <h1>{scene.scene_script_number}: {scene.setting} {scene.location} - {scene.time_of_day}</h1>
                 </section>
             </Link>
         )

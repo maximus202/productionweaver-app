@@ -172,7 +172,7 @@ class SceneBreakdown extends Component {
 
         return <>
             <header>
-                <h1>{scene[0].setting} {scene[0].location} - {scene[0].time_of_day}</h1>
+                <h1>Scene {scene[0].scene_script_number}: {scene[0].setting} {scene[0].location} - {scene[0].time_of_day}</h1>
                 <p>Scene breakdown</p>
                 <p>Summary: {scene[0].short_summary}</p>
             </header>
