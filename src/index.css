@@ -42,25 +42,14 @@ div.bottom-bar {
     position: fixed;
     bottom: 0;
     right: 0;
-    left: 0;
-    background: lightgrey;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    background: transparent;
+    padding: 15px;
 
-}
-
-div.bottom-bar p {
-  font-size: 12px;
-  background-color: lightgray;
-  color: black;
-  padding-right: 10px;
 }
 
 div.bottom-bar button {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: black;
   color: white;

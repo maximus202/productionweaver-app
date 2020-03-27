@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
+import { Link } from 'react-router-dom';
 
 class SceneBreakdown extends Component {
     static defaultProps = {
@@ -298,6 +299,9 @@ class SceneBreakdown extends Component {
                     <div key={element.id}>{element.description}</div>
                 )}
             </section>
+            <div className="bottom-bar">
+                <Link to={`/add-element/${scene[0].id}`}><button>+</button></Link>
+            </div>
         </>
     }
 
