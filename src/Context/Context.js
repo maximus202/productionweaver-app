@@ -9,7 +9,6 @@ export class Provider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: [],
             error: null,
             productionList: [],
             scenesList: [],

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProductionApiService from '../../services/production-api-service';
 import { Context } from '../../Context/Context';
+import NavBar from '../../components/NavBar/NavBar';
 
 class ProductionPage extends Component {
     static defaultProps = {
@@ -23,16 +24,19 @@ class ProductionPage extends Component {
     renderProduction() {
         const { production } = this.context
         return <>
+            <NavBar />
             <header>
                 <h1>{production.production_title}</h1>
                 <p>Production overview</p>
             </header>
-            <section className="module-header">
-                <h2>Production Tools</h2>
-            </section>
-            <section>
-                <h3><a href={`/script-breakdown/${production.id}`}>Script breakdown</a></h3>
-            </section>
+            <main>
+                <section className="module-header">
+                    <h2>Production Tools</h2>
+                </section>
+                <section>
+                    <h3><a href={`/script-breakdown/${production.id}`}>Script breakdown</a></h3>
+                </section>
+            </main>
         </>
     }
 

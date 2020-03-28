@@ -3,6 +3,7 @@ import { Context } from '../../Context/Context';
 import ProductionListItem from '../../components/ProductionListItem/ProductionListItem';
 import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar';
 
 class AccountDashboard extends Component {
     static contextType = Context
@@ -28,19 +29,22 @@ class AccountDashboard extends Component {
         const { error } = this.context
         return (
             <>
+                <NavBar />
                 <header>
                     <h1>Dashboard</h1>
                 </header>
-                <section className="module-header">
-                    <h2>Productions</h2>
-                    <Link to="/add-production">Add production</Link>
-                </section>
-                <section>
-                    {error
-                        ? <p>There was an error, try again.</p>
-                        : this.renderProductions()
-                    }
-                </section>
+                <main>
+                    <section className="module-header">
+                        <h2>Productions</h2>
+                        <Link to="/add-production">Add production</Link>
+                    </section>
+                    <section>
+                        {error
+                            ? <p>There was an error, try again.</p>
+                            : this.renderProductions()
+                        }
+                    </section>
+                </main>
             </>
         )
     }

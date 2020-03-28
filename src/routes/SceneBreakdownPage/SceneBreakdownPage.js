@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar';
 
 class SceneBreakdown extends Component {
     static defaultProps = {
@@ -176,132 +177,134 @@ class SceneBreakdown extends Component {
                 <p>Scene breakdown</p>
                 <p>Summary: {scene[0].short_summary}</p>
             </header>
-            <section>
-                <h2>Elements</h2>
-            </section>
-            <section>
-                <h3>Animal Handler</h3>
-                {animalHandler.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Cast</h3>
-                {cast.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Extras</h3>
-                {extras.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Greenery</h3>
-                {greenery.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Livestock</h3>
-                {livestock.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Makeup/Hair</h3>
-                {makeupHair.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Mechanical FX</h3>
-                {mechanicalFx.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Miscellaneous</h3>
-                {miscellaneous.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Music</h3>
-                {music.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Optical FX</h3>
-                {opticalFx.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Props</h3>
-                {props.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Security</h3>
-                {security.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Set Dressing</h3>
-                {setDressing.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Sound</h3>
-                {sound.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Special Equipment</h3>
-                {specialEquipment.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Special FX</h3>
-                {specialFx.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Stunts</h3>
-                {stunts.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Vehicles</h3>
-                {vehicles.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Visual FX</h3>
-                {visualFx.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <section>
-                <h3>Wardrobe</h3>
-                {wardrobe.map(element =>
-                    <div key={element.id}>{element.description}</div>
-                )}
-            </section>
-            <div className="bottom-bar">
-                <Link to={`/add-element/${scene[0].id}`}><button>+</button></Link>
-            </div>
+            <main>
+                <section>
+                    <h2>Elements</h2>
+                </section>
+                <section>
+                    <h3>Animal Handler</h3>
+                    {animalHandler.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Cast</h3>
+                    {cast.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Extras</h3>
+                    {extras.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Greenery</h3>
+                    {greenery.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Livestock</h3>
+                    {livestock.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Makeup/Hair</h3>
+                    {makeupHair.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Mechanical FX</h3>
+                    {mechanicalFx.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Miscellaneous</h3>
+                    {miscellaneous.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Music</h3>
+                    {music.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Optical FX</h3>
+                    {opticalFx.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Props</h3>
+                    {props.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Security</h3>
+                    {security.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Set Dressing</h3>
+                    {setDressing.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Sound</h3>
+                    {sound.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Special Equipment</h3>
+                    {specialEquipment.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Special FX</h3>
+                    {specialFx.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Stunts</h3>
+                    {stunts.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Vehicles</h3>
+                    {vehicles.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Visual FX</h3>
+                    {visualFx.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <section>
+                    <h3>Wardrobe</h3>
+                    {wardrobe.map(element =>
+                        <div key={element.id}>{element.description}</div>
+                    )}
+                </section>
+                <div className="bottom-bar">
+                    <Link to={`/add-element/${scene[0].id}`}><button>+</button></Link>
+                </div>
+            </main>
         </>
     }
 
@@ -318,9 +321,12 @@ class SceneBreakdown extends Component {
             content = this.renderElements()
         }
         return (
-            <section>
-                {content}
-            </section>
+            <>
+                <NavBar />
+                <section>
+                    {content}
+                </section>
+            </>
         )
     }
 }

@@ -37,14 +37,16 @@ section.module-header {
 }
 
 div.bottom-bar {
+    width: 100%;
     display: flex;
     flex-flow: row;
     position: fixed;
     bottom: 0;
     right: 0;
+    left: 0;
     background: transparent;
-    padding: 15px;
-
+    padding: 20px;
+    justify-content: center;
 }
 
 div.bottom-bar button {
@@ -61,7 +63,7 @@ a {
 
 /*Tablet*/
 @media only screen and (min-width: 768px) {
-  main {
+  main, header {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -69,7 +71,7 @@ a {
 
 /*Desktop*/
 @media only screen and (min-width: 1024px) {
-  main, div.bottom-bar {
+  main, header {
     width: 75%;
     margin-left: auto;
     margin-right: auto;

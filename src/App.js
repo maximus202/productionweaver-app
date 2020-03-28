@@ -19,7 +19,6 @@ import AddElementPage from './routes/AddElementPage/AddElementPage';
 function App() {
   return (
     <>
-      <NavBar />
       <Provider>
         <Route
           exact path="/home"

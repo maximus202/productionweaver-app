@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
-
+import NavBar from '../../components/NavBar/NavBar';
 
 class ScriptBreakdownPage extends Component {
     static defaultProps = {
@@ -52,17 +52,20 @@ class ScriptBreakdownPage extends Component {
         }
         return (
             <>
+                <NavBar />
                 <header>
                     <h1>{production.production_title}</h1>
                     <p>Script Breakdown</p>
                 </header>
-                <section className="module-header">
-                    <h2>Scenes</h2>
-                    <Link to={`/add-scene/${production.id}`}>Add scene</Link>
-                </section>
-                <section>
-                    {content}
-                </section>
+                <main>
+                    <section className="module-header">
+                        <h2>Scenes</h2>
+                        <Link to={`/add-scene/${production.id}`}>Add scene</Link>
+                    </section>
+                    <section>
+                        {content}
+                    </section>
+                </main>
             </>
         )
     }

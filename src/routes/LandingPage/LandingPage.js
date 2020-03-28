@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar';
 
 class LandingPage extends Component {
     render() {
         return (
             <>
+                <NavBar />
+                <header className="landing-page-header">
+                    <h1>Simple, swift, film production management.</h1>
+                    <Link to="/sign-up">Sign Up</Link>
+                    <Link to="/login">Login here</Link>
+                </header>
                 <main>
-                    <header className="landing-page-header">
-                        <h1>Simple, swift, film production management.</h1>
-                        <Link to="/sign-up">Sign Up</Link>
-                        <Link to="/login">Login here</Link>
-                    </header>
                     <section className="feature">
                         <h2>Script breakdown</h2>
                         <p>Breeze through your script breakdown process with ProductionWeaver's simple, mobile-friendly interface.</p>
