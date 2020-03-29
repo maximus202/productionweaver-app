@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Logo extends Component {
     render() {
         return (
-            <Link to={`/`}><img src="" alt="ProductionWeaver logo." className="logo" /></Link>
+            <Link to={`/`}><img src="https://github.com/maximus202/productionweaver-app/blob/styling/public/PWlogocolor.png?raw=true" alt="ProductionWeaver logo." className="logo" /></Link>
         )
     }
 }
