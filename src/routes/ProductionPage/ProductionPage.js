@@ -41,13 +41,13 @@ class ProductionPage extends Component {
     }
 
     render() {
-        const { error, production } = this.context
+        //const { error, production } = this.context
         let content
-        if (error) {
-            content = (error.error === 'Production does not exist')
+        if (this.context.error) {
+            content = (this.context.error.error === 'Production does not exist')
                 ? <p>Production not found</p>
                 : <p>There was an error</p>
-        } else if (!production.id) {
+        } else if (!this.context.production.id) {
             content = <div>Loading...</div>
         } else {
             content = this.renderProduction()

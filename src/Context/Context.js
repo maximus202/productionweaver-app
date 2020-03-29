@@ -9,7 +9,7 @@ export class Provider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            error: null,
+            error: '',
             productionList: [],
             scenesList: [],
             production: [],
@@ -183,7 +183,7 @@ export class Provider extends React.Component {
 
     clearError = () => {
         this.setState({
-            error: null
+            error: ''
         })
     }
 
