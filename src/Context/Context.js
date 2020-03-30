@@ -301,7 +301,6 @@ export class Provider extends React.Component {
         const lastNameInput = this.state.lastName;
         const emailInput = this.state.email;
         const passwordInput = this.state.password;
-        console.log(process.env)
         const url = `${API_BASE_URL}/api/users/`;
         const data = {
             'first_name': firstNameInput,
