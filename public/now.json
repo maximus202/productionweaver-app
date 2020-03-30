@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "alias": "productionweaver",
     "name": "productionweaver-app",
     "routes": [
         {
@@ -9,5 +10,10 @@
             "src": "/.*",
             "dest": "/index.html"
         }
-    ]
+    ],
+    "build": {
+        "env": {
+            "API_BASE_URL": "@REACT_APP_API_BASE_URL"
+        }
+    }
 }
