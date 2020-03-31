@@ -34,10 +34,12 @@ class LandingPage extends Component {
                             Contact management<br />
                         </p>
                     </section>
-                    <section className="call-to-action">
-                        <h2>Start using ProductionWeaver!</h2>
-                        <Link to="/sign-up">Get started</Link>
-                    </section>
+                    <div className="call-to-action">
+                        <section>
+                            <h2>Start using ProductionWeaver!</h2>
+                            <Link to="/sign-up">Get started</Link>
+                        </section>
+                    </div>
                 </main>
             </>
         )

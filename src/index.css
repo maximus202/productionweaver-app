@@ -24,35 +24,40 @@ header {
   padding: 50px 0 50px 0;
 }
 
-main {
-  width: 100%;
-}
-
 h1, h2, h3, h3, h5, h6, p {
   color: #59708F;
   background-color: transparent;
+  margin: 7px 0 7px 0;
 }
 
 a {
+  display: flex;
   background-color: transparent;
   text-decoration: none;
   color: #847D78;
-  justify-content: center;
   padding: 3px 0;
 }
 
 section {
-  background-color: transparent;
-  padding: 0 20px 0 20px;
-}
-
-section, header {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
+  padding: 0 20px 0 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
-header {
-  margin: 6% 0;
+div.call-to-action {
+    background-color: #9B9B96;
+    padding: 100px 0;
+}
+
+div.call-to-action h2, div.call-to-action a {
+    background-color: transparent;
+    color: #F6F7F7;
 }
 
 section.module-header {
@@ -81,10 +86,6 @@ div.bottom-bar button {
   border-radius: 100%;
   background-color: black;
   color: white;
-}
-
-a {
-  display: flex;
 }
 
 /*Tablet*/
