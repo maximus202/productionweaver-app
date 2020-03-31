@@ -328,7 +328,7 @@ export class Provider extends React.Component {
             })
             .then(responseJson => {
                 this.setState({
-                    users: [...this.state.users, responseJson]
+                    users: responseJson
                 })
             })
             .then(() => history.push('/registrationsuccess'))
