@@ -23,7 +23,7 @@ class RegistrationSuccess extends Component {
     render() {
         const { users } = this.context
         let content
-        if (!users.id) {
+        if (!users[0].id) {
             content = <div>Loading...</div>
         } else {
             content = this.renderRegistrationSuccessPage()
