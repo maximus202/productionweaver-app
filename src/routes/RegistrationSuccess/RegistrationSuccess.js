@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 
 class RegistrationSuccess extends Component {
-    render() {
+    renderRegistrationSuccessPage() {
         return (
             <>
                 <NavBar />
@@ -16,6 +16,21 @@ class RegistrationSuccess extends Component {
                         <Link to="/login">Log in ></Link>
                     </section>
                 </main>
+            </>
+        )
+    }
+
+    render() {
+        const { users } = this.context
+        let content
+        if (!users.id) {
+            content = <div>Loading...</div>
+        } else {
+            content = this.renderRegistrationSuccessPage()
+        }
+        return (
+            <>
+                {content}
             </>
         )
     }
