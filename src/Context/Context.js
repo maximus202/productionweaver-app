@@ -316,6 +316,9 @@ export class Provider extends React.Component {
             method: 'POST',
         };
 
+        console.log("The base URL is:");
+        console.log(API_BASE_URL);
+
         fetch(url, otherParams)
             .then(response => {
                 if (response.ok) {
@@ -400,9 +403,6 @@ export class Provider extends React.Component {
             body: JSON.stringify(data),
             method: 'POST',
         }
-
-        console.log("The base URL is:");
-        console.log(API_BASE_URL);
 
         fetch(url, otherParams)
             .then(response => {
