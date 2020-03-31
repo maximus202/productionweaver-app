@@ -10,6 +10,7 @@ export class Provider extends React.Component {
         super(props);
         this.state = {
             error: '',
+            users: [],
             productionList: [],
             scenesList: [],
             production: [],
@@ -325,6 +326,11 @@ export class Provider extends React.Component {
                         .json()
                         .then(responseJson => Promise.reject(new Error(responseJson)))
                 }
+            })
+            .then(responseJson => {
+                this.setState({
+                    users: [...this.state.users, responseJson]
+                })
             })
             .then(() => history.push('/registrationsuccess'))
             .catch(error => {
