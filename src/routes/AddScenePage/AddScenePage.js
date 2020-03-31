@@ -5,7 +5,6 @@ import NavBar from '../../components/NavBar/NavBar';
 class AddScenePage extends Component {
     render() {
         const { productionId } = this.props.match.params
-        console.log(productionId)
         return (
             <Context.Consumer>
                 {(value) => {
