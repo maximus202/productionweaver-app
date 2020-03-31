@@ -5,6 +5,17 @@ nav {
     margin: 15px 5px 15px 5px;
 }
 
+.Menu__logged-out, .Main__logged-in {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Menu__logged-out a, .Main__logged-in a {
+  color: #59708F;
+  font-size: 16px;
+}
+
 /*Tablet*/
 @media only screen and (min-width: 768px) {
   nav {

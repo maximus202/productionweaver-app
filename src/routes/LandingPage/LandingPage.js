@@ -36,7 +36,7 @@ class LandingPage extends Component {
                     </section>
                     <div className="call-to-action">
                         <section>
-                            <h2>Start using ProductionWeaver!</h2>
+                            <h2>Start using Production Weaver!</h2>
                             <Link to="/sign-up">Get started</Link>
                         </section>
                     </div>

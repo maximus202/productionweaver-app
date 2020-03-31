@@ -22,7 +22,7 @@ class Menu extends Component {
 
     renderLoginLink() {
         return (
-            <div className='Menu__logged-out>'>
+            <div className='Menu__logged-out'>
                 <Link to='/sign-up'>
                     Get started
                 </Link>
