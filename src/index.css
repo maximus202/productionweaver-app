@@ -1,5 +1,5 @@
 * {
-  background-color: #F6F5F1;
+  background-color: #F6F7F7;
   box-sizing: border-box;
 }
 
@@ -17,8 +17,33 @@ code {
     monospace;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 50px 0 50px 0;
+}
+
 main {
   width: 100%;
+}
+
+h1, h2, h3, h3, h5, h6, p {
+  color: #59708F;
+  background-color: transparent;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #847D78;
+  justify-content: center;
+  padding: 3px 0;
+}
+
+section {
+  background-color: transparent;
+  padding: 0 20px 0 20px;
 }
 
 section, header {
@@ -64,17 +89,10 @@ a {
 
 /*Tablet*/
 @media only screen and (min-width: 768px) {
-  main, header {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  
 }
 
 /*Desktop*/
 @media only screen and (min-width: 1024px) {
-  main, header {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
 }

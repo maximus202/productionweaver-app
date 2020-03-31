@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
+import './LandingPage.css';
 
 class LandingPage extends Component {
     render() {
@@ -8,9 +9,11 @@ class LandingPage extends Component {
             <>
                 <NavBar />
                 <header className="landing-page-header">
-                    <h1>Simple, swift, film production management.</h1>
-                    <Link to="/sign-up">Sign Up</Link>
-                    <Link to="/login">Login here</Link>
+                    <section>
+                        <h1>Simple, swift, film production management.</h1>
+                        <Link to="/sign-up">Sign Up</Link>
+                        <Link to="/login">Login here</Link>
+                    </section>
                 </header>
                 <main>
                     <section className="feature">
