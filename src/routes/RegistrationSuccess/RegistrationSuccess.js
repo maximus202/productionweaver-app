@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import './RegistrationSuccess.css';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
+import { Context } from '../../Context/Context';
 
 class RegistrationSuccess extends Component {
+    static contextType = Context
+
     renderRegistrationSuccessPage() {
         return (
             <>
