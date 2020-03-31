@@ -326,11 +326,6 @@ export class Provider extends React.Component {
                         .then(responseJson => Promise.reject(new Error(responseJson)))
                 }
             })
-            .then(responseJson => {
-                this.setState({
-                    users: responseJson
-                })
-            })
             .then(() => history.push('/registrationsuccess'))
             .catch(error => {
                 console.error({ error })
