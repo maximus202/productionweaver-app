@@ -10,6 +10,7 @@ export class Provider extends React.Component {
         super(props);
         this.state = {
             error: '',
+            users: [],
             productionList: [],
             scenesList: [],
             production: [],
@@ -391,7 +392,6 @@ export class Provider extends React.Component {
             'category': categoryInput,
             'description': descriptionInput
         }
-        console.log(data)
         const otherParams = {
             headers: {
                 'content-type': 'application/json',
