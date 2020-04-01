@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&display=swap');
 
 * {
-  background-color: #F6F7F7;
+  background-color: #FFFFFF;
   box-sizing: border-box;
 }
 
@@ -24,6 +24,7 @@ header {
   justify-content: center;
   margin: 0;
   padding: 50px 0 50px 0;
+  background-image: linear-gradient(#59708f, #415572) ;
 }
 
 h1, h2, p {
@@ -60,16 +61,35 @@ a {
   line-height: 25px;
 }
 
+header > section > h1 {
+  color: white;
+}
+
 section {
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  padding: 0 20px 0 20px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+input {
+    height: 45px;
+    border: solid 1px #59708f52;
+    margin: 1px 0;
+    font-size: 20px;
+    padding: 0 15px 0 15px;
+    border-radius: 3px;
+    color: #59708F;
+}
+
+input#submit {
+    background-color: #AB7676;
+    border: solid 1px #AB7676;
+    color: #FFFFFF;
 }
 
 div.call-to-action {
@@ -79,7 +99,7 @@ div.call-to-action {
 
 div.call-to-action h2, div.call-to-action a {
     background-color: transparent;
-    color: #F6F7F7;
+    color: #FFFFFF;
 }
 
 section.module-header {

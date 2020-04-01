@@ -14,7 +14,9 @@ class AccountSignUp extends Component {
                             <>
                                 <NavBar />
                                 <header>
-                                    <h1>Account Sign Up</h1>
+                                    <section>
+                                        <h1>Create your account</h1>
+                                    </section>
                                 </header>
                                 <main>
                                     <section>
@@ -25,7 +27,7 @@ class AccountSignUp extends Component {
                                             <input type="password" id="password" name="password" placeholder="Password" onChange={value.handlePasswordInputChange} required />
                                             <input type="submit" id="submit" name="submit" placeholder="Submit" />
                                         </form>
-                                        <Link to="/login">Existing user? Login here!</Link>
+                                        <Link to="/login">Existing user?</Link>
                                     </section>
                                 </main>
                             </>
