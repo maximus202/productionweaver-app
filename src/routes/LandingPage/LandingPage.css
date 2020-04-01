@@ -7,6 +7,8 @@ header.landing-page-header {
 
 header.landing-page-header h1, header.landing-page-header a {
     color: white;
+    text-align: center;
+    align-self: center;
 }
 
 /*Tablet*/

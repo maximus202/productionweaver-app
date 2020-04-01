@@ -14,6 +14,7 @@ nav {
 .Menu__logged-out a, .Main__logged-in a {
   color: #59708F;
   font-size: 16px;
+  line-height: 20px;
 }
 
 /*Tablet*/
