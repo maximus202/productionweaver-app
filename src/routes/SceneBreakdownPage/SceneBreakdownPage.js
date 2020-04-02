@@ -12,6 +12,7 @@ class SceneBreakdown extends Component {
 
     static contextType = Context
 
+
     componentDidMount() {
         const { sceneId } = this.props.match.params
         this.context.clearError()
