@@ -21,8 +21,10 @@ class Login extends Component {
                                 <main>
                                     <section>
                                         <form onSubmit={(e) => value.handleSubmitJwtAuth(e, this.props.history)}>
-                                            <input type="email" id="email" name="email" placeholder="Email address" onChange={value.handleSubmitLoginEmail} required />
-                                            <input type="password" id="password" name="password" placeholder="Password" onChange={value.handleSubmitLoginPassword} required />
+                                            <label htmlFor="email">Email</label>
+                                            <input type="email" id="email" name="email" onChange={value.handleSubmitLoginEmail} required />
+                                            <label htmlFor="password">Password</label>
+                                            <input type="password" id="password" name="password" onChange={value.handleSubmitLoginPassword} required />
                                             <input type="submit" id="submit" name="login" placeholder="Login" />
                                         </form>
                                         <Link to="/sign-up">New user? Sign up!</Link>

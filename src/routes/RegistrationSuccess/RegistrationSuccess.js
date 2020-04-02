@@ -12,7 +12,9 @@ class RegistrationSuccess extends Component {
             <>
                 <NavBar />
                 <header>
-                    <h1>You've created your account!</h1>
+                    <section>
+                        <h1>You've created your account!</h1>
+                    </section>
                 </header>
                 <main>
                     <section>

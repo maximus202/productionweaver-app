@@ -22,10 +22,14 @@ class AccountSignUp extends Component {
                                 <main>
                                     <section>
                                         <form onSubmit={(e) => value.handleSubmitNewUser(e, this.props.history)}>
-                                            <input type="text" id="first-name" name="first-name" placeholder="First name" onChange={value.handleFirstNameInputChange} required />
-                                            <input type="text" id="last-name" name="last-name" placeholder="Last name" onChange={value.handleLastNameInputChange} required />
-                                            <input type="email" id="email" name="email" placeholder="Email address" onChange={value.handleEmailInputChange} required />
-                                            <input type="password" id="password" name="password" placeholder="Password" onChange={value.handlePasswordInputChange} required />
+                                            <label htmlFor="first-name">First name</label>
+                                            <input type="text" id="first-name" name="first-name" onChange={value.handleFirstNameInputChange} required />
+                                            <label htmlFor="last-name">Last name</label>
+                                            <input type="text" id="last-name" name="last-name" onChange={value.handleLastNameInputChange} required />
+                                            <label htmlFor="email">Email</label>
+                                            <input type="email" id="email" name="email" onChange={value.handleEmailInputChange} required />
+                                            <label htmlFor="password">Password</label>
+                                            <input type="password" id="password" name="password" onChange={value.handlePasswordInputChange} required />
                                             <input type="submit" id="submit" name="submit" placeholder="Submit" />
                                         </form>
                                         <Link to="/login">Existing user?</Link>

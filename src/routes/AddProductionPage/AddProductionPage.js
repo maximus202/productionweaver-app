@@ -19,7 +19,7 @@ class AddProduction extends Component {
                                 <section>
                                     <form onSubmit={(e) => value.handleSubmitNewProduction(e, this.props.history)}>
                                         <label htmlFor="project-name">Production name</label>
-                                        <input type="text" id="project-name" name="project-name" placeholder="Night of the Living Dead" onChange={value.handleNewProductionTitle} required />
+                                        <input type="text" id="project-name" name="project-name" onChange={value.handleNewProductionTitle} required />
                                         <input type="submit" id="submit" name="add-project" />
                                     </form>
                                 </section>

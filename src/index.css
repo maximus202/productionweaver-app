@@ -53,7 +53,7 @@ p, label {
 a {
   display: flex;
   background-color: transparent;
-  color: #AB7676;
+  color: #ad6161;
   padding: 3px 0;
   font-size: 14px;
   font-weight: 600;
@@ -63,7 +63,7 @@ a {
 }
 
 a:hover {
-  color: rgb(148, 102, 102);
+  color: #8e4f4f;
 }
 
 img {
@@ -88,7 +88,7 @@ section {
 section.production-item {
     width: 100%;
     margin: 0;
-    background-color: #AB7676;
+    background-color: #ad6161;
     border-radius: 10px;
     box-shadow: 1px 1px 5px #00000059;
     margin-top: 2px;
@@ -125,17 +125,17 @@ input, select {
 }
 
 input#submit {
-    background-color: #AB7676;
-    border: solid 1px #AB7676;
+    background-color: #ad6161;
+    border: solid 1px #ad6161;
     color: #FFFFFF;
 }
 
 input#submit:hover {
-  background-color: rgb(148, 102, 102);
+  background-color: #8c4f4f;
 }
 
 div.call-to-action {
-    background-color: #9B9B96;
+    background-color: #565654;
     padding: 100px 0;
 }
 

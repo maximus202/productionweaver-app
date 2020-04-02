@@ -1,10 +1,11 @@
 .element-tag {
-    background-color: #9B9B96;
+    background-color: #565654;
     padding: 5px 10px;
     width: fit-content;
     border-radius: 2px;
     color: white;
     margin: 3px;
+    font-size: 20px;
 }
 
 .element-section h3 {
