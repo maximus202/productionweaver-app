@@ -1,0 +1,12 @@
+.element-tag {
+    background-color: #9B9B96;
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 2px;
+    color: white;
+    margin: 3px;
+}
+
+.element-section h3 {
+    color: #59708F
+}

@@ -1,0 +1,15 @@
+div.script-breakdown-selection {
+    background-color: #AB7676;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000059;
+    align-self: center;
+    height: 45px;
+}
+
+div.script-breakdown-selection p a {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}

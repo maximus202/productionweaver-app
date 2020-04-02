@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import './LandingPage.css';
+import Footer from '../../components/Footer/Footer';
 
 class LandingPage extends Component {
     render() {
@@ -45,6 +46,7 @@ class LandingPage extends Component {
                         </section>
                     </div>
                 </main>
+                <Footer />
             </>
         )
     }

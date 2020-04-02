@@ -14,8 +14,12 @@ class NavBar extends Component {
         return (
             <div className='Menu__logged-in'>
                 <Link
-                    onClick={this.handleLogoutClick}
                     to="/">
+                    Dashboard
+                    </Link>
+                <Link
+                    onClick={this.handleLogoutClick}
+                    to="/login">
                     Logout
                 </Link>
             </div>

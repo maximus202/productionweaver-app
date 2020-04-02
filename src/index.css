@@ -23,7 +23,7 @@ header {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 50px 0 50px 0;
+  padding: 20px 0 20px 0;
   background-image: linear-gradient(#59708f, #415572) ;
 }
 
@@ -56,13 +56,19 @@ a {
   background-color: transparent;
   color: #AB7676;
   padding: 3px 0;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-header > section > h1 {
+header > section > h1, header > section > p {
   color: white;
+}
+
+header > section > p {
+  font-size: 16px;
 }
 
 section {
@@ -74,6 +80,27 @@ section {
   margin-right: auto;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+section.production-item {
+    width: 100%;
+    margin: 0;
+    background-color: #AB7676;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000059;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+section.production-item h3 {
+  background-color: transparent;
+  color: white;
+}
+
+img.production-icon {
+  background-color: transparent;
+  width: 64px;
+  align-self: center;
 }
 
 input {
@@ -132,11 +159,20 @@ div.bottom-bar button {
 
 /*Tablet*/
 @media only screen and (min-width: 768px) {
-  
+  section {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 }
 
 /*Desktop*/
 @media only screen and (min-width: 1024px) {
+section {
+  width: 45%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
   h1 {
   font-size: 40px;
   font-weight: 800;
@@ -147,5 +183,9 @@ h2 {
   font-size: 30px;
   font-weight: 800;
   line-height: 36px;
+}
+
+a {
+  font-size: 15px;
 }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProductionApiService from '../../services/production-api-service';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
+import './ProductionPage.css';
 
 class ProductionPage extends Component {
     static defaultProps = {
@@ -23,21 +24,27 @@ class ProductionPage extends Component {
 
     renderProduction() {
         const { production } = this.context
-        return <>
-            <NavBar />
-            <header>
-                <h1>{production.production_title}</h1>
-                <p>Production overview</p>
-            </header>
-            <main>
-                <section className="module-header">
-                    <h2>Production Tools</h2>
-                </section>
-                <section>
-                    <h3><a href={`/script-breakdown/${production.id}`}>Script breakdown</a></h3>
-                </section>
-            </main>
-        </>
+        return (
+            <>
+                <NavBar />
+                <header>
+                    <section>
+                        <h1>{production.production_title}</h1>
+                        <p>Production overview</p>
+                    </section>
+                </header>
+                <main>
+                    <section className="module-header">
+                        <h2>Production Tools</h2>
+                    </section>
+                    <section className="production-tools">
+                        <div className="script-breakdown-selection">
+                            <p><a href={`/script-breakdown/${production.id}`}>Script breakdown</a></p>
+                        </div>
+                    </section>
+                </main>
+            </>
+        )
     }
 
     render() {
@@ -54,9 +61,7 @@ class ProductionPage extends Component {
         }
         return (
             <>
-                <section>
-                    {content}
-                </section>
+                {content}
             </>
         )
     }

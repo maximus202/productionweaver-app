@@ -30,11 +30,11 @@ class ScriptBreakdownPage extends Component {
     renderScenes() {
         const { scenesList = [] } = this.context
         return scenesList.map(scene =>
-            <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
-                <section key={scene.id}>
-                    <h1>{scene.scene_script_number}: {scene.setting} {scene.location} - {scene.time_of_day}</h1>
-                </section>
-            </Link>
+            <section key={scene.id}>
+                <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
+                    {scene.scene_script_number}: {scene.setting} {scene.location} - {scene.time_of_day}
+                </Link>
+            </section >
         )
     }
 
@@ -54,17 +54,17 @@ class ScriptBreakdownPage extends Component {
             <>
                 <NavBar />
                 <header>
-                    <h1>{production.production_title}</h1>
-                    <p>Script Breakdown</p>
+                    <section>
+                        <h1>{production.production_title}</h1>
+                        <p>Script Breakdown</p>
+                    </section>
                 </header>
                 <main>
                     <section className="module-header">
                         <h2>Scenes</h2>
                         <Link to={`/add-scene/${production.id}`}>Add scene</Link>
                     </section>
-                    <section>
-                        {content}
-                    </section>
+                    {content}
                 </main>
             </>
         )

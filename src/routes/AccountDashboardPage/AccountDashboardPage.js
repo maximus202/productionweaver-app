@@ -26,17 +26,19 @@ class AccountDashboard extends Component {
     }
 
     render() {
-        const { error } = this.context
+        const { error, users } = this.context
         return (
             <>
                 <NavBar />
                 <header>
-                    <h1>Dashboard</h1>
+                    <section>
+                        <h1>Your dashboard</h1>
+                    </section>
                 </header>
                 <main>
                     <section className="module-header">
                         <h2>Productions</h2>
-                        <Link to="/add-production">Add production</Link>
+                        <Link to="/add-production">Add</Link>
                     </section>
                     <section>
                         {error

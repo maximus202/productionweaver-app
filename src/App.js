@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import PrivateRoute from './components/Utils/PrivateRoute';
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
 import LandingPage from './routes/LandingPage/LandingPage';
 import AccountSignUp from './routes/AccountSignUp/AccountSignUp';
 import Login from './routes/Login/Login';
@@ -65,7 +63,6 @@ function App() {
           component={AddElementPage}
         />
       </Provider>
-      <Footer />
     </>
   );
 }

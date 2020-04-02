@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 class Login extends Component {
     render() {
@@ -27,6 +28,7 @@ class Login extends Component {
                                         <Link to="/sign-up">New user? Sign up!</Link>
                                     </section>
                                 </main>
+                                <Footer />
                             </>
                         )
                     }
