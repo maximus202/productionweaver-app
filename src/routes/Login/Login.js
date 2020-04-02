@@ -28,7 +28,6 @@ class Login extends Component {
                                         <Link to="/sign-up">New user? Sign up!</Link>
                                     </section>
                                 </main>
-                                <Footer />
                             </>
                         )
                     }

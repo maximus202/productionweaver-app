@@ -31,7 +31,6 @@ class AccountSignUp extends Component {
                                         <Link to="/login">Existing user?</Link>
                                     </section>
                                 </main>
-                                <Footer />
                             </>
                         )
                     }
