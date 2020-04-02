@@ -1,12 +1,13 @@
 img.logo {
     width: 150px;
-    height: auto;
+    height: 48.75px;
 }
 
 /*Tablet*/
 @media only screen and (min-width: 768px) {
   img.logo {
       width: 175px;
+      height: 56.88px;
   }
 }
 
@@ -14,5 +15,6 @@ img.logo {
 @media only screen and (min-width: 1024px) {
   img.logo {
     width: 175px;
+    height: 56.88px;
   }
 }
