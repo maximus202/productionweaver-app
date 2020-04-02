@@ -24,7 +24,6 @@ header {
   justify-content: center;
   margin: 0;
   padding: 20px 0 20px 0;
-  background-image: linear-gradient(#59708f, #415572) ;
 }
 
 h1, h2, p {
@@ -45,7 +44,7 @@ h2 {
   line-height: 30px;
 }
 
-p {
+p, label {
   font-size: 20px;
   font-weight: 300;
   line-height: 25px;
@@ -63,12 +62,12 @@ a {
   text-transform: uppercase;
 }
 
-header > section > h1, header > section > p {
-  color: white;
+img {
+  background-color: transparent
 }
 
-header > section > p {
-  font-size: 16px;
+header > section > h1, header > section > p {
+  color: #59708F;
 }
 
 section {
@@ -103,13 +102,21 @@ img.production-icon {
   align-self: center;
 }
 
-input {
+label {
+  color: #59708F;
+  padding: 0 15px 0 15px;
+}
+
+input, select {
     height: 45px;
     border: solid 1px #59708f52;
-    margin: 1px 0;
+    margin: 1px 0 20px 0;
     font-size: 20px;
     padding: 0 15px 0 15px;
     border-radius: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     color: #59708F;
 }
 

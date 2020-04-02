@@ -11,13 +11,18 @@ class AddProduction extends Component {
                         <>
                             <NavBar />
                             <header>
-                                <h1>Add a new production</h1>
+                                <section>
+                                    <h1>Add a new production</h1>
+                                </section>
                             </header>
                             <main>
-                                <form onSubmit={(e) => value.handleSubmitNewProduction(e, this.props.history)}>
-                                    <input type="text" id="project-name" name="project-name" placeholder="Project name" onChange={value.handleNewProductionTitle} required />
-                                    <input type="submit" id="add-project" name="add-project" placeholder="Add project" />
-                                </form>
+                                <section>
+                                    <form onSubmit={(e) => value.handleSubmitNewProduction(e, this.props.history)}>
+                                        <label htmlFor="project-name">Production name</label>
+                                        <input type="text" id="project-name" name="project-name" placeholder="Night of the Living Dead" onChange={value.handleNewProductionTitle} required />
+                                        <input type="submit" id="submit" name="add-project" />
+                                    </form>
+                                </section>
                             </main>
                         </>
                     )

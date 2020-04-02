@@ -10,3 +10,10 @@
 .element-section h3 {
     color: #59708F
 }
+
+.add-element-button {
+    background-color: transparent;
+    width: 64px;
+    box-shadow: 2px 2px 10px #00000087;
+    border-radius: 100%;
+}

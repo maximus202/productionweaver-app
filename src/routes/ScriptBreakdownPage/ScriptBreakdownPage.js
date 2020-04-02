@@ -43,8 +43,8 @@ class ScriptBreakdownPage extends Component {
         let content
         if (error) {
             content = (error.error === 'production does not exist')
-                ? <p>Production not found</p>
-                : <p>No scenes.</p>
+                ? <section><p>Production not found</p></section>
+                : <section><p>No scenes.</p></section>
         } else if (!production.id) {
             content = <div>Loading...</div>
         } else {

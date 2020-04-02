@@ -291,7 +291,7 @@ class SceneBreakdown extends Component {
                     )}
                 </section>
                 <div className="bottom-bar">
-                    <Link to={`/add-element/${scene[0].id}`}><img src="productionicon.png" alt="Add" /></Link>
+                    <Link to={`/add-element/${scene[0].id}`}><img className="add-element-button" src="https://github.com/maximus202/productionweaver-app/blob/styling/public/plusicon.png?raw=true" alt="Add" /></Link>
                 </div>
             </main>
         </>
@@ -305,7 +305,7 @@ class SceneBreakdown extends Component {
                 ? <p>Scene not found</p>
                 : <p>There was an error</p>
         } else if (!scene[0]) {
-            content = <div>Loading...</div>
+            content = <section><p>Loading...</p></section>
         } else {
             content = this.renderElements()
         }

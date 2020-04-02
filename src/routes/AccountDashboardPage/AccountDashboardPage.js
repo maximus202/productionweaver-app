@@ -42,7 +42,7 @@ class AccountDashboard extends Component {
                     </section>
                     <section>
                         {error
-                            ? <p>No productions.</p>
+                            ? <section><p>No productions.</p></section>
                             : this.renderProductions()
                         }
                     </section>
