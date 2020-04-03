@@ -2,7 +2,7 @@
 
 An application designed for independent film production management.
 
-## Motivation
+## Description
 
 Most film productions are not cheap! As the independent film movement continues
 to grow all over the globe, indie filmmakers are required to make vital decisions
