@@ -41,6 +41,7 @@ class AddElementPage extends Component {
                                             <option value="Stunts">Stunts</option>
                                             <option value="Vehicles">Vehicles</option>
                                             <option value="Visual FX">Visual FX</option>
+                                            <option value="Wardrobe">Wardrobe</option>
                                         </select>
                                         <input type="text" id="description" name="description" placeholder="Element description (example: gun)" onChange={value.handleNewElementDescriptionInput} required />
                                         <input type="submit" id="submit" name="add-element" placeholder="Add element" />
