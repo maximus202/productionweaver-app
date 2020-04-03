@@ -34,141 +34,141 @@ class SceneBreakdown extends Component {
         const { scene } = this.context
 
         const animalHandler = []
-        elementsList.map(element => {
-            if (element.category == 'Animal Handler') {
+        elementsList.forEach(element => {
+            if (element.category === 'Animal Handler') {
                 animalHandler.push(element)
             }
         })
 
         const cast = []
-        elementsList.map(element => {
-            if (element.category == 'Cast') {
+        elementsList.forEach(element => {
+            if (element.category === 'Cast') {
                 cast.push(element)
             }
         })
 
         const extras = []
-        elementsList.map(element => {
-            if (element.category == 'Extras') {
+        elementsList.forEach(element => {
+            if (element.category === 'Extras') {
                 extras.push(element)
             }
         })
 
         const greenery = []
-        elementsList.map(element => {
-            if (element.category == 'Greenery') {
+        elementsList.forEach(element => {
+            if (element.category === 'Greenery') {
                 greenery.push(element)
             }
         })
 
         const livestock = []
-        elementsList.map(element => {
-            if (element.category == 'Livestock') {
+        elementsList.forEach(element => {
+            if (element.category === 'Livestock') {
                 livestock.push(element)
             }
         })
 
         const makeupHair = []
-        elementsList.map(element => {
-            if (element.category == 'Makeup/Hair') {
+        elementsList.forEach(element => {
+            if (element.category === 'Makeup/Hair') {
                 makeupHair.push(element)
             }
         })
 
         const mechanicalFx = []
-        elementsList.map(element => {
-            if (element.category == 'Mechanical FX') {
+        elementsList.forEach(element => {
+            if (element.category === 'Mechanical FX') {
                 mechanicalFx.push(element)
             }
         })
 
         const miscellaneous = []
-        elementsList.map(element => {
-            if (element.category == 'Miscellaneous') {
+        elementsList.forEach(element => {
+            if (element.category === 'Miscellaneous') {
                 miscellaneous.push(element)
             }
         })
 
         const music = []
-        elementsList.map(element => {
-            if (element.category == 'Music') {
+        elementsList.forEach(element => {
+            if (element.category === 'Music') {
                 music.push(element)
             }
         })
 
         const opticalFx = []
-        elementsList.map(element => {
-            if (element.category == 'Optical FX') {
+        elementsList.forEach(element => {
+            if (element.category === 'Optical FX') {
                 opticalFx.push(element)
             }
         })
 
         const props = []
-        elementsList.map(element => {
-            if (element.category == 'Prop') {
+        elementsList.forEach(element => {
+            if (element.category === 'Prop') {
                 props.push(element)
             }
         })
 
         const security = []
-        elementsList.map(element => {
-            if (element.category == 'Security') {
+        elementsList.forEach(element => {
+            if (element.category === 'Security') {
                 security.push(element)
             }
         })
 
         const setDressing = []
-        elementsList.map(element => {
-            if (element.category == 'Set Dressing') {
+        elementsList.forEach(element => {
+            if (element.category === 'Set Dressing') {
                 setDressing.push(element)
             }
         })
 
         const sound = []
-        elementsList.map(element => {
-            if (element.category == 'Sound') {
+        elementsList.forEach(element => {
+            if (element.category === 'Sound') {
                 sound.push(element)
             }
         })
 
         const specialEquipment = []
-        elementsList.map(element => {
-            if (element.category == 'Special Equipment') {
+        elementsList.forEach(element => {
+            if (element.category === 'Special Equipment') {
                 specialEquipment.push(element)
             }
         })
 
         const specialFx = []
-        elementsList.map(element => {
-            if (element.category == 'Special FX') {
+        elementsList.forEach(element => {
+            if (element.category === 'Special FX') {
                 specialFx.push(element)
             }
         })
 
         const stunts = []
-        elementsList.map(element => {
-            if (element.category == 'Stunts') {
+        elementsList.forEach(element => {
+            if (element.category === 'Stunts') {
                 stunts.push(element)
             }
         })
 
         const vehicles = []
-        elementsList.map(element => {
-            if (element.category == 'Vehicles') {
+        elementsList.forEach(element => {
+            if (element.category === 'Vehicles') {
                 vehicles.push(element)
             }
         })
 
         const visualFx = []
-        elementsList.map(element => {
-            if (element.category == 'Visual FX') {
+        elementsList.forEach(element => {
+            if (element.category === 'Visual FX') {
                 visualFx.push(element)
             }
         })
 
         const wardrobe = []
-        elementsList.map(element => {
-            if (element.category == 'Wardrobe') {
+        elementsList.forEach(element => {
+            if (element.category === 'Wardrobe') {
                 wardrobe.push(element)
             }
         })

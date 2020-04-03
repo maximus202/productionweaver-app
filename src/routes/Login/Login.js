@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
 
 class Login extends Component {
     render() {

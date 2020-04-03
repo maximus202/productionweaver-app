@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import './AccountSignUp.css';
 import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
 
 class AccountSignUp extends Component {
     render() {

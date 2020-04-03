@@ -9,7 +9,7 @@ import AddProductionPage from './routes/AddProductionPage/AddProductionPage';
 import ProductionPage from './routes/ProductionPage/ProductionPage';
 import ScriptBreakdownPage from './routes/ScriptBreakdownPage/ScriptBreakdownPage';
 import SceneBreakdownPage from './routes/SceneBreakdownPage/SceneBreakdownPage';
-import { Provider } from './Context/Context'
+import { Provider } from './Context/Context';
 import RegistrationSuccess from './routes/RegistrationSuccess/RegistrationSuccess';
 import AddScenePage from './routes/AddScenePage/AddScenePage';
 import AddElementPage from './routes/AddElementPage/AddElementPage';

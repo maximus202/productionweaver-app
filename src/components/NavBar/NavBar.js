@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import Logo from '../Logo/Logo.js';
-import Menu from '../Menu/Menu.js';
 import TokenService from '../../services/token-service';
 import { Link } from 'react-router-dom';
 

@@ -26,7 +26,7 @@ class AccountDashboard extends Component {
     }
 
     render() {
-        const { error, users } = this.context
+        const { error } = this.context
         return (
             <>
                 <NavBar />
