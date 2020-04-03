@@ -331,9 +331,9 @@ class SceneBreakdown extends Component {
                         )}
                     </ul>
                 </section>
-                <div className="bottom-bar">
+                <section className="bottom-bar">
                     <Link to={`/add-element/${scene[0].id}`}><img className="add-element-button" src="https://github.com/maximus202/productionweaver-app/blob/styling/public/plusicon.png?raw=true" alt="Add" /></Link>
-                </div>
+                </section>
             </main>
         </>
     }

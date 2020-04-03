@@ -41,17 +41,15 @@ class LandingPage extends Component {
                         <h2>Try it out!</h2>
                         <p>Use Alfred Hitchcock's ProductionWeaver account to take it for a test drive, he won't mind!</p>
                         <p>Simply login using:</p>
-                        <ul>
-                            <li>Email: ahitchcock@studio.com</li>
-                            <li>Password: iLovebirds*</li>
-                        </ul>
+                        <p>Email: ahitchcock@studio.com</p>
+                        <p>Password: iLovebirds*</p>
                     </section>
-                    <div className="call-to-action">
+                    <section className="call-to-action">
                         <section>
                             <h2>Start using ProductionWeaver!</h2>
                             <Link to="/sign-up">Get started</Link>
                         </section>
-                    </div>
+                    </section>
                 </main>
                 <Footer />
             </>
