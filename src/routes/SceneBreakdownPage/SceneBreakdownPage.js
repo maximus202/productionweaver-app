@@ -24,11 +24,6 @@ class SceneBreakdown extends Component {
             .catch(this.context.setError)
     }
 
-    componentWillUnmount() {
-        //this.context.clearScene()
-        //this.context.clearElementsList()
-    }
-
     renderElements() {
         const { elementsList = [] } = this.context
         const { scene } = this.context

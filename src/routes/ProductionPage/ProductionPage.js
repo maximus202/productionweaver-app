@@ -18,10 +18,6 @@ class ProductionPage extends Component {
             .catch(this.context.setError)
     }
 
-    componentWillUnmount() {
-        //this.context.clearProduction()
-    }
-
     renderProduction() {
         const { production } = this.context
         return (
@@ -48,7 +44,6 @@ class ProductionPage extends Component {
     }
 
     render() {
-        //const { error, production } = this.context
         let content
         if (this.context.error) {
             content = (this.context.error.error === 'Production does not exist')

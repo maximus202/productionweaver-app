@@ -23,11 +23,6 @@ class ScriptBreakdownPage extends Component {
             .catch(this.context.setError)
     }
 
-    componentWillUnmount() {
-        //this.context.clearProduction()
-        //this.context.clearScenesList()
-    }
-
     renderScenes() {
         const { scenesList = [] } = this.context
         return scenesList.map(scene =>
