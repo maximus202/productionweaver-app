@@ -32,7 +32,7 @@ class AddElementPage extends Component {
                                             <option value="Miscellaneous">Miscellaneous</option>
                                             <option value="Music">Music</option>
                                             <option value="Optical FX">Optical FX</option>
-                                            <option value="Prop">Prop</option>
+                                            <option value="Props">Props</option>
                                             <option value="Security">Security</option>
                                             <option value="Set Dressing">Set Dressing</option>
                                             <option value="Sound">Sound</option>

@@ -105,7 +105,7 @@ class SceneBreakdown extends Component {
 
         const props = []
         elementsList.forEach(element => {
-            if (element.category === 'Prop') {
+            if (element.category === 'Props') {
                 props.push(element)
             }
         })
