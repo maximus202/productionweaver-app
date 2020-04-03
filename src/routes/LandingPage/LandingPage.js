@@ -11,7 +11,7 @@ class LandingPage extends Component {
                 <NavBar />
                 <header className="landing-page-header">
                     <section>
-                        <h1>Simple, swift, film production management.</h1>
+                        <h1>Simple, swift, film production management for indie filmmakers.</h1>
                         <Link to="/sign-up">Sign Up</Link>
                         <Link to="/login">Login</Link>
                     </section>
