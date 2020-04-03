@@ -3,6 +3,7 @@ import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
+import './ScriptBreakdownPage.css';
 
 class ScriptBreakdownPage extends Component {
     static defaultProps = {
@@ -30,11 +31,11 @@ class ScriptBreakdownPage extends Component {
     renderScenes() {
         const { scenesList = [] } = this.context
         return scenesList.map(scene =>
-            <section key={scene.id}>
+            <li key={scene.id}>
                 <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
                     {scene.scene_script_number}: {scene.setting} {scene.location} - {scene.time_of_day}
                 </Link>
-            </section >
+            </li>
         )
     }
 
@@ -64,7 +65,11 @@ class ScriptBreakdownPage extends Component {
                         <h2>Scenes</h2>
                         <Link to={`/add-scene/${production.id}`}>Add scene</Link>
                     </section>
-                    {content}
+                    <section>
+                        <ul>
+                            {content}
+                        </ul>
+                    </section>
                 </main>
             </>
         )

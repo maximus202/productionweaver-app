@@ -192,104 +192,144 @@ class SceneBreakdown extends Component {
                 <section className="element-section">
                     <h2>Elements:</h2>
                     <h3>Animal Handler</h3>
-                    {animalHandler.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {animalHandler.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Cast</h3>
-                    {cast.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {cast.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Extras</h3>
-                    {extras.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {extras.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Greenery</h3>
-                    {greenery.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {greenery.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Livestock</h3>
-                    {livestock.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {livestock.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Makeup/Hair</h3>
-                    {makeupHair.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {makeupHair.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Mechanical FX</h3>
-                    {mechanicalFx.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {mechanicalFx.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Miscellaneous</h3>
-                    {miscellaneous.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {miscellaneous.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Music</h3>
-                    {music.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {music.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Optical FX</h3>
-                    {opticalFx.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {opticalFx.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Props</h3>
-                    {props.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {props.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Security</h3>
-                    {security.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {security.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Set Dressing</h3>
-                    {setDressing.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {setDressing.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Sound</h3>
-                    {sound.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {sound.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Special Equipment</h3>
-                    {specialEquipment.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {specialEquipment.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Special FX</h3>
-                    {specialFx.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {specialFx.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Stunts</h3>
-                    {stunts.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {stunts.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Vehicles</h3>
-                    {vehicles.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {vehicles.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Visual FX</h3>
-                    {visualFx.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {visualFx.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
 
                     <h3>Wardrobe</h3>
-                    {wardrobe.map(element =>
-                        <div className="element-tag" key={element.id}>{element.description}</div>
-                    )}
+                    <ul className="element-section">
+                        {wardrobe.map(element =>
+                            <li className="element-tag" key={element.id}>{element.description}</li>
+                        )}
+                    </ul>
                 </section>
                 <div className="bottom-bar">
                     <Link to={`/add-element/${scene[0].id}`}><img className="add-element-button" src="https://github.com/maximus202/productionweaver-app/blob/styling/public/plusicon.png?raw=true" alt="Add" /></Link>

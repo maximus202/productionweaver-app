@@ -4,6 +4,7 @@ import ProductionListItem from '../../components/ProductionListItem/ProductionLi
 import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
+import './AccountDashboardPage.css';
 
 class AccountDashboard extends Component {
     static contextType = Context
@@ -41,10 +42,12 @@ class AccountDashboard extends Component {
                         <Link to="/add-production">Add</Link>
                     </section>
                     <section>
-                        {error
-                            ? <p>No productions.</p>
-                            : this.renderProductions()
-                        }
+                        <ul className="production-list">
+                            {error
+                                ? <p>No productions.</p>
+                                : this.renderProductions()
+                            }
+                        </ul>
                     </section>
                 </main>
             </>

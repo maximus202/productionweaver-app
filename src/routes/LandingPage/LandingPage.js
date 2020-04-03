@@ -38,6 +38,13 @@ class LandingPage extends Component {
                         <p>
                             Tools coming soon: budgeting, shoot scheduling, shot listing, storyboarding, call sheets, contact management and more!
                         </p>
+                        <h2>Try it out!</h2>
+                        <p>Use Alfred Hitchcock's ProductionWeaver account to take it for a test drive, he won't mind!</p>
+                        <p>Simply login using:</p>
+                        <ul>
+                            <li>Email: ahitchcock@studio.com</li>
+                            <li>Password: iLovebirds*</li>
+                        </ul>
                     </section>
                     <div className="call-to-action">
                         <section>
