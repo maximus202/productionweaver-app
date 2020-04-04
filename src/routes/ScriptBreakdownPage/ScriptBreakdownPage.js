@@ -4,6 +4,7 @@ import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import './ScriptBreakdownPage.css';
+import Loading from '../../components/Loading/Loading';
 
 class ScriptBreakdownPage extends Component {
     static defaultProps = {
@@ -42,7 +43,7 @@ class ScriptBreakdownPage extends Component {
                 ? <p>Production not found</p>
                 : <p>No scenes.</p>
         } else if (!production.id) {
-            content = <div>Loading...</div>
+            content = <Loading />
         } else {
             content = this.renderScenes()
         }

@@ -12,14 +12,11 @@ export class Provider extends React.Component {
             error: '',
             users: [],
             productionList: [],
-            scenesList: [],
             production: [],
             productions: [],
+            scenesList: [],
             scene: [],
             elementsList: [],
-            displayedProduction: [],
-            displayedScenes: [],
-            displayedElements: [],
             firstName: '',
             lastName: '',
             email: '',
@@ -45,9 +42,6 @@ export class Provider extends React.Component {
             handleGetProductions: this.handleGetProductions,
             handleNewProductionTitle: this.handleNewProductionTitle,
             handleSubmitNewProduction: this.handleSubmitNewProduction,
-            handleGetDisplayedProduction: this.handleGetDisplayedProduction,
-            handleGetDisplayedScenes: this.handleGetDisplayedScenes,
-            handleGetDisplayedElements: this.handleGetDisplayedElements,
             handleNewSceneSceneScriptNumberInput: this.handleNewSceneSceneScriptNumberInput,
             handleNewSceneSettingInput: this.handleNewSceneSettingInput,
             handleNewSceneLocationInput: this.handleNewSceneLocationInput,
@@ -147,24 +141,6 @@ export class Provider extends React.Component {
     handleGetProductions = (productions) => {
         this.setState({
             productions: productions
-        })
-    }
-
-    handleGetDisplayedProduction = (production) => {
-        this.setState({
-            displayedProduction: production
-        })
-    }
-
-    handleGetDisplayedScenes = (scenes) => {
-        this.setState({
-            displayedScenes: scenes
-        })
-    }
-
-    handleGetDisplayedElements = (elements) => {
-        this.setState({
-            displayedElements: elements
         })
     }
 

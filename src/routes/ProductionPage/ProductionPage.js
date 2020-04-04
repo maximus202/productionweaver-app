@@ -3,6 +3,7 @@ import ProductionApiService from '../../services/production-api-service';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
 import './ProductionPage.css';
+import Loading from '../../components/Loading/Loading';
 
 class ProductionPage extends Component {
     static defaultProps = {
@@ -50,7 +51,7 @@ class ProductionPage extends Component {
                 ? <p>Production not found</p>
                 : <p>There was an error</p>
         } else if (!this.context.production.id) {
-            content = <div>Loading...</div>
+            content = <Loading />
         } else {
             content = this.renderProduction()
         }

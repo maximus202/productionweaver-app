@@ -4,6 +4,7 @@ import ProductionApiService from '../../services/production-api-service';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import './SceneBreakdownPage.css';
+import Loading from '../../components/Loading/Loading';
 
 class SceneBreakdown extends Component {
     static defaultProps = {
@@ -341,7 +342,7 @@ class SceneBreakdown extends Component {
                 ? <p>Scene not found</p>
                 : <p>There was an error</p>
         } else if (!scene[0]) {
-            content = <section><p>Loading...</p></section>
+            content = <Loading />
         } else {
             content = this.renderElements()
         }
