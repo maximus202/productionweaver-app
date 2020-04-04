@@ -11,6 +11,7 @@ export class Provider extends React.Component {
         this.state = {
             error: '',
             users: [],
+            loading: false,
             productionList: [],
             production: [],
             productions: [],
@@ -254,6 +255,7 @@ export class Provider extends React.Component {
 
     handleSubmitJwtAuth = (e, history) => {
         e.preventDefault();
+        this.setState({ loading: true })
         const loginEmailInput = this.state.loginEmail;
         const loginPasswordInput = this.state.loginPassword;
         const data = {
@@ -264,6 +266,7 @@ export class Provider extends React.Component {
             .then(res => {
                 TokenService.saveAuthToken(res.authToken)
             })
+            .then(() => this.setState({ loading: false }))
             .then(() => history.push('/'))
             .catch(res => {
                 this.setState({
