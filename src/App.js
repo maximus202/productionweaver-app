@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import PrivateRoute from '../src/Utils/PrivateRoute';
+import PrivateRoute from './Utils/PrivateRoute';
 import LandingPage from './routes/LandingPage/LandingPage';
 import AccountSignUp from './routes/AccountSignUp/AccountSignUp';
 import Login from './routes/Login/Login';
@@ -19,7 +19,8 @@ function App() {
     <>
       <Provider>
         <Route
-          exact path="/home"
+          exact
+          path="/home"
           component={LandingPage}
         />
         <Route
@@ -35,11 +36,13 @@ function App() {
           component={Login}
         />
         <PrivateRoute
-          exact path="/"
+          exact
+          path="/"
           component={AccountDashboardPage}
         />
         <PrivateRoute
-          exact path="/production/:productionId"
+          exact
+          path="/production/:productionId"
           component={ProductionPage}
         />
         <PrivateRoute
@@ -47,15 +50,18 @@ function App() {
           component={AddProductionPage}
         />
         <PrivateRoute
-          exact path="/script-breakdown/:productionId"
+          exact
+          path="/script-breakdown/:productionId"
           component={ScriptBreakdownPage}
         />
         <PrivateRoute
-          exact path="/add-scene/:productionId"
+          exact
+          path="/add-scene/:productionId"
           component={AddScenePage}
         />
         <PrivateRoute
-          exact path="/scene-breakdown/:sceneId"
+          exact
+          path="/scene-breakdown/:sceneId"
           component={SceneBreakdownPage}
         />
         <PrivateRoute

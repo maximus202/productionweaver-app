@@ -1,7 +1,7 @@
 import React from 'react';
-import { API_BASE_URL } from '../config';
 import AuthApiService from '../services/auth-api-service';
 import TokenService from '../services/token-service';
+import ProductionApiService from '../services/production-api-service';
 
 export const Context = React.createContext()
 
@@ -220,28 +220,10 @@ export class Provider extends React.Component {
 
     handleSubmitNewProduction = (e, history) => {
         e.preventDefault();
-        const newProductionTitleInput = this.state.newProductionTitle;
         const data = {
-            'production_title': newProductionTitleInput
+            'production_title': this.state.newProductionTitle
         }
-
-        fetch(`${API_BASE_URL}/api/productions/`, {
-            headers: {
-                'content-type': 'application/json',
-                'Authorization': `bearer ${TokenService.getAuthToken()}`
-            },
-            body: JSON.stringify(data),
-            method: 'POST',
-        })
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                } else {
-                    return response
-                        .json()
-                        .then(responseJson => Promise.reject(new Error(responseJson)))
-                }
-            })
+        ProductionApiService.submitNewProduction(data)
             .then(responseJson => {
                 this.setState({
                     productions: [...this.state.productions, responseJson]
@@ -256,11 +238,9 @@ export class Provider extends React.Component {
     handleSubmitJwtAuth = (e, history) => {
         e.preventDefault();
         this.setState({ loading: true })
-        const loginEmailInput = this.state.loginEmail;
-        const loginPasswordInput = this.state.loginPassword;
         const data = {
-            'email': loginEmailInput,
-            'password': loginPasswordInput
+            'email': this.state.loginEmail,
+            'password': this.state.loginPassword
         }
         AuthApiService.postLogin(data)
             .then(res => {
@@ -277,35 +257,13 @@ export class Provider extends React.Component {
 
     handleSubmitNewUser = (e, history) => {
         e.preventDefault();
-        const firstNameInput = this.state.firstName;
-        const lastNameInput = this.state.lastName;
-        const emailInput = this.state.email;
-        const passwordInput = this.state.password;
-        const url = `${API_BASE_URL}/api/users/`;
         const data = {
-            'first_name': firstNameInput,
-            'last_name': lastNameInput,
-            'email': emailInput,
-            'password': passwordInput
+            'first_name': this.state.firstName,
+            'last_name': this.state.lastName,
+            'email': this.state.email,
+            'password': this.state.password,
         };
-        const otherParams = {
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data),
-            method: 'POST',
-        };
-
-        fetch(url, otherParams)
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                } else {
-                    return response
-                        .json()
-                        .then(responseJson => Promise.reject(new Error(responseJson)))
-                }
-            })
+        ProductionApiService.submitNewUser(data)
             .then(responseJson => {
                 this.setState({
                     users: [...this.state.users, responseJson]
@@ -319,38 +277,14 @@ export class Provider extends React.Component {
 
     handleSubmitNewScene = (e, productionId, history) => {
         e.preventDefault();
-        const settingInput = this.state.newSceneSetting;
-        const sceneSceneScriptNumberInput = this.state.newSceneScriptNumber;
-        const locationInput = this.state.newSceneLocation;
-        const timeOfDayInput = this.state.newSceneTimeOfDay;
-        const shortSummaryInput = this.state.newSceneShortSummary;
-        const url = `${API_BASE_URL}/api/scenes/${productionId}`;
         const data = {
-            'scene_script_number': sceneSceneScriptNumberInput,
-            'setting': settingInput,
-            'location': locationInput,
-            'time_of_day': timeOfDayInput,
-            'short_summary': shortSummaryInput
+            'scene_script_number': this.state.newSceneScriptNumber,
+            'setting': this.state.newSceneSetting,
+            'location': this.state.newSceneLocation,
+            'time_of_day': this.state.newSceneTimeOfDay,
+            'short_summary': this.state.newSceneShortSummary
         };
-        const otherParams = {
-            headers: {
-                'content-type': 'application/json',
-                'Authorization': `bearer ${TokenService.getAuthToken()}`
-            },
-            body: JSON.stringify(data),
-            method: 'POST',
-        }
-
-        fetch(url, otherParams)
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                } else {
-                    return response
-                        .json()
-                        .then(responseJson => Promise.reject(new Error(responseJson)))
-                }
-            })
+        ProductionApiService.submitNewScene(data, productionId)
             .then(responseJson => {
                 this.setState({
                     scenes: [...this.state.scenesList, responseJson]
@@ -364,32 +298,11 @@ export class Provider extends React.Component {
 
     handleSubmitNewElement = (e, sceneId, history) => {
         e.preventDefault();
-        const categoryInput = this.state.newElementCategory;
-        const descriptionInput = this.state.newElementDescription;
-        const url = `${API_BASE_URL}/api/elements/scene/${sceneId}`;
         const data = {
-            'category': categoryInput,
-            'description': descriptionInput
-        }
-        const otherParams = {
-            headers: {
-                'content-type': 'application/json',
-                'Authorization': `bearer ${TokenService.getAuthToken()}`
-            },
-            body: JSON.stringify(data),
-            method: 'POST',
-        }
-
-        fetch(url, otherParams)
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                } else {
-                    return response
-                        .json()
-                        .then(responseJson => Promise.reject(new Error(responseJson)))
-                }
-            })
+            'category': this.state.newElementCategory,
+            'description': this.state.newElementDescription
+        };
+        ProductionApiService.submitNewElement(data, sceneId)
             .then(responseJson => {
                 this.setState({
                     elementsList: [...this.state.elementsList, responseJson]
