@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
-import { Context } from '../../Context/Context';
 
 class RegistrationSuccess extends Component {
-    static contextType = Context
-
-    renderRegistrationSuccessPage() {
+    render() {
         return (
             <>
                 <NavBar />
@@ -20,21 +17,6 @@ class RegistrationSuccess extends Component {
                         <Link to="/login">Log in ></Link>
                     </section>
                 </main>
-            </>
-        )
-    }
-
-    render() {
-        const { users } = this.context
-        let content
-        if (!users[0].id) {
-            content = <div>Loading...</div>
-        } else {
-            content = this.renderRegistrationSuccessPage()
-        }
-        return (
-            <>
-                {content}
             </>
         )
     }

@@ -10,48 +10,18 @@ export class Provider extends React.Component {
         super(props);
         this.state = {
             error: '',
-            users: [],
             loading: false,
             productionList: [],
             production: [],
-            productions: [],
             scenesList: [],
             scene: [],
             elementsList: [],
-            firstName: '',
-            lastName: '',
-            email: '',
-            password: '',
             loginEmail: '',
             loginPassword: '',
-            newProductionTitle: '',
-            newSceneScriptNumber: '',
-            newSceneSetting: '',
-            newSceneLocation: '',
-            newSceneTimeOfDay: '',
-            newSceneShortSummary: '',
-            newElementCategory: '',
-            newElementDescription: '',
-            handleFirstNameInputChange: this.handleFirstNameInputChange,
-            handleLastNameInputChange: this.handleLastNameInputChange,
-            handleEmailInputChange: this.handleEmailInputChange,
-            handlePasswordInputChange: this.handlePasswordInputChange,
-            handleSubmitNewUser: this.handleSubmitNewUser,
             handleSubmitLoginEmail: this.handleSubmitLoginEmail,
             handleSubmitLoginPassword: this.handleSubmitLoginPassword,
             handleSubmitJwtAuth: this.handleSubmitJwtAuth,
             handleGetProductions: this.handleGetProductions,
-            handleNewProductionTitle: this.handleNewProductionTitle,
-            handleSubmitNewProduction: this.handleSubmitNewProduction,
-            handleNewSceneSceneScriptNumberInput: this.handleNewSceneSceneScriptNumberInput,
-            handleNewSceneSettingInput: this.handleNewSceneSettingInput,
-            handleNewSceneLocationInput: this.handleNewSceneLocationInput,
-            handleNewSceneTimeOfDayInput: this.handleNewSceneTimeOfDayInput,
-            handleNewSceneShortSummaryInput: this.handleNewSceneShortSummaryInput,
-            handleSubmitNewScene: this.handleSubmitNewScene,
-            handleNewElementCategoryInput: this.handleNewElementCategoryInput,
-            handleNewElementDescriptionInput: this.handleNewElementDescriptionInput,
-            handleSubmitNewElement: this.handleSubmitNewElement,
             setProductionList: this.setProductionList,
             setError: this.setError,
             clearError: this.clearError,
@@ -66,31 +36,6 @@ export class Provider extends React.Component {
         }
     }
 
-    //handlers
-    handleFirstNameInputChange = (event) => {
-        this.setState({
-            firstName: event.target.value
-        })
-    }
-
-    handleLastNameInputChange = (event) => {
-        this.setState({
-            lastName: event.target.value
-        })
-    }
-
-    handleEmailInputChange = (event) => {
-        this.setState({
-            email: event.target.value
-        })
-    }
-
-    handlePasswordInputChange = (event) => {
-        this.setState({
-            password: event.target.value
-        })
-    }
-
     handleSubmitLoginEmail = (event) => {
         this.setState({
             loginEmail: event.target.value
@@ -100,42 +45,6 @@ export class Provider extends React.Component {
     handleSubmitLoginPassword = (event) => {
         this.setState({
             loginPassword: event.target.value
-        })
-    }
-
-    handleNewProductionTitle = (event) => {
-        this.setState({
-            newProductionTitle: event.target.value
-        })
-    }
-
-    handleNewSceneSceneScriptNumberInput = (event) => {
-        this.setState({
-            newSceneScriptNumber: event.target.value
-        })
-    }
-
-    handleNewSceneSettingInput = (event) => {
-        this.setState({
-            newSceneSetting: event.target.value
-        })
-    }
-
-    handleNewSceneLocationInput = (event) => {
-        this.setState({
-            newSceneLocation: event.target.value
-        })
-    }
-
-    handleNewSceneTimeOfDayInput = (event) => {
-        this.setState({
-            newSceneTimeOfDay: event.target.value
-        })
-    }
-
-    handleNewSceneShortSummaryInput = (event) => {
-        this.setState({
-            newSceneShortSummary: event.target.value
         })
     }
 
@@ -206,35 +115,6 @@ export class Provider extends React.Component {
         this.setState(null)
     }
 
-    handleNewElementCategoryInput = (event) => {
-        this.setState({
-            newElementCategory: event.target.value
-        })
-    }
-
-    handleNewElementDescriptionInput = (event) => {
-        this.setState({
-            newElementDescription: event.target.value
-        })
-    }
-
-    handleSubmitNewProduction = (e, history) => {
-        e.preventDefault();
-        const data = {
-            'production_title': this.state.newProductionTitle
-        }
-        ProductionApiService.submitNewProduction(data)
-            .then(responseJson => {
-                this.setState({
-                    productions: [...this.state.productions, responseJson]
-                })
-            })
-            .then(() => history.push('/'))
-            .catch(error => {
-                console.error({ error })
-            })
-    }
-
     handleSubmitJwtAuth = (e, history) => {
         e.preventDefault();
         this.setState({ loading: true })
@@ -246,71 +126,14 @@ export class Provider extends React.Component {
             .then(res => {
                 TokenService.saveAuthToken(res.authToken)
             })
-            .then(() => this.setState({ loading: false }))
+            .then(() => this.setState({
+                loading: false
+            }))
             .then(() => history.push('/'))
             .catch(res => {
                 this.setState({
                     error: res.error
                 })
-            })
-    }
-
-    handleSubmitNewUser = (e, history) => {
-        e.preventDefault();
-        const data = {
-            'first_name': this.state.firstName,
-            'last_name': this.state.lastName,
-            'email': this.state.email,
-            'password': this.state.password,
-        };
-        ProductionApiService.submitNewUser(data)
-            .then(responseJson => {
-                this.setState({
-                    users: [...this.state.users, responseJson]
-                })
-            })
-            .then(() => history.push('/registrationsuccess'))
-            .catch(error => {
-                console.error({ error })
-            })
-    }
-
-    handleSubmitNewScene = (e, productionId, history) => {
-        e.preventDefault();
-        const data = {
-            'scene_script_number': this.state.newSceneScriptNumber,
-            'setting': this.state.newSceneSetting,
-            'location': this.state.newSceneLocation,
-            'time_of_day': this.state.newSceneTimeOfDay,
-            'short_summary': this.state.newSceneShortSummary
-        };
-        ProductionApiService.submitNewScene(data, productionId)
-            .then(responseJson => {
-                this.setState({
-                    scenes: [...this.state.scenesList, responseJson]
-                })
-            })
-            .then(() => history.push(`/script-breakdown/${productionId}`))
-            .catch(error => {
-                console.error({ error })
-            })
-    }
-
-    handleSubmitNewElement = (e, sceneId, history) => {
-        e.preventDefault();
-        const data = {
-            'category': this.state.newElementCategory,
-            'description': this.state.newElementDescription
-        };
-        ProductionApiService.submitNewElement(data, sceneId)
-            .then(responseJson => {
-                this.setState({
-                    elementsList: [...this.state.elementsList, responseJson]
-                })
-            })
-            .then(() => history.push(`/scene-breakdown/${sceneId}`))
-            .catch(error => {
-                console.error({ error })
             })
     }
 
