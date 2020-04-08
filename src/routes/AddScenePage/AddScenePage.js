@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavBar from '../../components/NavBar/NavBar';
 import AddSceneForm from '../../components/AddSceneForm/AddSceneForm';
 
-function AddScenePage() {
+function AddScenePage(props) {
   const {
     history,
     match,
-  } = this.props;
+  } = props;
   return (
     <>
       <NavBar />
@@ -23,5 +24,10 @@ function AddScenePage() {
     </>
   );
 }
+
+AddScenePage.propTypes = {
+  history: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+};
 
 export default AddScenePage;

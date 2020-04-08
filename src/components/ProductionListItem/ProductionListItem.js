@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function ProductionListItem() {
-  const { production } = this.props;
+function ProductionListItem(props) {
+  const { production } = props;
   return (
     <li>
       <section className="production-item" key={production.id}>
@@ -14,5 +15,9 @@ function ProductionListItem() {
     </li>
   );
 }
+
+ProductionListItem.propTypes = {
+  production: PropTypes.object.isRequired,
+};
 
 export default ProductionListItem;

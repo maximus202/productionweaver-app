@@ -13,7 +13,6 @@ class SceneBreakdown extends Component {
     componentDidMount() {
       const {
         match,
-        sceneId,
       } = this.props;
       const {
         setScene,
@@ -24,12 +23,13 @@ class SceneBreakdown extends Component {
       ProductionApiService.getScene(match.params.sceneId)
         .then(setScene)
         .catch(setError);
-      ProductionApiService.getElements(sceneId)
+      ProductionApiService.getElements(match.params.sceneId)
         .then(setElementsList)
         .catch(setError);
     }
 
     renderElements() {
+      console.log(this.context.elementsList);
       const { elementsList = [] } = this.context;
       const { scene } = this.context;
 

@@ -26,7 +26,7 @@ function AccountSignUp(props) {
 }
 
 AccountSignUp.propTypes = {
-  history: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default AccountSignUp;

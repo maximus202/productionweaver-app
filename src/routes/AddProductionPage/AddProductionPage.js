@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavBar from '../../components/NavBar/NavBar';
 import AddProductionForm from '../../components/AddProductionForm/AddProductionForm';
 
-function AddProduction() {
-  const { history } = this.props;
+function AddProduction(props) {
+  const { history } = props;
   return (
     <>
       <NavBar />
@@ -20,5 +21,9 @@ function AddProduction() {
     </>
   );
 }
+
+AddProduction.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default AddProduction;

@@ -43,8 +43,8 @@ class AccountSignUpForm extends Component {
 
   handleSubmitNewUser = (e) => {
     e.preventDefault();
+    const { history } = this.props;
     const {
-      history,
       firstName,
       lastName,
       email,
@@ -56,7 +56,7 @@ class AccountSignUpForm extends Component {
       email,
       password,
     };
-    ProductionApiService.submitNewUser(data)
+    ProductionApiService.submitNewUser(data, history)
       .then(() => history.push('/registrationsuccess'))
       .catch((error) => {
         console.error({ error });
@@ -64,14 +64,13 @@ class AccountSignUpForm extends Component {
   }
 
   render() {
-    const { history } = this.state;
     const { handleSubmitNewUser } = this.state;
     const { handleFirstNameInputChange } = this.state;
     const { handleLastNameInputChange } = this.state;
     const { handleEmailInputChange } = this.state;
     const { handlePasswordInputChange } = this.state;
     return (
-      <form onSubmit={(e) => handleSubmitNewUser(e, history)}>
+      <form onSubmit={(e) => handleSubmitNewUser(e)}>
         <label htmlFor="first-name">First name</label>
         <input type="text" id="first-name" name="first-name" onChange={handleFirstNameInputChange} required />
         <label htmlFor="last-name">Last name</label>

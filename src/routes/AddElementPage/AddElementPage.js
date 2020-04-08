@@ -2,9 +2,11 @@ import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import NewElementForm from '../../components/NewElementForm/NewElementForm';
 
-function AddElementPage() {
-  const { match } = this.props;
-  const { history } = this.props;
+function AddElementPage(props) {
+  const {
+    match,
+    history,
+  } = props;
   return (
     <>
       <NavBar />
