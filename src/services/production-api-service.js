@@ -6,13 +6,13 @@ const ProductionApiService = {
     return fetch(`${API_BASE_URL}/api/users/`, {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
       },
       body: JSON.stringify(data),
     })
-      .then(res => ((!res.ok))
+      .then((res) => (((!res.ok))
         ? res.json().then((e) => Promise.reject(e))
-        : res.json());
+        : res.json()));
   },
 
   getProductions() {
@@ -45,14 +45,14 @@ const ProductionApiService = {
     return fetch(`${API_BASE_URL}/api/productions/`, {
       headers: {
         'content-type': 'application/json',
-        'Authorization': `bearer ${TokenService.getAuthToken()}`
+        Authorization: `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(data),
       method: 'POST',
     })
-      .then(res => ((!res.ok))
+      .then((res) => (((!res.ok))
         ? res.json().then((e) => Promise.reject(e))
-        : res.json());
+        : res.json()));
   },
 
   getScenes(productionId) {
@@ -85,13 +85,13 @@ const ProductionApiService = {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'Authorization': `bearer ${TokenService.getAuthToken()}`
+        Authorization: `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(data),
     })
-      .then(res => ((!res.ok))
+      .then((res) => (((!res.ok))
         ? res.json().then((e) => Promise.reject(e))
-        : res.json())
+        : res.json()));
   },
 
   getElements(sceneId) {
@@ -110,13 +110,13 @@ const ProductionApiService = {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'Authorization': `bearer ${TokenService.getAuthToken()}`
+        Authorization: `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(data),
     })
-      .then(res => ((!res.ok))
+      .then((res) => (((!res.ok))
         ? res.json().then((e) => Promise.reject(e))
-        : res.json())
+        : res.json()));
   },
 };
 

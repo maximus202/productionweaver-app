@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
-import { Context } from '../../Context/Context';
+import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import NewElementForm from '../../components/NewElementForm/NewElementForm';
 
-class AddElementPage extends Component {
-  render() {
-    return (
-      <>
-        <NavBar />
-        <header>
-          <section>
-            <h1>Add new Element</h1>
-          </section>
-        </header>
-        <main>
-          <section>
-            <NewElementForm sceneId={this.props.match.params.sceneId} history={this.props.history} />
-          </section>
-        </main>
-      </>
-    );
-  }
+function AddElementPage() {
+  const { match } = this.props;
+  const { history } = this.props;
+  return (
+    <>
+      <NavBar />
+      <header>
+        <section>
+          <h1>Add new Element</h1>
+        </section>
+      </header>
+      <main>
+        <section>
+          <NewElementForm sceneId={match.params.sceneId} history={history} />
+        </section>
+      </main>
+    </>
+  );
 }
 
 export default AddElementPage;

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import Footer from './Footer';
 
 describe('Footer', () => {
-    it('renders without crashing', () => {
-        const div = document.createElement('div');
-        ReactDOM.render(<Footer />, div);
-        ReactDOM.unmountComponentAtNode(div);
-    });
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Footer />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });

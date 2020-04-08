@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 
@@ -6,46 +7,56 @@ class AddProductionForm extends Component {
     static contextType = Context;
 
     constructor(props) {
-        super(props);
-        this.state = {
-            newProductionTitle: '',
-            handleNewProductionTitle: this.handleNewProductionTitle,
-            handleSubmitNewProduction: this.handleSubmitNewProduction,
-        }
+      super(props);
+      this.state = {
+        newProductionTitle: '',
+        handleNewProductionTitle: this.handleNewProductionTitle,
+        handleSubmitNewProduction: this.handleSubmitNewProduction,
+      };
     }
 
     handleNewProductionTitle = (event) => {
-        this.setState({
-            newProductionTitle: event.target.value
-        })
+      this.setState({
+        newProductionTitle: event.target.value,
+      });
     }
 
     handleSubmitNewProduction = (e, history) => {
-        e.preventDefault();
-        const data = {
-            'production_title': this.state.newProductionTitle
-        }
-        ProductionApiService.submitNewProduction(data)
-            .then(responseJson => {
-                this.setState({
-                    productionList: [...this.context.productionList, responseJson]
-                })
-            })
-            .then(() => history.push('/'))
-            .catch(error => {
-                console.error({ error })
-            })
+      e.preventDefault();
+      const { newProductionTitle } = this.state;
+      const data = {
+        production_title: newProductionTitle,
+      };
+      ProductionApiService.submitNewProduction(data)
+        .then((responseJson) => {
+          const { productionList } = this.context;
+          this.setState({
+            productionList: [...productionList, responseJson],
+          });
+        })
+        .then(() => history.push('/'))
+        .catch((error) => {
+          console.error({ error });
+        });
     }
 
     render() {
-        return (
-            <form onSubmit={(e) => this.state.handleSubmitNewProduction(e, this.props.history)}>
-                <label htmlFor="project-name">Production name</label>
-                <input type="text" id="project-name" name="project-name" onChange={this.state.handleNewProductionTitle} required />
-                <input type="submit" id="submit" name="add-project" />
-            </form>
-        )
+      const { history } = this.props;
+      const { handleSubmitNewProduction, handleNewProductionTitle } = this.state;
+      return (
+        <form onSubmit={(e) => handleSubmitNewProduction(e, history)}>
+          <label htmlFor="project-name">Production name</label>
+          <input type="text" id="project-name" name="project-name" onChange={handleNewProductionTitle} required />
+          <input type="submit" id="submit" name="add-project" />
+        </form>
+      );
     }
 }
+
+AddProductionForm.propTypes = {
+  history: PropTypes.oneOfType([
+    PropTypes.string,
+  ]).isRequired,
+};
 
 export default AddProductionForm;
