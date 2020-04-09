@@ -42,6 +42,16 @@ function LandingPage() {
             Tools coming soon: budgeting, shoot scheduling, shot listing, storyboarding,
             call sheets, contact management and more!
           </p>
+          <h2>Script breakdowns</h2>
+          <p>
+            &quot;For your consideration... every element in your script!&quot;
+          </p>
+          <p>
+            Keeping track of all the elements in your film, such as; wardrobe, props,
+            and effects, are crucial in your pre-production days. Script breakdowns
+            let&apos;s you easily add elements to every scene so you don&apos;t forget
+            a thing on filming day.
+          </p>
           <h2>Try it out!</h2>
           <p>
             Use Alfred Hitchcock&apos;s ProductionWeaver account to take it for a test
