@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProductionApiService from '../../services/production-api-service';
 
 class AccountSignUpForm extends Component {
@@ -45,6 +46,7 @@ class AccountSignUpForm extends Component {
     e.preventDefault();
     const { history } = this.props;
     const {
+      handleError,
       firstName,
       lastName,
       email,
@@ -58,9 +60,7 @@ class AccountSignUpForm extends Component {
     };
     ProductionApiService.submitNewUser(data, history)
       .then(() => history.push('/registrationsuccess'))
-      .catch((error) => {
-        console.error({ error });
-      });
+      .catch((error) => handleError(error));
   }
 
   render() {
@@ -84,5 +84,9 @@ class AccountSignUpForm extends Component {
     );
   }
 }
+
+AccountSignUpForm.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default AccountSignUpForm;

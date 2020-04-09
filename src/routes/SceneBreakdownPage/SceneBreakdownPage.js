@@ -1,3 +1,4 @@
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -18,8 +19,9 @@ class SceneBreakdown extends Component {
         setScene,
         setError,
         setElementsList,
+        clearError,
       } = this.context;
-      this.context.clearError();
+      clearError();
       ProductionApiService.getScene(match.params.sceneId)
         .then(setScene)
         .catch(setError);
@@ -29,7 +31,6 @@ class SceneBreakdown extends Component {
     }
 
     renderElements() {
-      console.log(this.context.elementsList);
       const { elementsList = [] } = this.context;
       const { scene } = this.context;
 
@@ -335,10 +336,7 @@ class SceneBreakdown extends Component {
 }
 
 SceneBreakdown.propTypes = {
-  match: PropTypes.oneOfType([
-    PropTypes.string,
-  ]).isRequired,
-  sceneId: PropTypes.number.isRequired,
+  match: PropTypes.object.isRequired,
 };
 
 export default SceneBreakdown;

@@ -1,19 +1,21 @@
+/* eslint-disable no-console */
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 
 class AddProductionForm extends Component {
-    static contextType = Context;
+  static contextType = Context;
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        newProductionTitle: '',
-        handleNewProductionTitle: this.handleNewProductionTitle,
-        handleSubmitNewProduction: this.handleSubmitNewProduction,
-      };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      newProductionTitle: '',
+      handleNewProductionTitle: this.handleNewProductionTitle,
+      handleSubmitNewProduction: this.handleSubmitNewProduction,
+    };
+  }
 
     handleNewProductionTitle = (event) => {
       this.setState({
@@ -31,6 +33,7 @@ class AddProductionForm extends Component {
         .then((responseJson) => {
           const { productionList } = this.context;
           this.setState({
+            // eslint-disable-next-line react/no-unused-state
             productionList: [...productionList, responseJson],
           });
         })
@@ -54,9 +57,7 @@ class AddProductionForm extends Component {
 }
 
 AddProductionForm.propTypes = {
-  history: PropTypes.oneOfType([
-    PropTypes.string,
-  ]).isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default AddProductionForm;

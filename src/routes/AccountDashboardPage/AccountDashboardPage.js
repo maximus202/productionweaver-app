@@ -1,3 +1,4 @@
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
@@ -13,8 +14,9 @@ class AccountDashboard extends Component {
       const {
         setProductionList,
         setError,
+        clearError,
       } = this.context;
-      this.context.clearError();
+      clearError();
       ProductionApiService.getProductions()
         .then(setProductionList)
         .catch(setError);

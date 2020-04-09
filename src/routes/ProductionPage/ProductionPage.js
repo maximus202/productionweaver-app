@@ -1,3 +1,4 @@
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProductionApiService from '../../services/production-api-service';
@@ -14,8 +15,9 @@ class ProductionPage extends Component {
       const {
         setProduction,
         setError,
+        clearError,
       } = this.context;
-      this.context.clearError();
+      clearError();
       ProductionApiService.getProduction(match.params.productionId)
         .then(setProduction)
         .catch(setError);
@@ -70,10 +72,7 @@ class ProductionPage extends Component {
 }
 
 ProductionPage.propTypes = {
-  match: PropTypes.oneOfType([
-    PropTypes.string,
-  ]).isRequired,
-  productionId: PropTypes.number.isRequired,
+  match: PropTypes.object.isRequired,
 };
 
 export default ProductionPage;

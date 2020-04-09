@@ -1,3 +1,4 @@
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -16,8 +17,9 @@ class ScriptBreakdownPage extends Component {
         setProduction,
         setError,
         setScenesList,
+        clearError,
       } = this.context;
-      this.context.clearError();
+      clearError();
       ProductionApiService.getProduction(match.params.productionId)
         .then(setProduction)
         .catch(setError);
@@ -84,9 +86,7 @@ class ScriptBreakdownPage extends Component {
 }
 
 ScriptBreakdownPage.propTypes = {
-  match: PropTypes.oneOfType([
-    PropTypes.string,
-  ]).isRequired,
+  match: PropTypes.object.isRequired,
 };
 
 export default ScriptBreakdownPage;

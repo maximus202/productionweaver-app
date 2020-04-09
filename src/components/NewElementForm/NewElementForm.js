@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProductionApiService from '../../services/production-api-service';
@@ -94,10 +97,8 @@ class NewElementForm extends Component {
 }
 
 NewElementForm.propTypes = {
-  history: PropTypes.oneOfType([
-    PropTypes.string,
-  ]).isRequired,
-  sceneId: PropTypes.number.isRequired,
+  history: PropTypes.object.isRequired,
+  sceneId: PropTypes.string.isRequired,
 };
 
 export default NewElementForm;

@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Context } from '../../Context/Context';
@@ -125,10 +128,8 @@ class AddSceneForm extends Component {
 }
 
 AddSceneForm.propTypes = {
-  history: PropTypes.oneOfType([
-    PropTypes.string,
-  ]).isRequired,
-  productionId: PropTypes.number.isRequired,
+  history: PropTypes.object.isRequired,
+  productionId: PropTypes.string.isRequired,
 };
 
 export default AddSceneForm;

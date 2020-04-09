@@ -10,9 +10,11 @@ describe('ProductionListItem', () => {
       id: 1,
       production_title: 'test',
     };
-    ReactDOM.render(<BrowserRouter>
+    ReactDOM.render(
+      <BrowserRouter>
         <ProductionListItem production={production} />
-                      </BrowserRouter>, div);
+      </BrowserRouter>, div,
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 });

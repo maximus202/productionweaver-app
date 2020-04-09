@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavBar from '../../components/NavBar/NavBar';
 import NewElementForm from '../../components/NewElementForm/NewElementForm';
 
@@ -23,5 +24,10 @@ function AddElementPage(props) {
     </>
   );
 }
+
+AddElementPage.propTypes = {
+  history: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+};
 
 export default AddElementPage;

@@ -1,4 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable react/no-unused-state */
 import React from 'react';
+import PropTypes from 'prop-types';
 import AuthApiService from '../services/auth-api-service';
 import TokenService from '../services/token-service';
 
@@ -147,3 +150,7 @@ export class Provider extends React.Component {
       );
     }
 }
+
+Provider.propTypes = {
+  children: PropTypes.array.isRequired,
+};
