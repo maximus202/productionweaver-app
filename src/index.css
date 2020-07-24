@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 * {
-  background-color: #FFFFFF;
+  background-color: #f6f7fa;
   box-sizing: border-box;
 }
 
@@ -77,9 +77,9 @@ img {
   background-color: transparent;
 }
 
-header > section > h1, header > section > p {
+/*header > section > h1, header > section > p {
   color: #59708F;
-}
+}*/
 
 section {
   display: flex;
