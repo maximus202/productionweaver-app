@@ -28,9 +28,9 @@ class Login extends Component {
             <section>
               <form onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
+                <input type="email" placeholder="Email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
+                <input type="password" placeholder="Password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
                 <input type="submit" id="submit" name="login" placeholder="Login" />
               </form>
               <Link to="/sign-up">New user? Sign up!</Link>

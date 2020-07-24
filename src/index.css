@@ -77,10 +77,6 @@ img {
   background-color: transparent;
 }
 
-/*header > section > h1, header > section > p {
-  color: #59708F;
-}*/
-
 section {
   display: flex;
   flex-direction: column;
@@ -114,13 +110,17 @@ img.production-icon {
 }
 
 label {
-  color: #59708F;
-  padding: 0 15px 0 15px;
+  display: none;
 }
 
 input, select {
+    color: #838383;
+    font-weight: 500;
     height: 45px;
-    border: solid 1px #59708f52;
+    border: solid 3px #ecedf5;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     margin: 1px 0 20px 0;
     padding: 0 15px 0 15px;
 }
@@ -134,6 +134,7 @@ input#submit {
     background-color: #6270ff;
     border: solid 1px #6270ff;
     color: #FFFFFF;
+    box-shadow: #adacac 4px 6px 10px;
 }
 
 input#submit:hover {

@@ -105,22 +105,22 @@ class AddSceneForm extends Component {
           <input type="text" id="scene_script_number" name="scene_script_number" placeholder="Scene number on script" onChange={handleNewSceneSceneScriptNumberInput} required />
           <label htmlFor="setting">Setting</label>
           <select id="setting" name="setting" onChange={handleNewSceneSettingInput} required>
-            <option value="">--Please choose an option--</option>
+            <option value="">--Select an environment (INT/EXT)--</option>
             <option value="Int.">INT.</option>
             <option value="Ext.">EXT.</option>
           </select>
           <label htmlFor="location">Location</label>
-          <input type="text" id="location" name="location" placeholder="Example: SMITH HOUSE, LIVING ROOM" onChange={handleNewSceneLocationInput} required />
+          <input type="text" id="location" name="location" placeholder="Location (Example: SMITH HOUSE, LIVING ROOM)" onChange={handleNewSceneLocationInput} required />
           <label htmlFor="time_of_day">Time of day</label>
           <select id="time_of_day" name="time_of_day" onChange={handleNewSceneTimeOfDayInput} required>
-            <option value="">--Please choose an option--</option>
+            <option value="">--Select a time of day--</option>
             <option value="Day">DAY</option>
             <option value="Dusk">DUSK</option>
             <option value="Night">NIGHT</option>
             <option value="Dawn">DAWN</option>
           </select>
           <label htmlFor="short_summary">Short summary</label>
-          <input type="text" id="short_summary" name="short_summary" placeholder="Opening scene where protagonist is introduced." onChange={handleNewSceneShortSummaryInput} required />
+          <input type="text" id="short_summary" name="short_summary" placeholder="Short summary (Example: Opening scene where protagonist is introduced.)" onChange={handleNewSceneShortSummaryInput} required />
           <input type="submit" id="submit" name="add-project" placeholder="Add project" />
         </form>
       );

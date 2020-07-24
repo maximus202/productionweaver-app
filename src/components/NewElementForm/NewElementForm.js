@@ -67,7 +67,7 @@ class NewElementForm extends Component {
         <form onSubmit={(e) => handleSubmitNewElement(e, sceneId, history)}>
           <label htmlFor="category">Category</label>
           <select id="category" name="category" onChange={handleNewElementCategoryInput} required>
-            <option value="">--Please choose an option--</option>
+            <option value="">--Select a category--</option>
             <option value="Animal Handler">Animal Handler</option>
             <option value="Cast">Cast</option>
             <option value="Extras">Extras</option>
@@ -89,7 +89,7 @@ class NewElementForm extends Component {
             <option value="Visual FX">Visual FX</option>
             <option value="Wardrobe">Wardrobe</option>
           </select>
-          <input type="text" id="description" name="description" placeholder="Element description (example: gun)" onChange={handleNewElementDescriptionInput} required />
+          <input type="text" id="description" name="description" placeholder="Element name (example: Black Teapot)" onChange={handleNewElementDescriptionInput} required />
           <input type="submit" id="submit" name="add-element" placeholder="Add element" />
         </form>
       );
