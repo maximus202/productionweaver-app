@@ -73,6 +73,11 @@ a:hover {
   font-size: 14px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 img {
   background-color: transparent;
 }
