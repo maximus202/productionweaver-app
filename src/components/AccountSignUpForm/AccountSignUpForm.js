@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProductionApiService from '../../services/production-api-service';
+import './AccountSignUpForm.css';
 
 class AccountSignUpForm extends Component {
   constructor(props) {
@@ -70,15 +71,15 @@ class AccountSignUpForm extends Component {
     const { handleEmailInputChange } = this.state;
     const { handlePasswordInputChange } = this.state;
     return (
-      <form onSubmit={(e) => handleSubmitNewUser(e)}>
+      <form className="AccountSignUpForm__form" onSubmit={(e) => handleSubmitNewUser(e)}>
         <label htmlFor="first-name">First name</label>
-        <input type="text" placeholder="First name" id="first-name" name="first-name" onChange={handleFirstNameInputChange} required />
+        <input className="AccountSignUpForm__input" type="text" placeholder="First name" id="first-name" name="first-name" onChange={handleFirstNameInputChange} required />
         <label htmlFor="last-name">Last name</label>
-        <input type="text" placeholder="Last name" id="last-name" name="last-name" onChange={handleLastNameInputChange} required />
+        <input className="AccountSignUpForm__input" type="text" placeholder="Last name" id="last-name" name="last-name" onChange={handleLastNameInputChange} required />
         <label htmlFor="email">Email</label>
-        <input type="email" placeholder="Email" id="email" name="email" onChange={handleEmailInputChange} required />
+        <input className="AccountSignUpForm__input" type="email" placeholder="Email" id="email" name="email" onChange={handleEmailInputChange} required />
         <label htmlFor="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" onChange={handlePasswordInputChange} required />
+        <input className="AccountSignUpForm__input" type="password" placeholder="Password" id="password" name="password" onChange={handlePasswordInputChange} required />
         <input type="submit" id="submit" name="submit" placeholder="Submit" />
       </form>
     );

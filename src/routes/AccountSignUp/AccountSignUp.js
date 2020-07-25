@@ -10,15 +10,15 @@ function AccountSignUp(props) {
   return (
     <>
       <NavBar />
-      <header>
-        <section>
+      <header className="AccountSignUp__header">
+        <section className="AccountSignUp__section">
           <h2>Create your account</h2>
         </section>
       </header>
-      <main>
+      <main className="AccountSignUp__main">
         <section>
           <AccountSignUpForm history={history} />
-          <Link to="/login">Existing user?</Link>
+          <Link className="AccountSignUp__link" to="/login">Existing user?</Link>
         </section>
       </main>
     </>
