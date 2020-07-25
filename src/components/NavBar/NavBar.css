@@ -2,25 +2,31 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 5px 15px 5px;
+    background-color: #282638;
+    padding: 10px;
 }
 
 .Menu__logged-out, .Menu__logged-in {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    background-color: #282638;
 }
 
-/*Tablet*/
+.Menu__logged-out a, .Menu__logged-in a {
+  color: white;
+}
+
+/*
 @media only screen and (min-width: 768px) {
   nav {
-      margin: 10px;
+      padding: 10px;
   }
 }
 
-/*Desktop*/
+
 @media only screen and (min-width: 1024px) {
   nav {
     margin: 25px;
   }
-}
+}*/

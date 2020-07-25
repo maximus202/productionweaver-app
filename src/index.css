@@ -70,7 +70,7 @@ a {
 }
 
 a:hover {
-  color: #5d6af2;
+  font-size: 14px;
 }
 
 img {
@@ -218,4 +218,8 @@ a {
   font-size: 12px;
   line-height: 17px;
   }
+
+  a:hover {
+  font-size: 13px;
+}
 }

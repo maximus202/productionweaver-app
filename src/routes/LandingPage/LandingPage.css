@@ -5,7 +5,7 @@ header.landing-page-header {
     padding: 125px 0 125px 0;
 }
 
-header.landing-page-header h1, header.landing-page-header a {
+header.landing-page-header h2, header.landing-page-header a {
     color: white;
     text-align: center;
     align-self: center;

@@ -12,7 +12,7 @@ function AccountSignUp(props) {
       <NavBar />
       <header>
         <section>
-          <h1>Create your account</h1>
+          <h2>Create your account</h2>
         </section>
       </header>
       <main>

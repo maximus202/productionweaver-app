@@ -21,7 +21,7 @@ class Login extends Component {
           <NavBar />
           <header>
             <section>
-              <h1>Login</h1>
+              <h2>Login</h2>
             </section>
           </header>
           <main>
