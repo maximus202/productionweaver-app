@@ -19,3 +19,13 @@ section.AccountSignUp__section h2 {
 a.AccountSignUp__link {
     color: #79ccff;
 }
+
+@media only screen and (min-width: 1024px) {
+    section.AccountSignUp__section h2 {
+        text-align: center;
+    }
+
+    section.AccountSignUp__section {
+        width: 30%;
+    }
+}

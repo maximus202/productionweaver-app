@@ -16,7 +16,7 @@ function AccountSignUp(props) {
         </section>
       </header>
       <main className="AccountSignUp__main">
-        <section>
+        <section className="AccountSignUp__section">
           <AccountSignUpForm history={history} />
           <Link className="AccountSignUp__link" to="/login">Existing user?</Link>
         </section>

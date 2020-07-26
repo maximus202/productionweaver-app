@@ -13,3 +13,7 @@ form.AccountSignUpForm__form > input#submit {
     box-shadow: none;
     color: #282638;
 }
+
+form.AccountSignUpForm__form > input#submit:hover {
+    background-color: #6cb6e4;
+}
