@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
 import Loading from '../../components/Loading/Loading';
+import './Login.css';
 
 class Login extends Component {
     static contextType = Context
@@ -19,21 +20,21 @@ class Login extends Component {
       return (
         <>
           <NavBar />
-          <header>
-            <section>
+          <header className="Login__header">
+            <section className="Login__section">
               <h2>Login</h2>
             </section>
           </header>
-          <main>
-            <section>
-              <form onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
+          <main className="Login__main">
+            <section className="Login__section">
+              <form className="Login__form" onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
                 <label htmlFor="email">Email</label>
-                <input type="email" placeholder="Email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
+                <input className="Login__input" type="email" placeholder="Email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
                 <label htmlFor="password">Password</label>
-                <input type="password" placeholder="Password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
+                <input className="Login__input" type="password" placeholder="Password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
                 <input type="submit" id="submit" name="login" placeholder="Login" />
               </form>
-              <Link to="/sign-up">New user? Sign up!</Link>
+              <Link className="Login__link" to="/sign-up">New user? Sign up!</Link>
             </section>
           </main>
         </>

@@ -1,0 +1,47 @@
+header.Login__header {
+    background-color: #282638;
+}
+
+section.Login__section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+main.Login__main {
+    background-color: #282638;
+    height: 100vh;
+}
+
+section.Login__section h2 {
+    color: white;
+}
+
+a.Login__link {
+    color: #79ccff;
+}
+
+@media only screen and (min-width: 1024px) {
+    section.Login__section {
+        width: 35%;
+    }
+}
+
+input.Login__input {
+    background-color: #ffffff;
+    color: #282638;
+}
+
+form.Login__form {
+    background-color: #282638;
+}
+
+form.Login__form > input#submit {
+    background-color: #79ccff;
+    border: solid 1px #79ccff;
+    box-shadow: none;
+    color: #282638;
+}
+
+form.Login__form > input#submit:hover {
+    background-color: #6cb6e4;
+}
