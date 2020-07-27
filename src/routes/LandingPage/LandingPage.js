@@ -63,7 +63,7 @@ function LandingPage() {
         </section>
         <section className="call-to-action">
           <section>
-            <h2>Start using ProductionWeaver!</h2>
+            <h2>Get started in 60 seconds!</h2>
             <Link to="/sign-up">Get started</Link>
           </section>
         </section>

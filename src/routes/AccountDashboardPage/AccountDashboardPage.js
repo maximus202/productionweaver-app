@@ -37,18 +37,15 @@ class AccountDashboard extends Component {
       return (
         <>
           <NavBar />
-          <header>
+          <header className="AccountDashboardPage__header">
             <section>
-              <h1>Your dashboard</h1>
-            </section>
-          </header>
-          <main>
-            <section className="module-header">
-              <h2>Productions</h2>
+              <h2>Active Productions</h2>
               <Link to="/add-production">Add</Link>
             </section>
+          </header>
+          <main className="AccountDashboardPage__main">
             <section>
-              <ul className="production-list">
+              <ul className="AccountDashboardPage__ul">
                 {error
                   ? <p>No productions.</p>
                   : this.renderProductions()}

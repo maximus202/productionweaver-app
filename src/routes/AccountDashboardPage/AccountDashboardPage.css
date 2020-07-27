@@ -1,4 +1,16 @@
-ul.production-list {
+header.AccountDashboardPage__header, main.AccountDashboardPage__main {
+    background-color: #282638;
+}
+
+header.AccountDashboardPage__header h2 {
+    color: white;
+}
+
+ul.AccountDashboardPage__ul {
     list-style-type: none;
     padding: 0;
+}
+
+ul.AccountDashboardPage__ul li {
+    background-color: #282638;
 }
