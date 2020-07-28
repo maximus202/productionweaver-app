@@ -1,3 +1,11 @@
-section.loading-page {
-    align-items: center;
+main.Loading__main {
+    background: #282638;
+    height: 100vh;
+}
+
+main.Loading__main h2 {
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    padding-top: 50vh;
 }
