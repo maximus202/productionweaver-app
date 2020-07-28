@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
+import './AddProductionForm.css';
 
 class AddProductionForm extends Component {
   static contextType = Context;

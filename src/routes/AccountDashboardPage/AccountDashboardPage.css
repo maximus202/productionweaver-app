@@ -16,6 +16,11 @@ ul.AccountDashboardPage__ul li {
     padding-bottom: 1.2em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+ul.AccountDashboardPage__ul p {
+    color: white;
 }
 
 @media only screen and (min-width: 1024px) {

@@ -10,6 +10,7 @@ function ProductionListItem(props) {
       <Link to={`/production/${production.id}`}>
         <h3 className="ProductionListItem__title">{production.production_title}</h3>
       </Link>
+      <p>2020</p>
     </li>
   );
 }

@@ -30,13 +30,13 @@ class ProductionPage extends Component {
           <NavBar />
           <header>
             <section>
-              <h1>{production.production_title}</h1>
+              <h2>{production.production_title}</h2>
               <p>Production overview</p>
             </section>
           </header>
           <main>
             <section className="module-header">
-              <h2>Production Tools</h2>
+              <h3>Production Tools</h3>
             </section>
             <section className="production-tools">
               <div className="script-breakdown-selection">
