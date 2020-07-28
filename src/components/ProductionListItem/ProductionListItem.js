@@ -8,7 +8,7 @@ function ProductionListItem(props) {
   return (
     <li>
       <Link to={`/production/${production.id}`}>
-        <h3 className="title">{production.production_title}</h3>
+        <h3 className="ProductionListItem__title">{production.production_title}</h3>
       </Link>
     </li>
   );

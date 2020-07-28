@@ -1,15 +1,13 @@
-section.production-item {
-    width: 100%;
-    height: max-content;
-    margin-bottom: 1em;
-}
-
-h3.title {
+h3.ProductionListItem__title {
     color: white;
     margin: 0;
     display: inline;
 }
 
-h3.title:hover {
+h3.ProductionListItem__title:hover {
     font-size: 31px;
+}
+
+p.ProductionListItem__year {
+    color: white;
 }

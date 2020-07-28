@@ -20,12 +20,6 @@ a.Login__link {
     color: #79ccff;
 }
 
-@media only screen and (min-width: 1024px) {
-    section.Login__section {
-        width: 35%;
-    }
-}
-
 input.Login__input {
     background-color: #ffffff;
     color: #282638;
@@ -44,4 +38,19 @@ form.Login__form > input#submit {
 
 form.Login__form > input#submit:hover {
     background-color: #6cb6e4;
+}
+
+@media only screen and (min-width: 1024px) {
+    header.Login__header {
+        text-align: center;
+    }
+
+    section.Login__section {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

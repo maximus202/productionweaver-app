@@ -21,7 +21,16 @@ a.AccountSignUp__link {
 }
 
 @media only screen and (min-width: 1024px) {
+    header.AccountSignUp__header {
+        text-align: center;
+    }
+
     section.AccountSignUp__section {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
         width: 35%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

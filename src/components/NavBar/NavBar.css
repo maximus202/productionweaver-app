@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #282638;
-    padding: 10px;
+    padding: 20px;
 }
 
 .Menu__logged-out, .Menu__logged-in {
@@ -16,17 +16,3 @@ nav {
 .Menu__logged-out a, .Menu__logged-in a {
   color: white;
 }
-
-/*
-@media only screen and (min-width: 768px) {
-  nav {
-      padding: 10px;
-  }
-}
-
-
-@media only screen and (min-width: 1024px) {
-  nav {
-    margin: 25px;
-  }
-}*/

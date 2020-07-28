@@ -40,7 +40,7 @@ class AccountDashboard extends Component {
           <header className="AccountDashboardPage__header">
             <section>
               <h2>Active Productions</h2>
-              <Link to="/add-production">Add</Link>
+              <Link className="white-button" to="/add-production">Add Production</Link>
             </section>
           </header>
           <main className="AccountDashboardPage__main">
