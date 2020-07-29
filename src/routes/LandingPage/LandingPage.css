@@ -1,4 +1,4 @@
-header.landing-page-header {
+/* header.landing-page-header {
     background-image: url('https://github.com/maximus202/productionweaver-app/blob/styling/public/heroimage-min.jpg?raw=true');
     background-size: cover;
     background-position: inherit;
@@ -11,13 +11,11 @@ header.landing-page-header h2, header.landing-page-header a {
     align-self: center;
 }
 
-/*Tablet*/
 @media only screen and (min-width: 768px) {
 }
 
-/*Desktop*/
 @media only screen and (min-width: 1024px) {
   header.landing-page-header {
     padding: 200px 0 200px 0;
   }
-}
+}  */

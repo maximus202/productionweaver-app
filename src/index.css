@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 * {
   background-color: #f6f7fa;
@@ -185,7 +185,6 @@ section.bottom-bar button {
   color: white;
 }
 
-/*Desktop*/
 @media only screen and (min-width: 1024px) {
   h1 {
   font-size: 48px;
@@ -210,4 +209,4 @@ a {
   a:hover {
   font-size: 13px;
 }
-}
+}*/

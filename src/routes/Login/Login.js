@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
 import Loading from '../../components/Loading/Loading';
-import './Login.css';
+// import './Login.css';
 
 class Login extends Component {
     static contextType = Context

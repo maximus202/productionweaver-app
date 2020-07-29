@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProductionApiService from '../../services/production-api-service';
-import './AccountSignUpForm.css';
+// import './AccountSignUpForm.css';
 
 class AccountSignUpForm extends Component {
   constructor(props) {

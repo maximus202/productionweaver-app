@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import NavBar from '../../components/NavBar/NavBar';
-import './ScriptBreakdownPage.css';
+// import './ScriptBreakdownPage.css';
 import Loading from '../../components/Loading/Loading';
 
 class ScriptBreakdownPage extends Component {

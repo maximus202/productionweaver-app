@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './AccountSignUp.css';
+// import './AccountSignUp.css';
 import PropTypes from 'prop-types';
 import NavBar from '../../components/NavBar/NavBar';
 import AccountSignUpForm from '../../components/AccountSignUpForm/AccountSignUpForm';

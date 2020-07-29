@@ -1,12 +1,12 @@
 /* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import ProductionApiService from '../../services/production-api-service';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
-import './ProductionPage.css';
+//import './ProductionPage.css';
 import Loading from '../../components/Loading/Loading';
-import { Link } from 'react-router-dom';
 
 class ProductionPage extends Component {
     static contextType = Context
