@@ -28,15 +28,26 @@ class ProductionPage extends Component {
       return (
         <>
           <NavBar />
-          <header>
+          <header className="ProductionPage__header">
             <section>
-              <h2>{production.production_title}</h2>
-              <p>Production overview</p>
+              <h2>
+                {production.production_title}
+                {' '}
+                (2020)
+              </h2>
+              <p className="ProductionPage__header-list">Logline</p>
+              <p>After taking an unknown drug, a young man becomes convinced that his uncle's house is haunted by his twin brother who died a year prior and now seeks to expose the truth about his death.</p>
+              <p className="ProductionPage__header-list">Genre</p>
+              <p>Drama</p>
+              <p className="ProductionPage__header-list">Director</p>
+              <p>Kilian Lombardi</p>
+              <p className="ProductionPage__header-list">Writer/s</p>
+              <p>Kilian Lombardi</p>
             </section>
           </header>
           <main>
             <section className="module-header">
-              <h3>Production Tools</h3>
+              <h3>1. Set up your scenes</h3>
             </section>
             <section className="production-tools">
               <div className="script-breakdown-selection">
