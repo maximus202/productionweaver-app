@@ -6,6 +6,7 @@ import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
 import './ProductionPage.css';
 import Loading from '../../components/Loading/Loading';
+import { Link } from 'react-router-dom';
 
 class ProductionPage extends Component {
     static contextType = Context
@@ -43,10 +44,16 @@ class ProductionPage extends Component {
               <p>Kilian Lombardi</p>
               <p className="ProductionPage__header-list">Writer/s</p>
               <p>Kilian Lombardi</p>
+              <Link>
+                Edit project details
+                {' '}
+                <i className="fas fa-caret-right" />
+              </Link>
             </section>
           </header>
           <main>
             <section className="module-header">
+              <i className="fas fa-list-alt" />
               <h3>1. Set up your scenes</h3>
             </section>
             <section className="production-tools">
