@@ -8,15 +8,15 @@ function LandingPage() {
   return (
     <>
       <NavBar />
-      <header className="landing-page-header">
-        <section>
-          <h2>Simple, swift, film production management for indie filmmakers.</h2>
-          <Link to="/sign-up">Sign Up</Link>
-          <Link to="/login">Login</Link>
+      <header>
+        <section className="container">
+          <h1>Simple, swift, film production management for indie filmmakers.</h1>
+          <Link to="/sign-up"><button type="button" className="button">Sign Up</button></Link>
+          <Link to="/login"><button type="button" className="button outlined-button">Login</button></Link>
         </section>
       </header>
       <main>
-        <section className="feature">
+        <section className="container centered">
           <h2>Film production tools finally geared towards indie filmmakers.</h2>
           <p>
             Running your production on spreadsheets is a great solution... said no one ever.
@@ -42,6 +42,8 @@ function LandingPage() {
             Tools coming soon: budgeting, shoot scheduling, shot listing, storyboarding,
             call sheets, contact management and more!
           </p>
+        </section>
+        <section className="container">
           <h2>Script breakdowns</h2>
           <p>
             &quot;For your consideration... every element in your script!&quot;
@@ -52,6 +54,8 @@ function LandingPage() {
             let&apos;s you easily add elements to every scene so you don&apos;t forget
             a thing on filming day.
           </p>
+        </section>
+        <section className="container">
           <h2>Try it out!</h2>
           <p>
             Use Alfred Hitchcock&apos;s ProductionWeaver account to take it for a test
@@ -61,11 +65,9 @@ function LandingPage() {
           <p>Email: ahitchcock@studio.com</p>
           <p>Password: iLovebirds*</p>
         </section>
-        <section className="call-to-action">
-          <section>
-            <h2>Get started in 60 seconds!</h2>
-            <Link to="/sign-up">Get started</Link>
-          </section>
+        <section className="container">
+          <h2>Get started in 60 seconds!</h2>
+          <Link to="/sign-up">Get started</Link>
         </section>
       </main>
       <Footer />
