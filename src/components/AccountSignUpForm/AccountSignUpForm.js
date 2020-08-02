@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import ProductionApiService from '../../services/production-api-service';
-import './AccountSignUpForm.css';
 
 class AccountSignUpForm extends Component {
   constructor(props) {
@@ -72,7 +71,7 @@ class AccountSignUpForm extends Component {
     const { handleEmailInputChange } = this.state;
     const { handlePasswordInputChange } = this.state;
     return (
-      <form className="AccountSignUpForm__form" onSubmit={(e) => handleSubmitNewUser(e)}>
+      <form onSubmit={(e) => handleSubmitNewUser(e)}>
         <label htmlFor="first-name">First name</label>
         <input type="text" placeholder="First name" id="first-name" name="first-name" onChange={handleFirstNameInputChange} required />
         <label htmlFor="last-name">Last name</label>
