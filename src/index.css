@@ -154,6 +154,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.header-100vh {
+    min-height: 100vh;
+}
+
 /*Footer*/
 footer {
   padding: 8rem 0 2rem;
@@ -256,10 +260,6 @@ td, th {
 } 
 
 @media only screen and (min-width: 1024px) {
-  .header-100vh {
-    min-height: 100vh;
-  }
-
   .container {
     max-width: 80rem;
   }

@@ -6,16 +6,14 @@ function RegistrationSuccess() {
   return (
     <>
       <NavBar />
-      <header>
-        <section>
+      <header className="header-100vh">
+        <section className="container">
           <h1>You&apos;ve created your account!</h1>
+          <main>
+            <Link to="/login">Log in &gt;</Link>
+          </main>
         </section>
       </header>
-      <main>
-        <section>
-          <Link to="/login">Log in &gt;</Link>
-        </section>
-      </main>
     </>
   );
 }
