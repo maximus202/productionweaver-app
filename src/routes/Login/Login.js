@@ -24,10 +24,10 @@ class Login extends Component {
             <section className="container">
               <h1>Login</h1>
               <main className="Login__main">
-                <form className="Login__form" onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
-                  <label className="Login__label" htmlFor="email">Email</label>
+                <form onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
+                  <label htmlFor="email">Email</label>
                   <input type="email" placeholder="Email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
-                  <label className="Login__label" htmlFor="password">Password</label>
+                  <label htmlFor="password">Password</label>
                   <input type="password" placeholder="Password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
                   <input className="button" type="submit" id="submit" name="login" placeholder="Login" />
                 </form>

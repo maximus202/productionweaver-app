@@ -1,36 +1,3 @@
-/* header.AccountSignUp__header {
-    background-color: #282638;
+.AccountSignUp__main {
+    text-align: left;
 }
-
-section.AccountSignUp__section {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-main.AccountSignUp__main {
-    background-color: #282638;
-    height: 100vh;
-}
-
-section.AccountSignUp__section h2 {
-    color: white;
-}
-
-a.AccountSignUp__link {
-    color: #79ccff;
-}
-
-@media only screen and (min-width: 1024px) {
-    header.AccountSignUp__header {
-        text-align: center;
-    }
-
-    section.AccountSignUp__section {
-        margin-top: 0;
-        margin-bottom: 0;
-        display: flex;
-        width: 35%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
