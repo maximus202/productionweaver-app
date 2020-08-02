@@ -8,10 +8,12 @@ function LandingPage() {
   return (
     <>
       <NavBar />
-      <header>
+      <header className="header-100vh">
         <section className="container">
-          <h1>Simple, swift, film production management for indie filmmakers.</h1>
-          <Link to="/sign-up"><button type="button" className="button">Sign Up</button></Link>
+          <img className="header-image" src="https://github.com/maximus202/productionweaver-app/blob/branding-update/public/productionweaverhomeimg.png?raw=true" alt="A film director filming an actor with a camera" />
+          <h1>The indie filmmaker&apos;s new superpower.</h1>
+          <p>Running your productions should not cost half your budget. Write, plan, and run all your productions for $8 a month. Simple.</p>
+          <Link to="/sign-up"><button type="button" className="button">Free Trial</button></Link>
           <Link to="/login"><button type="button" className="button outlined-button">Login</button></Link>
         </section>
       </header>
@@ -44,7 +46,7 @@ function LandingPage() {
           </p>
         </section>
         <section className="container">
-          <h2>Script breakdowns</h2>
+          <h3>Script breakdowns</h3>
           <p>
             &quot;For your consideration... every element in your script!&quot;
           </p>
@@ -56,7 +58,7 @@ function LandingPage() {
           </p>
         </section>
         <section className="container">
-          <h2>Try it out!</h2>
+          <h3>Try it out!</h3>
           <p>
             Use Alfred Hitchcock&apos;s ProductionWeaver account to take it for a test
             drive, he won&apos;t mind!
@@ -66,7 +68,7 @@ function LandingPage() {
           <p>Password: iLovebirds*</p>
         </section>
         <section className="container">
-          <h2>Get started in 60 seconds!</h2>
+          <h3>Get started in 60 seconds!</h3>
           <Link to="/sign-up">Get started</Link>
         </section>
       </main>

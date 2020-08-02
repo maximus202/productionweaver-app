@@ -5,9 +5,11 @@ import Menu from '../Menu/Menu';
 
 function NavBar() {
   return (
-    <nav className="wrapper">
-      <Logo />
-      <Menu />
+    <nav>
+      <section className="container nav">
+        <Logo />
+        <Menu />
+      </section>
     </nav>
   );
 }

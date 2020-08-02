@@ -4,7 +4,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      <section className="wrapper">
+      <section className="container">
         <p>©2020 ProductionWeaver.com</p>
       </section>
     </footer>
