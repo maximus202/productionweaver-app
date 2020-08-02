@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import NavBar from '../../components/NavBar/NavBar';
 import Loading from '../../components/Loading/Loading';
-// import './Login.css';
+import './Login.css';
 
 class Login extends Component {
     static contextType = Context
@@ -20,23 +20,21 @@ class Login extends Component {
       return (
         <>
           <NavBar />
-          <header className="Login__header">
-            <section className="Login__section">
-              <h2>Login</h2>
+          <header className="header-100vh">
+            <section className="container">
+              <h1>Login</h1>
+              <main className="Login__main">
+                <form className="Login__form" onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
+                  <label className="Login__label" htmlFor="email">Email</label>
+                  <input type="email" placeholder="Email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
+                  <label className="Login__label" htmlFor="password">Password</label>
+                  <input type="password" placeholder="Password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
+                  <input className="button" type="submit" id="submit" name="login" placeholder="Login" />
+                </form>
+                <Link to="/sign-up">New user? Sign up!</Link>
+              </main>
             </section>
           </header>
-          <main className="Login__main">
-            <section className="Login__section">
-              <form className="Login__form" onSubmit={(e) => handleSubmitJwtAuth(e, history)}>
-                <label htmlFor="email">Email</label>
-                <input className="Login__input" type="email" placeholder="Email" id="email" name="email" onChange={handleSubmitLoginEmail} required />
-                <label htmlFor="password">Password</label>
-                <input className="Login__input" type="password" placeholder="Password" id="password" name="password" onChange={handleSubmitLoginPassword} required />
-                <input type="submit" id="submit" name="login" placeholder="Login" />
-              </form>
-              <Link className="Login__link" to="/sign-up">New user? Sign up!</Link>
-            </section>
-          </main>
         </>
       );
     }
