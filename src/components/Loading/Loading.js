@@ -2,7 +2,7 @@ import React from 'react';
 // import './Loading.css';
 
 function Loading() {
-  return <main className="Loading__main"><h2>Loading...</h2></main>;
+  return <main><section className="container centered"><p>Loading...</p></section></main>;
 }
 
 export default Loading;
