@@ -39,12 +39,11 @@ class AccountDashboard extends Component {
           <NavBar />
           <header>
             <section className="container">
-              <h1>Dashboard</h1>
+              <h1>Active Productions</h1>
             </section>
           </header>
           <main>
             <section className="container">
-              <h2>Active productions</h2>
               <ul className="AccountDashboardPage__ul">
                 {error
                   ? <p>No productions.</p>
