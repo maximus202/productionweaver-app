@@ -5,7 +5,7 @@ import { Context } from '../../Context/Context';
 import ProductionListItem from '../../components/ProductionListItem/ProductionListItem';
 import ProductionApiService from '../../services/production-api-service';
 import NavBar from '../../components/NavBar/NavBar';
-// import './AccountDashboardPage.css';
+import './AccountDashboardPage.css';
 
 class AccountDashboard extends Component {
     static contextType = Context
@@ -37,19 +37,21 @@ class AccountDashboard extends Component {
       return (
         <>
           <NavBar />
-          <header className="AccountDashboardPage__header">
-            <section>
-              <h2>Active Productions</h2>
-              <Link className="white-button" to="/add-production">Add Production</Link>
+          <header>
+            <section className="container">
+              <h1>Dashboard</h1>
             </section>
           </header>
-          <main className="AccountDashboardPage__main">
-            <section>
+          <main>
+            <section className="container">
+              <h2>Active productions</h2>
               <ul className="AccountDashboardPage__ul">
                 {error
                   ? <p>No productions.</p>
                   : this.renderProductions()}
               </ul>
+              <Link to="/add-production"><button type="button" className="button">Add Production</button></Link>
+              <Link to="/"><button type="button" className="button outlined-button">Archived Productions</button></Link>
             </section>
           </main>
         </>
