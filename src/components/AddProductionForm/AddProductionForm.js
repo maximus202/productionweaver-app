@@ -50,7 +50,7 @@ class AddProductionForm extends Component {
       return (
         <form onSubmit={(e) => handleSubmitNewProduction(e, history)}>
           <label htmlFor="project-name">Production name</label>
-          <input type="text" placeholder="Production name" id="project-name" name="project-name" onChange={handleNewProductionTitle} required />
+          <input type="text" placeholder="Example: Night of the Living Dead" id="project-name" name="project-name" onChange={handleNewProductionTitle} required />
           <input className="button" type="submit" id="submit" name="add-project" />
         </form>
       );
