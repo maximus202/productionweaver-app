@@ -11,7 +11,7 @@ function AccountSignUp(props) {
   return (
     <>
       <NavBar />
-      <header className="header-100vh">
+      <header className="header-100vh grey-background">
         <section className="container">
           <h1>Create your account</h1>
           <main className="AccountSignUp__main">

@@ -20,7 +20,7 @@ class Login extends Component {
       return (
         <>
           <NavBar />
-          <header className="header-100vh">
+          <header className="header-100vh grey-background">
             <section className="container">
               <h1>Login</h1>
               <main className="Login__main">

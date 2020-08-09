@@ -37,13 +37,11 @@ class AccountDashboard extends Component {
       return (
         <>
           <NavBar />
-          <header>
-            <section className="container">
+          <section className="container">
+            <header>
               <h1>Active Productions</h1>
-            </section>
-          </header>
-          <main>
-            <section className="container">
+            </header>
+            <main>
               <ul className="AccountDashboardPage__ul">
                 {error
                   ? <p>No productions.</p>
@@ -51,8 +49,8 @@ class AccountDashboard extends Component {
               </ul>
               <Link to="/add-production"><button type="button" className="button">Add Production</button></Link>
               <Link to="/"><button type="button" className="button outlined-button">Archived Productions</button></Link>
-            </section>
-          </main>
+            </main>
+          </section>
         </>
       );
     }

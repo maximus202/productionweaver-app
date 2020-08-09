@@ -8,7 +8,7 @@ function LandingPage() {
   return (
     <>
       <NavBar />
-      <header className="LandingPage__header header-100vh">
+      <header className="LandingPage__header header-100vh grey-background">
         <section className="container">
           <img className="header-image" src="https://github.com/maximus202/productionweaver-app/blob/branding-update/public/productionweaverhomeimg.png?raw=true" alt="A film director filming an actor with a camera" />
           <h1>The indie filmmaker&apos;s new superpower.</h1>
