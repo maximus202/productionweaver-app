@@ -3,3 +3,7 @@
     flex-direction: column;
 }
 
+.ProductionPage__ul {
+    list-style-type: none;
+    padding: 0;
+}

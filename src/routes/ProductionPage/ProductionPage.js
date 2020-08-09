@@ -45,76 +45,106 @@ class ProductionPage extends Component {
                 <p>Logline: After taking an unknown drug, a young man becomes convinced that his uncle's house is haunted by his twin brother who died a year prior and now seeks to expose the truth about his death.</p>
                 <p>Genre: Drama</p>
                 <p>Release Date: November 20, 2020</p>
-                <Link>
-                  Edit Project
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Story Outline
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Write/Import Script
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Script Breakdown
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Elements
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Shot List
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Storyboards
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Shooting Schedule
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Calendar
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Budget
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Cast/Crew
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Call Sheets
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Email Cast/Crew
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
-                <Link>
-                  Reports
-                  {' '}
-                  <i className="fas fa-caret-right" />
-                </Link>
+                <ul className="ProductionPage__ul">
+                  <li>
+                    <Link>
+                      Edit Project
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Story Outline
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Write/Import Script
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Script Breakdown
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Elements
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Shot List
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Storyboards
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Shooting Schedule
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Calendar
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Budget
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Cast/Crew
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Call Sheets
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Email Cast/Crew
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Reports
+                      {' '}
+                      <i className="fas fa-caret-right" />
+                    </Link>
+                  </li>
+                </ul>
               </section>
             </main>
           </section>
