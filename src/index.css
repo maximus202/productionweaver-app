@@ -79,6 +79,11 @@ a:hover {
   color: #606C76;
 }
 
+/*special text styling*/
+.bold {
+  font-weight: bold;
+}
+
 /*button*/
 .button {
   background-color: #6270ff;
