@@ -79,6 +79,19 @@ a:hover {
   color: #606C76;
 }
 
+.white-link {
+  color: white;
+}
+
+.white-link:hover {
+  color: white;
+}
+
+/*fontawesome icons*/
+i {
+  padding: 0 1rem;
+}
+
 /*special text styling*/
 .bold {
   font-weight: bold;
@@ -100,7 +113,7 @@ a:hover {
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .button:hover {
@@ -256,9 +269,25 @@ td, th {
     padding: 1.2rem 1.5rem;
 }
 
+
+/*background colors*/
 .grey-background {
   background-color: #f4f5f6;
-} 
+}
+
+/*control boxes*/
+.control-box {
+  background-color: #6270ff;
+  border-radius: .4rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: #a0a0a0 1px 1px 13px;
+}
+
+.control-box a {
+  padding: 1rem;
+  display: inline-block;
+}
 
 @media only screen and (min-width: 1024px) {
   .container {

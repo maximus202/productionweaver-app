@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import NavBar from '../../components/NavBar/NavBar';
-// import './SceneBreakdownPage.css';
+import './SceneBreakdownPage.css';
 import Loading from '../../components/Loading/Loading';
 
 class SceneBreakdown extends Component {
@@ -176,9 +176,10 @@ class SceneBreakdown extends Component {
 
       return (
         <>
-          <header>
-            <section>
-              <h1>
+          <header className="grey-background">
+            <section className="container">
+              <p className="bold">Script breakdown</p>
+              <h1 className="SceneBreakdownPage__h1">
                 Scene
                 {' '}
                 {scene[0].scene_script_number}
@@ -192,20 +193,23 @@ class SceneBreakdown extends Component {
                 {' '}
                 {scene[0].time_of_day}
               </h1>
-              <p>Scene breakdown</p>
-            </section>
-          </header>
-          <main>
-            <section>
-              <h2>
-                Summary:
-              </h2>
               <p>
+                Scene summary:
+                {' '}
                 {scene[0].short_summary}
               </p>
             </section>
-            <section className="element-section">
-              <h2>Elements:</h2>
+          </header>
+          <main>
+            <section className="container SceneBreakdownPage__elements-list">
+              <section className="control-box">
+                <Link className="white-link" to={`/add-element/${scene[0].id}`}>
+                  <i className="fas fa-plus" />
+                  Add New Element
+                  {' '}
+                </Link>
+              </section>
+              <h2>Scene Elements</h2>
               <h3>Animal Handler</h3>
               <ul className="element-section">
                 {animalHandler.map((element) => <li className="element-tag" key={element.id}>{element.description}</li>)}
@@ -305,9 +309,6 @@ class SceneBreakdown extends Component {
               <ul className="element-section">
                 {wardrobe.map((element) => <li className="element-tag" key={element.id}>{element.description}</li>)}
               </ul>
-            </section>
-            <section className="bottom-bar">
-              <Link to={`/add-element/${scene[0].id}`}><img className="add-element-button" src="https://github.com/maximus202/productionweaver-app/blob/styling/public/plusicon.png?raw=true" alt="Add" /></Link>
             </section>
           </main>
         </>
