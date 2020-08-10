@@ -1,4 +1,5 @@
-/* ul {
+.ScriptBreakdownPage__ul {
     list-style-type: none;
     padding: 0;
-} */
+    text-transform: uppercase;
+}

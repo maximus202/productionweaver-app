@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import ProductionApiService from '../../services/production-api-service';
 import NavBar from '../../components/NavBar/NavBar';
-// import './ScriptBreakdownPage.css';
+import './ScriptBreakdownPage.css';
 import Loading from '../../components/Loading/Loading';
 
 class ScriptBreakdownPage extends Component {
@@ -63,23 +63,26 @@ class ScriptBreakdownPage extends Component {
       return (
         <>
           <NavBar />
-          <header>
-            <section>
-              <h1>{production.production_title}</h1>
-              <p>Script Breakdown</p>
+          <header className="grey-background">
+            <section className="container">
+              <p className="bold">Script Breakdown</p>
+              <h1>
+                {production.production_title}
+                {' '}
+                (2020)
+              </h1>
             </section>
           </header>
           <main>
-            <section className="module-header">
+            <section className="container">
               <h2>Scenes</h2>
-              <Link to={`/add-scene/${production.id}`}>Add scene</Link>
-            </section>
-            <section>
-              <ul>
+              <Link to={`/add-scene/${production.id}`}><button type="button" className="button">Add scene</button></Link>
+              <ul className="ScriptBreakdownPage__ul">
                 {content}
               </ul>
             </section>
           </main>
+
         </>
       );
     }

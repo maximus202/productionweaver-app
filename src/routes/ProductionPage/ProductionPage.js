@@ -68,7 +68,7 @@ class ProductionPage extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link>
+                    <Link to={`/script-breakdown/${production.id}`}>
                       Script Breakdown
                       {' '}
                       <i className="fas fa-caret-right" />
