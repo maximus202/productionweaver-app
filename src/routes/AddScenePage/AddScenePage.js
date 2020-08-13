@@ -11,16 +11,14 @@ function AddScenePage(props) {
   return (
     <>
       <NavBar />
-      <header>
-        <section>
+      <header className="header-100vh">
+        <section className="container">
           <h1>Add a new scene</h1>
+          <main>
+            <AddSceneForm history={history} productionId={match.params.productionId} />
+          </main>
         </section>
       </header>
-      <main>
-        <section>
-          <AddSceneForm history={history} productionId={match.params.productionId} />
-        </section>
-      </main>
     </>
   );
 }

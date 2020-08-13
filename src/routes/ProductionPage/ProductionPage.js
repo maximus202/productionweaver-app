@@ -39,12 +39,40 @@ class ProductionPage extends Component {
             </header>
             <main>
               <section className="ProductionPage__main">
-                <p>Producer/s: Kilian Lombardi</p>
-                <p>Director: Kilian Lombardi</p>
-                <p>Writer/s: Kilian Lombardi</p>
-                <p>Logline: After taking an unknown drug, a young man becomes convinced that his uncle's house is haunted by his twin brother who died a year prior and now seeks to expose the truth about his death.</p>
-                <p>Genre: Drama</p>
-                <p>Release Date: November 20, 2020</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Info</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Producer/s</td>
+                      <td>Kilian Lombardi</td>
+                    </tr>
+                    <tr>
+                      <td>Director/s</td>
+                      <td>Kilian Lombardi</td>
+                    </tr>
+                    <tr>
+                      <td>Writer/s</td>
+                      <td>Kilian Lombardi</td>
+                    </tr>
+                    <tr>
+                      <td>Logline</td>
+                      <td>After taking an unknown drug, a young man becomes convinced that his uncle's house is haunted by his twin brother who died a year prior and now seeks to expose the truth about his death.</td>
+                    </tr>
+                    <tr>
+                      <td>Genre</td>
+                      <td>Drama</td>
+                    </tr>
+                    <tr>
+                      <td>Release Date</td>
+                      <td>November 20, 2020</td>
+                    </tr>
+                  </tbody>
+                </table>
                 <ul className="ProductionPage__ul">
                   <li>
                     <Link>

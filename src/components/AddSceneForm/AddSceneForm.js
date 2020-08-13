@@ -121,7 +121,7 @@ class AddSceneForm extends Component {
           </select>
           <label htmlFor="short_summary">Short summary</label>
           <input type="text" id="short_summary" name="short_summary" placeholder="Short summary (Example: Opening scene where protagonist is introduced.)" onChange={handleNewSceneShortSummaryInput} required />
-          <input type="submit" id="submit" name="add-project" placeholder="Add project" />
+          <input className="button" type="submit" id="submit" name="add-project" placeholder="Add project" />
         </form>
       );
     }

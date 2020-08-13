@@ -39,14 +39,23 @@ class AccountDashboard extends Component {
           <NavBar />
           <section className="container">
             <header>
-              <h1>Active Productions</h1>
+              <h1>Dashboard</h1>
             </header>
             <main>
-              <ul className="AccountDashboardPage__ul">
-                {error
-                  ? <p>No productions.</p>
-                  : this.renderProductions()}
-              </ul>
+              <h2>Active productions</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Production Name</th>
+                    <th>Release Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {error
+                    ? <p>No productions.</p>
+                    : this.renderProductions()}
+                </tbody>
+              </table>
               <Link to="/add-production"><button type="button" className="button">Add Production</button></Link>
               <Link to="/"><button type="button" className="button outlined-button">Archived Productions</button></Link>
             </main>

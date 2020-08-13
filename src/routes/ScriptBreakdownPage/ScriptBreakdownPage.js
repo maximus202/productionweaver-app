@@ -31,20 +31,23 @@ class ScriptBreakdownPage extends Component {
     renderScenes() {
       const { scenesList = [] } = this.context;
       return scenesList.map((scene) => (
-        <li key={scene.id}>
-          <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
-            {scene.scene_script_number}
-            :
-            {' '}
-            {scene.setting}
-            {' '}
-            {scene.location}
-            {' '}
-            -
-            {' '}
-            {scene.time_of_day}
-          </Link>
-        </li>
+        <tr key={scene.id}>
+          <td>
+            <Link key={scene.id} to={`/scene-breakdown/${scene.id}`}>
+              [
+              {scene.scene_script_number}
+              ]
+              {' '}
+              {scene.setting.toUpperCase()}
+              {' '}
+              {scene.location.toUpperCase()}
+              {' '}
+              -
+              {' '}
+              {scene.time_of_day.toUpperCase()}
+            </Link>
+          </td>
+        </tr>
       ));
     }
 
@@ -76,10 +79,17 @@ class ScriptBreakdownPage extends Component {
           <main>
             <section className="container">
               <h2>Scenes</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Scene Header</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {content}
+                </tbody>
+              </table>
               <Link to={`/add-scene/${production.id}`}><button type="button" className="button">Add scene</button></Link>
-              <ul className="ScriptBreakdownPage__ul">
-                {content}
-              </ul>
             </section>
           </main>
 
