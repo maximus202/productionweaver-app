@@ -90,7 +90,7 @@ class NewElementForm extends Component {
             <option value="Wardrobe">Wardrobe</option>
           </select>
           <input type="text" id="description" name="description" placeholder="Element name (example: Black Teapot)" onChange={handleNewElementDescriptionInput} required />
-          <input type="submit" id="submit" name="add-element" placeholder="Add element" />
+          <input className="button" type="submit" id="submit" name="add-element" placeholder="Add element" />
         </form>
       );
     }

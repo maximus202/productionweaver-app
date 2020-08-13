@@ -11,16 +11,14 @@ function AddElementPage(props) {
   return (
     <>
       <NavBar />
-      <header>
-        <section>
+      <header className="header-100vh">
+        <section className="container">
           <h1>Add new Element</h1>
+          <main>
+            <NewElementForm sceneId={match.params.sceneId} history={history} />
+          </main>
         </section>
       </header>
-      <main>
-        <section>
-          <NewElementForm sceneId={match.params.sceneId} history={history} />
-        </section>
-      </main>
     </>
   );
 }
